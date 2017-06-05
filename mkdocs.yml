@@ -48,6 +48,7 @@ pages:
         - Themes:
             - 'development/themes/index.md'
             - Templating System: 'development/themes/templates.md'
+        - Style Guide: 'development/style-guide.md'
     - Admin Panel:
         - 'admin/index.md'
         - 'admin/dashboard.md'
