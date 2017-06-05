@@ -24,3 +24,22 @@ pages:
             - 'installing/cloud/koding.md'
             - 'installing/cloud/nitrous.md'
             - 'installing/cloud/openshift.md'
+    - Configuration:
+        - config.json: 'configuring/config.md'
+        - Upgrading: 'configuring/upgrade.md'
+        - Databases:
+            - 'configuring/databases/index.md'
+            - MongoDB: 'configuring/databases/mongo.md'
+        - Proxies:
+            - 'configuring/proxies/index.md'
+            - Apache (v2.4+): 'configuring/proxies/apache.md'
+            - Apache (v2.2): 'configuring/proxies/apache2.2.md'
+            - NginX: 'configuring/proxies/nginx.md'
+            - Node.js: 'configuring/proxies/node.md'
+            - 'configuring/proxies/varnish.md'
+    - Development:
+        - 'development/widgets.md'
+    - Admin Panel:
+        - 'admin/index.md'
+        - 'admin/dashboard.md'
+        - 'admin/uploads.md'
