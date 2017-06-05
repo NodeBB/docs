@@ -1,4 +1,4 @@
-site_name: NodeBB (DEVELOPMENT)
+site_name: NodeBB Documentation
 theme: yeti
 markdown_extensions:
     - fenced_code
