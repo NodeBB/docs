@@ -154,4 +154,4 @@ issue](https://github.com/NodeBB/NodeBB/issues).
 Upgrading NodeBB
 ----------------
 
-**Note:** Detailed upgrade instructions are listed in (Upgrading NodeBB])../../upgrading/index).
+**Note:** Detailed upgrade instructions are listed in [Upgrading NodeBB](../../configuring/upgrade).

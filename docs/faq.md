@@ -33,11 +33,11 @@ Usage: ./nodebb {start|stop|reload|restart|log|setup|reset|upgrade|dev}
 
 ### How do I upgrade my NodeBB to a newer version?
 
-Please consult [Upgrading NodeBB](../upgrading/index.html)
+Please consult [Upgrading NodeBB](../configuring/upgrade)
 
 ### I upgraded NodeBB and now X isn't working properly!
 
-Please consult [Upgrading NodeBB](../upgrading/index.html)
+Please consult [Upgrading NodeBB](../configuring/upgrade)
 
 ### I installed an incompatible plugin, and now my forum won't start!
 
