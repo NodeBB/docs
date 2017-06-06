@@ -12,7 +12,7 @@ the application will load three resources. The API return
 [/api/topic/351/nodebb-wiki](http://community.nodebb.org/api/topic/351/nodebb-wiki)
 and the [template](http://community.nodebb.org/templates/topic.tpl), in
 this example, "topic.tpl", and the appropriate [language
-file](community.nodebb.org/language/en_GB/topic.json) "topic.json"\*.
+file](community.nodebb.org/language/en-GB/topic.json) "topic.json"\*.
 
 Just prepend api/ to the URL's path name to discover the JSON return.
 Any value in that return can be utilized in your template.
@@ -144,7 +144,7 @@ The template engine interfaces with the internationalization system as
 well. We can embed variables into language strings. Let's use [this API
 call](http://community.nodebb.org/api/register) as well as this
 [language
-file](http://community.nodebb.org/language/en_GB/register.json) as an
+file](http://community.nodebb.org/language/en-GB/register.json) as an
 example. We can now do something like the following:
 
 ``` html

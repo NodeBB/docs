@@ -40,14 +40,14 @@ pages:
             - 'configuring/proxies/varnish.md'
         - 'configuring/scaling.md'
     - Development:
-        - 'development/widgets.md'
         - Plugins:
             - 'development/plugins/index.md'
             - 'development/plugins/hooks.md'
-            - Internationalisation (i18n): 'development/plugins/i18n.md'
         - Themes:
             - 'development/themes/index.md'
             - Templating System: 'development/themes/templates.md'
+        - 'development/widgets.md'
+        - Internationalisation (i18n): 'development/i18n.md'
         - Style Guide: 'development/style-guide.md'
     - Admin Panel:
         - 'admin/index.md'

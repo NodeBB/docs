@@ -77,13 +77,14 @@ incompatible with the new theme are saved.
 Listen to this hook to register your Widget Area:
 
 ``` json
-"hook": "filter:widgets.getAreas", "method": "defineWidgetAreas", "callbacked": true
+"hook": "filter:widgets.getAreas", "method": "defineWidgetAreas"
 ```
 
 Pass this back in the array:
 
 ``` json
 {
+    widget: "categorysidebar",
     name: "Category Sidebar",
     template: "category.tpl",
     location: "sidebar"

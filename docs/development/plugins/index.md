@@ -14,7 +14,7 @@ See the full [list of
 hooks](https://github.com/NodeBB/NodeBB/wiki/Hooks/) for more
 information.
 
-## Filters and Actions
+## Plugin Hooks
 
 There are three types of hooks: **filters**, **actions**, and **static**
 hooks.
@@ -43,13 +43,16 @@ like something to happen. If a hook isn't present, [file an
 issue](https://github.com/NodeBB/NodeBB/issues) and we'll include it in
 the next version of NodeBB.
 
+For more information on hooks, please consult [the hooks page](./hooks).
+
 ## Configuration
 
 Each plugin package contains a configuration file called `plugin.json`.
-Here is a sample:
+Here is a sample, keeping in mind that *not all options are required*:
 
 ``` json
 {
+    "id": "nodebb-plugin-myplugin",
     "url": "Absolute URL to your plugin or a Github repository",
     "library": "./my-plugin.js",
     "staticDirs": {
@@ -72,6 +75,8 @@ Here is a sample:
     "templates": "path/to/templates"
 }
 ```
+
+`id` is a unique identifier for your plugin. NodeBB will refer to your plugin by this id, and if published to npm, NodeBB will try to download the package with the same name as this id.
 
 The `library` property is a relative path to the library in your
 package. It is automatically loaded by NodeBB (if the plugin is
@@ -107,14 +112,11 @@ are compiled into the minified payload served in the Admin Control Panel
 The `languages` property is optional, which allows you to set up your
 own internationalization for your plugin (or theme). Set up a similar
 directory structure as core, for example:
-`language/en_GB/myplugin.json`.
+`language/en-GB/myplugin.json`.
 
 The `templates` property is optional, and allows you to define a folder
 that contains template files to be loaded into NodeBB. Set up a similar
 directory structure as core, for example: `partials/topic/post.tpl`.
-
-The `nbbpm` property is an object containing NodeBB package manager
-info.
 
 ## Writing the plugin library
 
@@ -289,4 +291,10 @@ Alternatively, you can disable a single plugin by running
 
 ```
 ./nodebb reset -p nodebb-plugin-im-broken
+```
+
+or
+
+```
+./nodebb reset -p broken-plugin
 ```
