@@ -23,7 +23,8 @@ In addition to hooks executed on certain actions, a pair of hooks are also fired
 
 * `filter:<template>.build` is fired on a particular page load, based on the template file being rendered. For example, `/recent` draws its view from `recent.tpl`, and thus a plugin can subscribe to `filter:recent.build` and react whenever the recent page is loaded.
     * Keep in mind that there is no guarantee that the hook is **only** fired on that particular page. A plugin may elect to render that same template, which would also cause the hook to be fired.
-* `filter:middleware.render` is called on every single page load, and is useful for situations where you want to append or change data for every page
+* `filter:router.page` is called on every single page load, prior to any processing (template generation, etc.)
+* `filter:middleware.render` is called on every single page load, and is useful for situations where you want to append or change data for every page. It is called after the bulk of processing is done.
 
 ### Widget Render Hook `filter:widget.render:<widget>`
 
