@@ -8,25 +8,48 @@ executable:
 * `./nodebb stop` Stops the NodeBB server
 * Alternatively, you may use `npm start` and `npm stop` to do the same
 
-The methods listed below are alternatives to starting NodeBB via the
+However, NodeBB when started via `./nodebb start` will not automatically start up again when the system reboots. The methods listed below are alternatives to starting NodeBB via the
 executable.
 
-Upstart
--------
+## systemd
 
-Later version of Ubuntu may utilise
-[Upstart](http://upstart.ubuntu.com/) to manage processes at boot.
-Upstart also handles restarts of scripts if/when they crash.
+Newer releases of Ubuntu use systemd to manage their services. The following is a systemd service example you can use:
+
+```
+[Unit]
+Description=NodeBB
+After=network.target
+
+[Service]
+Type=simple
+User=myuser
+WorkingDirectory=/path/to/nodebb
+ExecStart=/path/to/nodebb/nodebb --no-silent --no-daemon
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Replace your username (`myuser`) and the path to NodeBB as appropriate.
+
+Save the file to `/etc/systemd/system/nodebb.service`. Start and stop NodeBB by doing the following:
+
+```
+$ systemctl start nodebb
+$ systemctl stop nodebb
+```
+
+Note that we are passing `--no-silent` and `--no-daemon` to the executable. The former ensures that logging is sent to stdout (in which case you can view the log output by running `journalctl -u nodebb`), and the latter doesn't do any forking and runs in the main parent thread.
+
+## Upstart
+
+Older versions of Ubuntu may utilise [Upstart](http://upstart.ubuntu.com/) to manage processes at boot. Upstart also handles restarts of scripts if/when they crash.
 
 You can use Upstart to start/stop/restart your NodeBB.
 
-Note: Prior to NodeBB v0.7.0, Upstart processes would not track the
-proper pid, meaning there was no way to stop the NodeBB process. NodeBB
-v0.7.0 includes some changes that allow Upstart to control NodeBB more
-effectively.
+Note: Prior to NodeBB v0.7.0, Upstart processes would not track the proper pid, meaning there was no way to stop the NodeBB process. NodeBB v0.7.0 includes some changes that allow Upstart to control NodeBB more effectively.
 
-You can utilise this Upstart configuration as a template to manage your
-NodeBB:
+You can utilise this Upstart configuration as a template to manage your NodeBB:
 
 ```
 start on startup
@@ -44,23 +67,7 @@ From there, you can start stop and restart NodeBB as the root user:
 `start nodebb`, `stop nodebb`, `restart nodebb`, assuming `nodebb.conf`
 is the name of the Upstart config file.
 
-Simple Node.js Process
-----------------------
-
-To start NodeBB, run it with `node` (some distributions use the
-executable `nodejs`, please adjust accordingly):
-
-``` bash
-$ cd /path/to/nodebb/install
-$ node app
-```
-
-However, bear in mind that crashes will cause the NodeBB process to
-halt, bringing down your forum. Consider some of the more reliable
-options, below:
-
-Supervisor Process
-------------------
+## Supervisor Process
 
 Using the [supervisor
 package](https://github.com/isaacs/node-supervisor), you can have NodeBB
@@ -74,8 +81,7 @@ $ supervisor app
 As `supervisor` by default continues to pipe output to `stdout`, it is
 best suited to development builds.
 
-Forever Daemon
---------------
+## Forever Daemon
 
 Another way to keep NodeBB up is to use the [forever
 package](https://github.com/nodejitsu/forever) via the command line
@@ -86,8 +92,7 @@ $ npm install -g forever
 $ forever start app.js
 ```
 
-Grunt Development
------------------
+## Grunt Development
 
 We can utilize grunt to launch NodeBB and re-compile assets when files
 are changed. Start up speed is increased because we don't compile assets
