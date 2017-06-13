@@ -8,22 +8,23 @@ const crypto = require('crypto');
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(bodyParser.json({
+	verify: function (req, res, buf, encoding) {
+		let hash = crypto.createHash('sha1');
+		hash.update(buf);
+		console.log("hash", hash.digest('hex'));
+	}
+}));
 
 app.post('/github', function (req, res) {
 	var headers = req.headers;
 	let shasum = crypto.createHash('sha1');
 
 	// Basic sanity checks
-	if (!req.body || req.headers['x-github-event'] === 'push') {
+	if (!req.body || req.headers['x-github-event'] !== 'push') {
 		return res.sendStatus(400);
 	}
 
-	// Verify payload
-	shasum.update(req.body);
-	let hash = shasum.digest('hex');
-	console.log(req.headers);
-	console.log(hash);
 	res.sendStatus(200);
 });
 
