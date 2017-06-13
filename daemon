@@ -3,13 +3,27 @@
 'use strict';
 
 const express = require('express');
-const app = express();
 const bodyParser = require('body-parser');
+const crypto = require('crypto');
+
+const app = express();
 
 app.use(bodyParser.json());
 
 app.post('/github', function (req, res) {
-	console.log(req.body);
+	var headers = req.headers;
+	let shasum = crypto.createHash('sha1');
+
+	// Basic sanity checks
+	if (!req.body || req.headers['x-github-event'] === 'push') {
+		return res.sendStatus(400);
+	}
+
+	// Verify payload
+	shasum.update(req.body);
+	let hash = shasum.digest('hex');
+	console.log(req.headers);
+	console.log(hash);
 	res.sendStatus(200);
 });
 
