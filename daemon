@@ -31,7 +31,9 @@ app.post('/github', function (req, res) {
 	execFile('/usr/local/bin/mkdocs', ['build'], function (err) {
 		res.sendStatus(err ? 500 : 200);
 		if (err) {
-			console.log(err.message);
+			console.log('Docs build failed @ ' + new Date().toISOString() + ' (error: ' + err.message + ')');
+		} else {
+			console.log('Docs build completed @ ' + new Date().toISOString());
 		}
 	});
 });

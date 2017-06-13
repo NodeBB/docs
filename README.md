@@ -10,7 +10,7 @@ Documentation is written in Markdown. While Markdown supports HTML, we encourage
 
 If there are insufficient articles or incorrect information, please [file a new issue](https://github.com/NodeBB/docs/issues/new) against this repository. It will help us ensure that content is kept up to date.
 
-Periodically, the NodeBB documentation will be updated to reflect changes in this source code. At this time it is a manual process. If it's behind and you wish to notify us, please open an issue 😂
+When changes are committed or pull requests merged, the documentation portal will be updated automatically. If this is not the case, please open an issue for us to investigate.
 
 ## Localisation
 
