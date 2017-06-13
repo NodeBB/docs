@@ -10,7 +10,7 @@ const app = express();
 
 app.use(bodyParser.json({
 	verify: function (req, res, buf, encoding) {
-		let hash = crypto.createHash('sha1');
+		let hash = crypto.createHmac('sha1', process.env.SECRET);
 		hash.update(buf);
 
 		res.locals.verified = hash.digest('hex') === req.headers['X-Hub-Signature'];
