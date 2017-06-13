@@ -13,7 +13,7 @@ app.use(bodyParser.json({
 		let hash = crypto.createHmac('sha1', process.env.SECRET);
 		hash.update(buf);
 
-		res.locals.verified = hash.digest('hex') === req.headers['X-Hub-Signature'];
+		res.locals.verified = String('sha1=' + hash.digest('hex')) === req.headers['X-Hub-Signature'];
 	}
 }));
 
