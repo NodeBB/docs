@@ -12,7 +12,8 @@ app.use(bodyParser.json({
 	verify: function (req, res, buf, encoding) {
 		let hash = crypto.createHash('sha1');
 		hash.update(buf);
-		console.log("hash", hash.digest('hex'));
+
+		res.locals.verified = hash.digest('hex') === req.headers['X-Hub-Signature'];
 	}
 }));
 
@@ -21,9 +22,11 @@ app.post('/github', function (req, res) {
 	let shasum = crypto.createHash('sha1');
 
 	// Basic sanity checks
-	if (!req.body || req.headers['x-github-event'] !== 'push') {
+	if (!req.body || req.headers['x-github-event'] !== 'push' || !res.locals.verified) {
 		return res.sendStatus(400);
 	}
+
+	console.log('got here');
 
 	res.sendStatus(200);
 });
