@@ -41,6 +41,8 @@ $ systemctl stop nodebb
 
 Note that we are passing `--no-silent` and `--no-daemon` to the executable. The former ensures that logging is sent to stdout (in which case you can view the log output by running `journalctl -u nodebb`), and the latter doesn't do any forking and runs in the main parent thread.
 
+For more information on configuring systemd, please consult [the manpage for the systemd service](https://www.freedesktop.org/software/systemd/man/systemd.service.html).
+
 ## Upstart
 
 Older versions of Ubuntu may utilise [Upstart](http://upstart.ubuntu.com/) to manage processes at boot. Upstart also handles restarts of scripts if/when they crash.
