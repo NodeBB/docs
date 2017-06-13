@@ -5,6 +5,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const crypto = require('crypto');
+const execFile = require('child_process').execFile;
 
 const app = express();
 
@@ -12,8 +13,9 @@ app.use(bodyParser.json({
 	verify: function (req, res, buf, encoding) {
 		let hash = crypto.createHmac('sha1', process.env.SECRET);
 		hash.update(buf);
+		let digest = hash.digest('hex');
 
-		res.locals.verified = String('sha1=' + hash.digest('hex')) === req.headers['X-Hub-Signature'];
+		res.locals.verified = String('sha1=' + digest) === req.headers['x-hub-signature'];
 	}
 }));
 
@@ -26,9 +28,12 @@ app.post('/github', function (req, res) {
 		return res.sendStatus(400);
 	}
 
-	console.log('got here');
-
-	res.sendStatus(200);
+	execFile('/usr/local/bin/mkdocs', ['build'], function (err) {
+		res.sendStatus(err ? 500 : 200);
+		if (err) {
+			console.log(err.message);
+		}
+	});
 });
 
 app.listen(8001);
