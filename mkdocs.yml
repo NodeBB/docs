@@ -8,13 +8,13 @@ pages:
     - Installation:
         - via OS:
             - 'installing/os/index.md'
+            - 'Ubuntu (Recommended)': 'installing/os/ubuntu.md'
             - 'Arch Linux': 'installing/os/arch.md'
             - 'CentOS': 'installing/os/centos.md'
             - 'installing/os/debian.md'
             - 'FreeBSD/OpenBSD': 'installing/os/freebsd.md'
             - 'OSX': 'installing/os/osx-mavericks.md'
             - 'SmartOS': 'installing/os/smartos.md'
-            - 'Ubuntu Linux': 'installing/os/ubuntu.md'
             - 'Windows 8': 'installing/os/windows8.md'
         - via the Cloud:
             - 'installing/cloud/index.md'
