@@ -1,12 +1,10 @@
-Ubuntu
-======
+# Ubuntu
 
 This installation guide is optimized for **Ubuntu 16.04 LTS** and will install NodeBB with MongoDB as the database. Fully patched LTS and equivalent **production** versions of software are assumed and used throughout.
 
 ------------------------------------------------------------------------
 
-Install Node.js
----------------
+## Install Node.js
 
 Naturally, NodeBB is driven by Node.js, and so it needs to be installed. Node.js is a rapidly evolving platform and so installation of an LTS version of Node.js is recommended to avoid unexpected breaking changes in the future as part of system updates. The [Node.js LTS Plan](https://github.com/nodejs/LTS) details the LTS release schedule including projected end-of-life.
 
@@ -33,8 +31,7 @@ $ npm -v
 3.10.10
 ```
 
-Install MongoDB
----------------
+## Install MongoDB
 
 MongoDB is the default database for NodeBB. As noted in the [MongoDB Support Policy](https://www.mongodb.com/support-policy) versions older than **3.x** are officially **End of Life** as of October 2016. This guide assumes installation of **3.2.x**. If [Redis](https://redis.io) or another database instead of MongoDB the [Configuring Databases](../../configuring/databases) section has more information.
 
@@ -58,8 +55,7 @@ $ sudo service mongod status
 If everything has been installed correctly the service status should
 show as `active (running)`.
 
-Configure MongoDB
------------------
+## Configure MongoDB
 
 General MongoDB administration is done through the MongoDB Shell `mongo`. A default installation of MongoDB listens on port `27017` and is accessible locally. Access the shell:
 
@@ -118,8 +114,7 @@ $ mongo -u your_username -p your_password --authenticationDatabase=admin
 
 If everything is configured correctly the Mongo Shell will connect. Exit the shell.
 
-Install NodeBB
---------------
+## Install NodeBB
 
 First, the remaining dependencies should be installed if not already
 present:
@@ -149,40 +144,6 @@ A series of questions will be prompt with defaults in parentheses. The default s
 
 A configuration file [config.json](../../configuring/config) will be created in the root of the nodebb directory. This file can be modified should you need to make changes such as changing the database location or credentials used to access the database.
 
-The last setup item is to configure NodeBB to start automatically. Modern linux systems have adopted [systemd](https://en.wikipedia.org/wiki/Systemd) as the default init system. Configure nodebb to start via a systemd unit file at the location `/lib/systemd/system/nodebb.service`:
-
-```
-[Unit]
-Description=NodeBB forum
-Documentation=http://nodebb.readthedocs.io/en/latest/
-After=system.slice multi-user.target
-
-[Service]
-Type=simple
-User=nodebb
-
-StandardOutput=syslog
-StandardError=syslog
-SyslogIdentifier=nodebb
-
-Environment=NODE_ENV=production
-WorkingDirectory=/path/to/nodebb
-ExecStart=/usr/bin/node loader.js --no-daemon --no-silent
-Restart=always
-
-[Install]
-WantedBy=multi-user.target
-```
-
-**Important**: Replace `/path/to/nodebb` with the correct path to your NodeBB directory. If you followed this guide exactly, then you can `cd $HOME/nodebb && pwd` to see the absolute path to the directory, e.g.:
-
-```
-$ cd $HOME/nodebb && pwd
-/home/myusername/nodebb
-
-$
-```
-
 Finally, enable and start NodeBB:
 
 ```
@@ -192,3 +153,5 @@ $ sudo service nodebb status
 ```
 
 If everything has been installed and configured correctly the service status should show as `active`. Assuming this install was done on a Ubuntu Server edition without a desktop, launch a web browser from another host and navigate to the address that was configured during the NodeBB setup via IP address or domain name. The default forum should load and be ready for general usage and customization.
+
+You can opt to set up NodeBB so that it starts up automatically on system boot. To do so, please see the options outlined in [Running NodeBB](../../configuring/running).
