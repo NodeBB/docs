@@ -27,7 +27,6 @@ pages:
     - Configuration:
         - Running NodeBB: 'configuring/running.md'
         - config.json: 'configuring/config.md'
-        - Upgrading: 'configuring/upgrade.md'
         - Databases:
             - 'configuring/databases/index.md'
             - MongoDB: 'configuring/databases/mongo.md'
@@ -39,6 +38,11 @@ pages:
             - NginX: 'configuring/proxies/nginx.md'
             - Node.js: 'configuring/proxies/node.md'
             - 'configuring/proxies/varnish.md'
+        - Plugins:
+            - 'configuring/plugins/index.md'
+            - 'configuring/plugins/emailers.md'
+            - 'configuring/plugins/search.md'
+        - Upgrading: 'configuring/upgrade.md'
         - 'configuring/scaling.md'
     - Development:
         - Plugins:
