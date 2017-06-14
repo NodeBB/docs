@@ -12,6 +12,17 @@ If there are insufficient articles or incorrect information, please [file a new 
 
 When changes are committed or pull requests merged, the documentation portal will be updated automatically. If this is not the case, please open an issue for us to investigate.
 
+## How to test your changes
+
+If you want to take a look at how your changes look, you can run a local install of the documentation portal.
+
+1. Install pip: `sudo apt-get update && sudo apt-get install python-pip`
+1. Install mkdocs: `pip install mkdocs` (you may need sudo for this, Windows users may need to run `python -m pip install mkdocs` instead)
+1. Start development mode: `mkdocs serve` (run this from the root of the checked out repository, `python -m mkdocs serve` for Windows)
+1. Browse to `http://localhost:8000`
+
+The page will automatically refresh every time any files are changed.
+
 ## Localisation
 
 At this time we do not have plans to localise the NodeBB documentation.
