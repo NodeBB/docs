@@ -31,6 +31,7 @@ pages:
         - Databases:
             - 'configuring/databases/index.md'
             - MongoDB: 'configuring/databases/mongo.md'
+            - Redis: 'configuring/databases/redis.md'
         - Proxies:
             - 'configuring/proxies/index.md'
             - Apache (v2.4+): 'configuring/proxies/apache.md'
