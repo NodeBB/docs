@@ -18,13 +18,15 @@ Newer releases of Ubuntu use systemd to manage their services. The following is 
 ```
 [Unit]
 Description=NodeBB
-After=network.target
+Documentation=https://docs.nodebb.org
+After=system.slice multi-user.target
 
 [Service]
 Type=simple
 User=myuser
 WorkingDirectory=/path/to/nodebb
 ExecStart=/path/to/nodebb/nodebb --no-silent --no-daemon
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
