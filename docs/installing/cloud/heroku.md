@@ -24,7 +24,7 @@ flavour of unix, as NodeBB does not run on Windows.
 
     > -   Your server name is found in your Heroku app's "settings"
     >     page, and looks something like
-    >     `adjective-noun-wxyz.herokuapp.com`
+    >     `https://adjective-noun-wxyz.herokuapp.com`
     > -   Use any port number. It will be ignored.
     > -   Your redis server can be found as part of the redis url. For
     >     example, for the url:
@@ -38,7 +38,7 @@ flavour of unix, as NodeBB does not run on Windows.
 11. Commit the Procfile:
 
 ```
-git add -f Procfile config.json package.json && git commit -am "adding Procfile and configs for Heroku"
+git add -f Procfile config.json package.json build/* && git commit -am "adding Procfile and configs for Heroku"
 ```
 
 12. Push to heroku: `git push -u heroku v1.5.x:master`
