@@ -38,7 +38,7 @@ flavour of unix, as NodeBB does not run on Windows.
 11. Commit the Procfile:
 
 ```
-git add -f Procfile config.json package.json build/* && git commit -am "adding Procfile and configs for Heroku"
+git add -f Procfile config.json package.json build && git commit -am "adding Procfile and configs for Heroku"
 ```
 
 12. Push to heroku: `git push -u heroku v1.5.x:master`
