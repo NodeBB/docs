@@ -126,7 +126,7 @@ Ask the NodeBB Community
 ------------------------
 
 Having trouble installing NodeBB? Or did something break? Don't hesitate
-to ```html
-<a href="https://community.nodebb.org/register" target="_blank">join our forum</a>
-```and ask for help.
+to ```<a href="https://community.nodebb.org/register" target="_blank">join our forum</a>
+```
+and ask for help.
 Hopefully one day you'll be able to help others too :)
