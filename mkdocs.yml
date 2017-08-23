@@ -45,6 +45,7 @@ pages:
         - Upgrading: 'configuring/upgrade.md'
         - 'configuring/scaling.md'
     - Development:
+        - Getting Started: 'development/getting-started.md'
         - Plugins:
             - 'development/plugins/index.md'
             - 'development/plugins/hooks.md'
