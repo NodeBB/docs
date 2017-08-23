@@ -95,21 +95,3 @@ interface, which can monitor NodeBB and re-launch it if necessary:
 $ npm install -g forever
 $ forever start app.js
 ```
-
-## Grunt Development
-
-We can utilize grunt to launch NodeBB and re-compile assets when files
-are changed. Start up speed is increased because we don't compile assets
-that weren't modified.
-
-Installing Grunt
-
-``` bash
-$ npm install -g grunt-cli
-```
-
-Run grunt to start up NodeBB and watch for code changes.
-
-``` bash
-$ grunt
-```
