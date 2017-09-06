@@ -13,32 +13,47 @@ executable.
 
 ## systemd
 
-Newer releases of Ubuntu use systemd to manage their services. The following is a systemd service example you can use:
+Newer releases of Ubuntu use systemd to manage their services. The following is a systemd service example you can use, but **assumes the following**:
+
+* MongoDB is installed via package manager and is managed by `systemd`
+* Node.js is installed via package manager and can be invoked via the `env` executable
+* NodeBB is run under the unprivileged user `nodebb`
 
 ```
 [Unit]
 Description=NodeBB
 Documentation=https://docs.nodebb.org
-After=system.slice multi-user.target
+After=system.slice multi-user.target mongod.service
 
 [Service]
 Type=simple
-User=myuser
+User=nodebb
+
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=nodebb
+
 WorkingDirectory=/path/to/nodebb
-ExecStart=/path/to/nodebb/nodebb --no-silent --no-daemon
+ExecStart=/usr/bin/env node loader.js --no-silent --no-daemon
 Restart=always
 
 [Install]
 WantedBy=multi-user.target
 ```
 
-Replace your username (`myuser`) and the path to NodeBB as appropriate.
+Replace your username (`nodebb`) and the path to NodeBB as appropriate.
 
 Save the file to `/etc/systemd/system/nodebb.service`. Start and stop NodeBB by doing the following:
 
 ```
 $ systemctl start nodebb
 $ systemctl stop nodebb
+```
+
+If you would like NodeBB to automatically start up on system boot:
+
+```
+$ systemctl enable nodebb
 ```
 
 Note that we are passing `--no-silent` and `--no-daemon` to the executable. The former ensures that logging is sent to stdout (in which case you can view the log output by running `journalctl -u nodebb`), and the latter doesn't do any forking and runs in the main parent thread.
