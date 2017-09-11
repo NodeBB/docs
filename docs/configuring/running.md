@@ -53,6 +53,7 @@ $ systemctl stop nodebb
 If you would like NodeBB to automatically start up on system boot:
 
 ```
+$ systemctl enable mongod
 $ systemctl enable nodebb
 ```
 

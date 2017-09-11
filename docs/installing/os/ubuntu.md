@@ -143,14 +143,10 @@ A series of questions will be prompt with defaults in parentheses. The default s
 
 A configuration file [config.json](../../configuring/config) will be created in the root of the nodebb directory. This file can be modified should you need to make changes such as changing the database location or credentials used to access the database.
 
-Finally, enable and start NodeBB:
+Finally, start NodeBB:
 
 ```
-$ sudo systemctl enable nodebb
-$ sudo service nodebb start
-$ sudo service nodebb status
+$ ./nodebb start
 ```
-
-If everything has been installed and configured correctly the service status should show as `active`. Assuming this install was done on a Ubuntu Server edition without a desktop, launch a web browser from another host and navigate to the address that was configured during the NodeBB setup via IP address or domain name. The default forum should load and be ready for general usage and customization.
 
 You can opt to set up NodeBB so that it starts up automatically on system boot. To do so, please see the options outlined in [Running NodeBB](../../configuring/running).
