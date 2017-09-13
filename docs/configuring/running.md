@@ -87,11 +87,10 @@ From there, you can start stop and restart NodeBB as the root user:
 `start nodebb`, `stop nodebb`, `restart nodebb`, assuming `nodebb.conf`
 is the name of the Upstart config file.
 
-Important to note: 
+**Notes**:
 
--If a service is reported as started (eg mongod.service), does not mean it has completed its starting process. For more information, one will need to monitor journalctl and see if it has started.  When starting a service, wait a minute or 2 (depending on your server's technical specifications)
--By adding mongod.service, or AnyOther.service in the "After= " field, means it will try to start when the service is reported as started. It will however NOT check if the service is working (eg network.service, it can be started, but it will not check if you are connected to a network). If the service has been enabled (systemctl enable SERVICENAME), then it will keep retrying, until it has started or until dependent services has started, or otherwise stated in the service file.
-
+* If a service is reported as started (eg mongod.service), does not mean it has completed its starting process. For more information, one will need to monitor journalctl and see if it has started.  When starting a service, wait a minute or 2 (depending on your server's technical specifications)
+* By adding `mongod.service`, or `AnyOther.service` in the `After=` field, means it will try to start when the service is reported as started. It will however NOT check if the service is working (e.g. `network.service`, it can be started, but it will not check if you are connected to a network). If the service has been enabled (`systemctl enable SERVICENAME`), then it will keep retrying, until it has started or until dependent services has started, or otherwise stated in the service file.
 
 ## Supervisor Process
 
