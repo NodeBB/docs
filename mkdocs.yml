@@ -48,6 +48,7 @@ pages:
         - Plugins:
             - 'development/plugins/index.md'
             - 'development/plugins/hooks.md'
+            - 'development/plugins/libraries.md'
         - Themes:
             - 'development/themes/index.md'
             - Templating System: 'development/themes/templates.md'

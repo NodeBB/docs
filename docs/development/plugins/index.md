@@ -109,6 +109,9 @@ The `acpScripts` property is similar to `scripts`, except these files
 are compiled into the minified payload served in the Admin Control Panel
 (ACP)
 
+The `modules` property allows you to embed third-party AMD-style scripts into your plugin. For more information, see
+[Using Third-Party Libraries](../libraries).
+
 The `languages` property is optional, which allows you to set up your
 own internationalization for your plugin (or theme). Set up a similar
 directory structure as core, for example:
