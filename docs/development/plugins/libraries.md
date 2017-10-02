@@ -21,7 +21,7 @@ In NodeBB, you'll want to use the `modules` property in `plugin.json` to properl
 {
 	...
 	"modules": {
-		"jquery": "/path/to/jquery.js"
+		"jquery.js": "/path/to/jquery.js"
 	},
 	...
 }
