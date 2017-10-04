@@ -60,11 +60,35 @@ the hooks system. The hook will be named after your widget's namespace
 (see previous example) - like so:
 `filter:widget.render:widget_namespace`
 
-This will pass in an object with the following useful properties:
+This will pass in a `widget` object with the following useful properties:
 
--   `obj.area` - will have `location`, `template`, `url`
--   `obj.data` - will have your admin-defined data; in the example from
+-   `widget.area` - that defined by hook `filter:widgets.getAreas` (see 
+    section below) - will have `location`, `template`, `url`
+-   `widget.data` - will have your admin-defined data; in the example from
     the previous section you will be exposed an `obj.data.myKey`
+-   `widget.req` - [req object](https://expressjs.com/en/4x/api.html#req)
+    represent current HTTP request.
+    
+You render widget by assigning HTML to `widget.html`. For example:
+
+```javascript
+Plugin.renderWidget = function (widget, callback) {
+  widget.html = '<h1>Hello world !</h1>';
+  callback(null, widget);
+};
+```
+
+Or you can render template file by `widget.req.app.render` (
+see also [templating system](themes/templates)). For example:
+
+```javascript
+Plugin.renderWidget = function (widget, callback) {
+  widget.req.app.render('widgets/my-widget', function (error, html) {
+    widget.html = html;
+    callback(error, html);
+  };
+};
+```
 
 Defining Widget Areas in Themes
 -------------------------------
