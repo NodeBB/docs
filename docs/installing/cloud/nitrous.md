@@ -13,7 +13,7 @@ The following are installation instructions for the [Nitrous.IO](http://nitrous.
 the folder
 
 ```
-wget https://github.com/NodeBB/NodeBB/archive/v1.5.x.zip && unzip NodeBB-v1.5.x.zip && rm NodeBB-v1.5.x.zip && cd NodeBB-v1.5.x
+wget https://github.com/NodeBB/NodeBB/archive/v1.6.x.zip && unzip NodeBB-v1.6.x.zip && rm NodeBB-v1.6.x.zip && cd NodeBB-v1.6.x
 ```
 
 **Step 4:** NPM Install

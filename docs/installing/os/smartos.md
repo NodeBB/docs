@@ -96,7 +96,7 @@ Installation
     different folder name):
 
     > ```
-    > $ git clone -b v1.5.x https://github.com/NodeBB/NodeBB.git nodebb
+    > $ git clone -b v1.6.x https://github.com/NodeBB/NodeBB.git nodebb
     > ```
 
 5.  Install NodeBB's npm dependencies:

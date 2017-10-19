@@ -29,7 +29,7 @@ Start Redis Server and leave the command window that it starts in open
 Open Git Shell, and type the following commands. Clone NodeBB repo:
 
 ```
-git clone -b v1.5.x https://github.com/NodeBB/NodeBB.git
+git clone -b v1.6.x https://github.com/NodeBB/NodeBB.git
 ```
 
 Enter directory:

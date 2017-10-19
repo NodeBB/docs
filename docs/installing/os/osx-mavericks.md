@@ -24,7 +24,7 @@ redis-server
 Clone NodeBB repo:
 
 ```
-git clone -b v1.5.x https://github.com/NodeBB/NodeBB.git
+git clone -b v1.6.x https://github.com/NodeBB/NodeBB.git
 ```
 
 Enter directory:
