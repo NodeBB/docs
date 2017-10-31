@@ -171,6 +171,29 @@ User.exists('foobar', function(err, exists) {
 });
 ```
 
+Note that `module.parent.require` only works when called in main module
+(the file specified by `library` field in `plugin.json`). For other modules
+you should use _dependency injection_:
+
+```js
+// main.js (library)
+
+var handle = require('./handle');
+var User = module.parent.require('./user');
+
+handle(User);
+```
+
+```js
+// handle.js
+
+module.exports = function (User) {
+  User.exists('foobar', function(err, exists) {
+    // ...
+  });
+};
+```
+
 ## Installing the plugin
 
 In almost all cases, your plugin should be published in
