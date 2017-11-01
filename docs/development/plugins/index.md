@@ -194,7 +194,22 @@ module.exports = function (User) {
 };
 ```
 
-Or just use `require.main.require` anywhere in your code.
+Or just use `require.main.require` anywhere in your code:
+
+```js
+// main.js (library)
+
+require('./handle');
+```
+
+```js
+// handle.js
+
+var User = require.main.require('./user');
+User.exists('foobar', function(err, exists) {
+  // ...
+});
+```
 
 ## Installing the plugin
 
