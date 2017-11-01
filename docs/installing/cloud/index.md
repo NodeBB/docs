@@ -6,7 +6,6 @@ the cloud using popular PaaS solutions.
 
 * [Cloud9](https://community.nodebb.org/topic/7983/setting-up-nodebb-on-cloud-9) (external)
 * [Cloudron.io](./cloud/cloudron)
-* [Codio](https://codio.com/docs/ide/tutorials/nodebb/) (external)
 * [DigitalOcean](http://www.blogsynthesis.com/install-nodebb-on-digitalocean/) (external)
 * [Heroku](./cloud/heroku)
 * [Jelastic](http://docs.jelastic.com/nodebb) (external)
