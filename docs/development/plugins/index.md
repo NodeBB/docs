@@ -164,52 +164,45 @@ verify that a user exists, you would need to call the `exists` method in
 the `User` class. To allow your plugin to access these NodeBB classes,
 use `module.parent.require` or `require.main.require`:
 
-``` js
-var User = module.parent.require('./user');
-User.exists('foobar', function(err, exists) {
-    // ...
-});
-```
+* You can use `require.main.require` anywhere in your code:
 
-Note that `module.parent.require` only works
-when called in main module (the file specified by `library` field in 
-`plugin.json`). For other modules you should use _dependency injection_:
+    ```js
+    // main.js (library)
 
-```js
-// main.js (library)
+    require('./handle');
+    ```
 
-var handle = require('./handle');
-var User = module.parent.require('./user');
+    ```js
+    // handle.js
 
-handle(User);
-```
+    var User = require.main.require('./user');
+    User.exists('foobar', function(err, exists) {
+      // ...
+    });
+    ```
 
-```js
-// handle.js
+* `module.parent.require` only works when called in main module (the
+file specified by `library` field in `plugin.json`). For other modules
+you should use _dependency injection_:
 
-module.exports = function (User) {
-  User.exists('foobar', function(err, exists) {
-    // ...
-  });
-};
-```
+    ```js
+    // main.js (library)
 
-Or just use `require.main.require` anywhere in your code:
+    var handle = require('./handle');
+    var User = module.parent.require('./user');
 
-```js
-// main.js (library)
+    handle(User);
+    ```
 
-require('./handle');
-```
+    ```js
+    // handle.js
 
-```js
-// handle.js
-
-var User = require.main.require('./user');
-User.exists('foobar', function(err, exists) {
-  // ...
-});
-```
+    module.exports = function (User) {
+      User.exists('foobar', function(err, exists) {
+        // ...
+      });
+    };
+    ```
 
 ## Installing the plugin
 
