@@ -1,4 +1,4 @@
-![NodeBB](http://i.imgur.com/zgeX2Jz.png)
+![NodeBB](https://i.imgur.com/zgeX2Jz.png)
 
 # Welcome!
 
