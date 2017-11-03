@@ -38,13 +38,7 @@ you can't enter \$IP in the node app --setup).
 echo $IP
 ```
 
-**Step 5:** Install NodeBB and it's dependencies:
-
-```
-npm install
-```
-
-**Step 6:** Run the nodebb setup utility:
+**Step 5:** Run the nodebb setup utility:
 
 ```
 node app --setup

@@ -47,18 +47,11 @@ Next, clone the NodeBB repository:
 ```
 cd /path/to/nodebb/install/location
 git clone -b v1.6.x https://github.com/NodeBB/NodeBB nodebb
+cd nodebb
 ```
 
 \*\*Note: To clone the master branch you can use the same command with
 out the "-b" option.
-
-After cloning the repository, obtain all of the dependencies required by
-NodeBB:
-
-```
-cd nodebb
-npm install
-```
 
 Initiate the setup script by running the app with the `setup` flag:
 

@@ -16,19 +16,13 @@ the folder
 wget https://github.com/NodeBB/NodeBB/archive/v1.6.x.zip && unzip NodeBB-v1.6.x.zip && rm NodeBB-v1.6.x.zip && cd NodeBB-v1.6.x
 ```
 
-**Step 4:** NPM Install
-
-```
-npm install
-```
-
-**Step 5:** Install Redis
+**Step 4:** Install Redis
 
 ```
 parts install redis
 ```
 
-**Step 6:** Setup NodeBB
+**Step 5:** Setup NodeBB
 
 ```
 ./nodebb setup
@@ -38,7 +32,7 @@ Leave everything as default but you can change yourself.
 
 I recommend the port number to bind : 8080
 
-**Step 14:** And the last one, start NodeBB
+**Step 6:** And the last one, start NodeBB
 
 ```
 ./nodebb start

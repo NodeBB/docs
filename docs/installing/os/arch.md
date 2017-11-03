@@ -17,13 +17,7 @@ Next, clone this repository:
 
 ```
 $ git clone -b v1.6.x https://github.com/NodeBB/NodeBB.git nodebb
-```
-
-Obtain all of the dependencies required by NodeBB:
-
-```
 $ cd nodebb
-$ npm install
 ```
 
 Initiate the setup script by running the app with the `setup` flag:

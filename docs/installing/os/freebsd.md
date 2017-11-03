@@ -44,12 +44,6 @@ Enter directory:
 cd nodebb
 ```
 
-Install dependencies:
-
-```
-npm install
-```
-
 Run interactive installation:
 
 ```

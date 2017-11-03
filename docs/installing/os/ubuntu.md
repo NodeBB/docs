@@ -129,15 +129,14 @@ Next, clone NodeBB into an appropriate location. Here the home directory is used
 
 ```
 $ git clone -b v1.6.x https://github.com/NodeBB/NodeBB.git $HOME/nodebb
+$ cd nodebb
 ```
 
 This clones the NodeBB repository from the `v1.6.x` branch to your home directory. A list of alternative branches are available in the [NodeBB Branches](https://github.com/NodeBB/NodeBB/branches) GitHub page.
 
-Obtain all of the dependencies required by NodeBB and initiate the setup script:
+Then, nitiate the setup script:
 
 ```
-$ cd nodebb
-$ npm install --production
 $ ./nodebb setup
 ```
 
