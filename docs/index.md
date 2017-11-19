@@ -8,7 +8,7 @@ Welcome to the documentation portal for **NodeBB**.
 
 NodeBB is an open source project which can be forked on [GitHub](https://github.com/NodeBB/NodeBB/). If there are any discrepancies in the documentation please feel free to submit a [pull request](https://github.com/NodeBB/docs) or raise an issue on our [issue tracker](https://github.com/NodeBB/NodeBB/).
 
-To access the old documentation, [click here](https://docs.nodebb.org). The old documentation was hosted by [ReadTheDocs](https://readthedocs.org), many thanks for the years of complimentary hosting!
+To access the old documentation, [click here](https://nodebb.readthedocs.io/en/latest/). The old documentation was hosted by [ReadTheDocs](https://readthedocs.org), many thanks for the years of complimentary hosting!
 
 ### Contributing to the documentation
 
