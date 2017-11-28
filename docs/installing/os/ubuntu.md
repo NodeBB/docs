@@ -2,7 +2,7 @@
 
 This installation guide is optimized for **Ubuntu 16.04 LTS** and will install NodeBB with MongoDB as the database. Fully patched LTS and equivalent **production** versions of software are assumed and used throughout.
 
-**Note**: Installing NodeBB's dependencies may require more than 512 megabytes of system memory. It is recommended to [enable a swap partition as well](https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04).
+**Note**: It is recommended to [enable a swap partition](https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04).
 
 ------------------------------------------------------------------------
 

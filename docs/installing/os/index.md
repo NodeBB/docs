@@ -1,6 +1,11 @@
 NodeBB Installation by OS
 =========================
 
+### Hardware requirements (minimum)
+- 512MB RAM
+
+### Guide
+
 The following are step-by-step guides to help you get up and running on various operating systems.
 
 -   [Arch Linux](./arch)
