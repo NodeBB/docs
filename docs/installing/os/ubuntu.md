@@ -134,7 +134,7 @@ $ cd nodebb
 
 This clones the NodeBB repository from the `v1.6.x` branch to your home directory. A list of alternative branches are available in the [NodeBB Branches](https://github.com/NodeBB/NodeBB/branches) GitHub page.
 
-Then, nitiate the setup script:
+Then, initiate the setup script:
 
 ```
 $ ./nodebb setup
