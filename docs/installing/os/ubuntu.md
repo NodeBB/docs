@@ -128,11 +128,11 @@ $ sudo apt-get install -y git build-essential
 Next, clone NodeBB into an appropriate location. Here the home directory is used, though any destination is fine:
 
 ```
-$ git clone -b v1.6.x https://github.com/NodeBB/NodeBB.git $HOME/nodebb
+$ git clone -b v1.7.x https://github.com/NodeBB/NodeBB.git $HOME/nodebb
 $ cd nodebb
 ```
 
-This clones the NodeBB repository from the `v1.6.x` branch to your home directory. A list of alternative branches are available in the [NodeBB Branches](https://github.com/NodeBB/NodeBB/branches) GitHub page.
+This clones the NodeBB repository from the `v1.7.x` branch to your home directory. A list of alternative branches are available in the [NodeBB Branches](https://github.com/NodeBB/NodeBB/branches) GitHub page.
 
 Then, initiate the setup script:
 

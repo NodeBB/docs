@@ -13,7 +13,7 @@ The following are installation instructions for the [Nitrous.IO](http://nitrous.
 the folder
 
 ```
-wget https://github.com/NodeBB/NodeBB/archive/v1.6.x.zip && unzip NodeBB-v1.6.x.zip && rm NodeBB-v1.6.x.zip && cd NodeBB-v1.6.x
+wget https://github.com/NodeBB/NodeBB/archive/v1.7.x.zip && unzip NodeBB-v1.7.x.zip && rm NodeBB-v1.7.x.zip && cd NodeBB-v1.7.x
 ```
 
 **Step 4:** Install Redis
