@@ -4,6 +4,33 @@ Creating a new NodeBB Theme
 NodeBB is built on [Twitter Bootstrap](http://getbootstrap.com/), which
 makes theming incredibly simple.
 
+Quick start
+-----------
+
+The easiest way to get started theming NodeBB is to fork the [Quickstart
+Theme](https://github.com/nodebb/nodebb-theme-quickstart) and adjust it
+for your customisations.
+
+The quickstart theme is a **child theme** (see below) of NodeBB's default
+theme (Persona), and thus inherits all of its styling and templates from
+its parent theme.
+
+If you want to overwrite an existing template, copy it from [the Persona
+repository](https://github.com/nodebb/nodebb-theme-persona) into your
+theme's `/templates` directory, taking care to follow the same directory
+structure. You may have to create this directory.
+
+Then rebuild NodeBB's assets and your template should override Persona's
+template of the same path.
+
+e.g. If you want to modify topic.tpl, you would:
+
+1. Copy the contents of `nodebb-theme-persona/templates/topic.tpl`
+1. Create `nodebb-theme-mytheme/templates`
+1. Create a new file `nodebb-theme-mytheme/templates/topic.tpl` with the contents of the original topic.tpl file
+1. Make your changes as necessary.
+1. `./nodebb build tpl && ./nodebb dev` to rebuild and start NodeBB
+
 Packaging for NodeBB
 --------------------
 
