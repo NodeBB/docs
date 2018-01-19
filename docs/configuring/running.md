@@ -116,6 +116,8 @@ $ npm install -g forever
 $ forever start app.js
 ```
 
+You can `forever start` and `forever stop` app.js, although the built-in Reload/Restart tools in the ACP will not work.
+
 ## Grunt Development
 
 We can utilize grunt to launch NodeBB and re-compile assets when files
