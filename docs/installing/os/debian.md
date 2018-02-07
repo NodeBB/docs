@@ -88,7 +88,7 @@ $ sudo echo 'deb-src http://packages.dotdeb.org wheezy all' >> /etc/apt/sources.
 After this, add the following GPC keys :
 
 ```
-$ wget http://www.dotdeb.org/dotdeb.gpg
+$ wget https://www.dotdeb.org/dotdeb.gpg
 $ sudo apt-key add dotdeb.gpg
 ```
 
