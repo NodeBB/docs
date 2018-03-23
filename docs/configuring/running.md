@@ -26,7 +26,7 @@ Documentation=https://docs.nodebb.org
 After=system.slice multi-user.target mongod.service
 
 [Service]
-Type=simple
+Type=forking
 User=nodebb
 
 StandardOutput=syslog
@@ -34,7 +34,8 @@ StandardError=syslog
 SyslogIdentifier=nodebb
 
 WorkingDirectory=/path/to/nodebb
-ExecStart=/usr/bin/env node loader.js --no-silent --no-daemon
+PIDFile=/path/to/nodebb/pidfile
+ExecStart=/usr/bin/env node loader.js
 Restart=always
 
 [Install]
@@ -56,8 +57,6 @@ If you would like NodeBB to automatically start up on system boot:
 $ systemctl enable mongod
 $ systemctl enable nodebb
 ```
-
-Note that we are passing `--no-silent` and `--no-daemon` to the executable. The former ensures that logging is sent to stdout (in which case you can view the log output by running `journalctl -u nodebb`), and the latter doesn't do any forking and runs in the main parent thread.
 
 For more information on configuring systemd, please consult [the manpage for the systemd service](https://www.freedesktop.org/software/systemd/man/systemd.service.html).
 
