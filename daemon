@@ -6,6 +6,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const crypto = require('crypto');
 const execFile = require('child_process').execFile;
+const async = require('async');
 
 const app = express();
 
@@ -28,14 +29,20 @@ app.post('/github', function (req, res) {
 		return res.sendStatus(400);
 	}
 
-	execFile('/usr/local/bin/mkdocs', ['build'], function (err) {
-		res.sendStatus(err ? 500 : 200);
-		if (err) {
-			console.log('Docs build failed @ ' + new Date().toISOString() + ' (error: ' + err.message + ')');
-		} else {
-			console.log('Docs build completed @ ' + new Date().toISOString());
+	async.series([
+		async.apply(execFile, '/usr/bin/git', ['pull']),
+		function (next) {
+			execFile('/usr/local/bin/mkdocs', ['build'], function (err) {
+				res.sendStatus(err ? 500 : 200);
+				if (err) {
+					console.log('Docs build failed @ ' + new Date().toISOString() + ' (error: ' + err.message + ')');
+				} else {
+					console.log('Docs build completed @ ' + new Date().toISOString());
+				}
+				next();
+			});
 		}
-	});
+	]);
 });
 
 app.listen(8001);
