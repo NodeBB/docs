@@ -71,7 +71,9 @@ function prepareData(basePath) {
   return all;
 }
 
-const categories = [];
+const categories = [
+  'installing/os',
+];
 
 function compileAll() {
   categories.forEach((categoryPath) => {
