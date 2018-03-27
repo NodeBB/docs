@@ -1,0 +1,1 @@
+{{commandPrefix}} tasklist | findstr nginx.exe

@@ -15,7 +15,7 @@ pages:
             - 'FreeBSD/OpenBSD': 'installing/os/freebsd.md'
             - 'OSX': 'installing/os/osx-mavericks.md'
             - 'SmartOS': 'installing/os/smartos.md'
-            - 'Windows 8': 'installing/os/windows8.md'
+            - 'Windows': 'installing/os/windows.md'
         - via the Cloud:
             - 'installing/cloud/index.md'
             - 'installing/cloud/cloud9.md'
