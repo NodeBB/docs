@@ -57,14 +57,14 @@ function prepareData(basePath) {
 
   const indexData = directories.reduce((prev, dir, i) => {
     try {
-      const p = path.join(...directories.slice(0, i + 1));
+      const p = path.join('/', ...directories.slice(0, i + 1));
       const d = require(p);
 
       return Object.assign({}, prev, d);
     } catch (e) {
       return prev;
     }
-  });
+  }, {});
 
   const all = Object.assign({}, indexData, data);
 
