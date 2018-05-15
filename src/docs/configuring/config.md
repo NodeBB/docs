@@ -56,3 +56,4 @@ NodeBB:
 
 * `sessionKey` (Default: `express.sid`) Specifies the session key to use.
 
+* `isCluster` Set this to true if you have multiple machines each running a single NodeBB process. This setting is not required if you have multiple NodeBB processes running either on a single or multiple machines.
