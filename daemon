@@ -30,7 +30,7 @@ app.post('/github', function (req, res) {
 		return res.sendStatus(400);
 	}
 
-	execFile('/usr/bin/bash', [path.join(__dirname, 'build.sh')], function (err) {
+	execFile('/bin/bash', [path.join(__dirname, 'build.sh')], function (err) {
 		res.sendStatus(err ? 500 : 200);
 
 		if (err) {
