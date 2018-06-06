@@ -31,3 +31,7 @@ console to stop NodeBB, build, and restart NodeBB.
 
 Alternatively, you can run `grunt --skip`, which skips the build step and simply runs NodeBB with file
 watching enabled.
+
+## Accessing page data
+
+Each page in NodeBB is rendered using json data. You can view this data by prepending `/api` to the url. For example if you are on the `/recent` page you can navigate to `/api/recent` to see the corresponding json data. When NodeBB is started in production mode the json output will not have any formatting so it will be hard to read, to prettify it you can add ?pretty=1 to the url. 
