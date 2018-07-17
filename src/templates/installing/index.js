@@ -23,7 +23,7 @@ const versions = {
     node: latestLTS,
     npm: '5.8.0',
     nginx: '1.12.2',
-    nodebb: '1.9.x',
+    nodebb: '1.10.x',
   },
 };
 
