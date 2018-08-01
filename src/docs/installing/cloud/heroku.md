@@ -8,29 +8,29 @@ flavour of unix, as NodeBB does not run on Windows.
     for your operating system
 1.  Log into your Heroku account: `heroku login`
 1.  Verify your Heroku account by adding a credit card (at
-    <http://heroku.com/verify>). *Required for enabling Redis To
-    Go Add-on.*
+    <http://heroku.com/verify>). *Required for enabling mLab MongoDB Add-on.*
 1.  Clone the repository:
-    `git clone -b v1.7.x https://github.com/NodeBB/NodeBB.git /path/to/repo/clone`
+    `git clone -b v1.10.x https://github.com/NodeBB/NodeBB.git /path/to/repo/clone`
 1.  `cd /path/to/repo/clone`
 1.  Create the heroku app: `heroku create`
-1.  Enable [Redis To Go](https://addons.heroku.com/redistogo) for your
-    heroku account ([Nano](https://addons.heroku.com/redistogo#nano) is
-    a free plan): `heroku addons:create redistogo:nano`
-1.  Run the NodeBB setup script: `node app --setup` (information for
-    your Heroku server and Redis to Go instance can be found in your
+1.  Enable [mLab MongoDB](https://elements.heroku.com/addons/mongolab) 
+    for your heroku account ([Sandbox](https://elements.heroku.com/addons/mongolab#sandbox) 
+    is a free plan): `heroku addons:create mongolab:sandbox`
+1.  Run the NodeBB setup script: `./nodebb setup` (information for
+    your Heroku server and mLab MongoDB instance can be found in your
     account page)
 
     > -   Your server name is found in your Heroku app's "settings"
     >     page, and looks something like
     >     `https://adjective-noun-wxyz.herokuapp.com`
     > -   Use any port number. It will be ignored.
-    > -   Your redis server can be found as part of the redis url. For
+    > -   Your MongoDB server can be found as part of the redis url. For
     >     example, for the url:
-    >     `redis://redistogo:h28h3wgh37fns7@fishyfish.redistogo.com:12345/`
-    >     -   The server is `fishyfish.redistogo.com`
-    >     -   The port is `12345`
-    >     -   The password is `h28h3wgh37fns7`
+    >     `mongodb://heroku_b5mwv5hk:8i0hd53a35qhd7bd2p8lm0m4do@ds151291.mlab.com:61391/heroku_b5mwv5hk`
+    >     -   The host is `ds151291.mlab.com`
+    >     -   The port is `61391`
+    >     -   The username is `heroku_b5mwv5hk`
+    >     -   The password is `8i0hd53a35qhd7bd2p8lm0m4do`
 
 1. Create a Procfile for Heroku:
     `echo "web: node loader.js --no-daemon" > Procfile`
@@ -40,7 +40,7 @@ flavour of unix, as NodeBB does not run on Windows.
 git add -f Procfile config.json package.json build && git commit -am "adding Procfile and configs for Heroku"
 ```
 
-1. Push to heroku: `git push -u heroku v1.7.x:master`
+1. Push to heroku: `git push -u heroku v1.10.x:master`
     * Ensure that a proper SSH key was added to your account, otherwise the push will not succeed!
 1. Initialise a single dyno: `heroku ps:scale web=1`
 1. Visit your app!
