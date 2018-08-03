@@ -134,7 +134,7 @@ Next clone this repository :
 
 ```
 $ cd /path/to/nodebb/install/location
-$ git clone -b v1.7.x https://github.com/NodeBB/NodeBB.git nodebb
+$ git clone -b v1.10.x https://github.com/NodeBB/NodeBB.git nodebb
 $ cd nodebb
 ```
 

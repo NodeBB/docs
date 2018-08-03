@@ -8,7 +8,7 @@ The following are installation instructions for the [Cloud
 the following command from the terminal:
 
 ```
-git clone -b v1.7.x https://github.com/NodeBB/NodeBB.git nodebb
+git clone -b v1.10.x https://github.com/NodeBB/NodeBB.git nodebb
 ```
 
 The nodebb command after the git url will create a folder called nodebb

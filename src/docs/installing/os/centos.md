@@ -46,7 +46,7 @@ Next, clone the NodeBB repository:
 
 ```
 cd /path/to/nodebb/install/location
-git clone -b v1.7.x https://github.com/NodeBB/NodeBB nodebb
+git clone -b v1.10.x https://github.com/NodeBB/NodeBB nodebb
 cd nodebb
 ```
 

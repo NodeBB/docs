@@ -23,7 +23,7 @@ September 2014)
 1.  Now we install NodeBBs other dependencies -
     `sudo apt-get install redis-server imagemagick`
 1. Next, we clone NodeBB into a NodeBB folder -
-    `git clone -b v1.7.x https://github.com/NodeBB/NodeBB.git nodebb`
+    `git clone -b v1.10.x https://github.com/NodeBB/NodeBB.git nodebb`
     (Optional: Replace nodebb at the end if you want the folder to be a
     different name)
 1. Now enter the NodeBB folder - `cd nodebb` (unless you changed the
