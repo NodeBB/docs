@@ -24,7 +24,7 @@ flavour of unix, as NodeBB does not run on Windows.
     >     page, and looks something like
     >     `https://adjective-noun-wxyz.herokuapp.com`
     > -   Use any port number. It will be ignored.
-    > -   Your MongoDB server can be found as part of the redis url. For
+    > -   Your MongoDB server can be found as part of the mongoDB url. For
     >     example, for the url:
     >     `mongodb://heroku_b5mwv5hk:8i0hd53a35qhd7bd2p8lm0m4do@ds151291.mlab.com:61391/heroku_b5mwv5hk`
     >     -   The host is `ds151291.mlab.com`
