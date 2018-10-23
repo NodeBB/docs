@@ -31,7 +31,8 @@ wiki. The instructions to install can be found on
 **Note: NPM is installed along with node.js, so there is no need to
 install it separately**
 
-Step 3: Install the Base Software Stack -------------------------
+Step 3: Install the Base Software Stack
+-------------------------
 
 Enter the following into the terminal to install the base software
 required to run NodeBB:
@@ -40,7 +41,8 @@ required to run NodeBB:
 # apt-get install git build-essential imagemagick
 ```
 
-Step 4: Clone the Repository -------------------------
+Step 4: Clone the Repository
+-------------------------
 
 Enter the following into the terminal, replacing
 /path/to/nodebb/install/location to where you would like NodeBB to be
@@ -62,7 +64,8 @@ $ cd nodebb
 $ npm install
 ```
 
-Step 6: Adding a New Database With Users -------------------------
+Step 6: Adding a New Database With Users
+-------------------------
 
 To go into the MongoDB command line, type:
 
@@ -146,7 +149,8 @@ Restart MongoDB.
 # service mongodb restart
 ```
 
-Step 8: Configuring NodeBB -------------------------
+Step 8: Configuring NodeBB 
+-------------------------
 
 Make sure you are in your NodeBB root folder. If not, just type:
 
