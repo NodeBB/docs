@@ -169,7 +169,7 @@ $ ./nodebb start
 **Note:** If you NodeBB or your server crash, your NodeBB instance will
 not reboot (snap), this is why you should take a look at the other way
 to start your NodeBB instance with helper programs such as `supervisor`
-and `forever`, just take a look [here](../../running/index).
+and `forever`, just take a look [here](../../configuring/running).
 
 Extras, tips and Advice
 -----------------------
