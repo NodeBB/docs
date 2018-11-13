@@ -11,7 +11,7 @@ $ sudo pacman -S git nodejs npm redis imagemagick icu
 
 If you want to use MongoDB, LevelDB, or another database instead of
 Redis please look at the
-[Configuring Databases](../../configuration/databases) section.
+[Configuring Databases](../../configuring/databases) section.
 
 Next, clone this repository:
 
