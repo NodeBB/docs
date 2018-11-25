@@ -16,9 +16,9 @@ Some of these values are saved via the setup script:
     secret is changed, all existing sessons will no longer validate and
     users will need to log in again.
 * `database` defines the primary database used by NodeBB. (e.g.
-    `redis` or `mongo`) -- for more information, see
+    `redis`, `mongo` or `postgress`) -- for more information, see
     Configuring Databases &lt;databases&gt;
-* Both `redis` and `mongo` are hashes that contain database-related
+* `redis`, `mongo` and `postgres` are objects that contain database-related
     connection information, they contain some or all of the following:
     * `host`
     * `port`
@@ -57,3 +57,7 @@ NodeBB:
 * `sessionKey` (Default: `express.sid`) Specifies the session key to use.
 
 * `isCluster` Set this to true if you have multiple machines each running a single NodeBB process. This setting is not required if you have multiple NodeBB processes running either on a single or multiple machines.
+
+* `session_store` This is an object similar to the `redis`, `mongo` or `postgress` block. It defines a database to use for sessions. For example by setting this to a different redis instance you can separate your data and sessions into two different redis instances.
+    * `name` (Name of database to use `redis`, `mongo` or `postgres`
+    * other settings are identical to the database block for the datastore.
