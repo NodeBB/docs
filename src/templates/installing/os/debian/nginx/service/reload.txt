@@ -1,0 +1,1 @@
+{{commandPrefix}} sudo systemctl reload nginx
