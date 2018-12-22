@@ -7,7 +7,7 @@ let latestLTS;
 try {
   latestLTS = deasync(nodeVersions)().find(value => value.lts).version.replace(/^v/, '');
 } catch (e) {
-  latestLTS = '8.10.0';
+  latestLTS = '10.0';
 }
 
 const versions = {
@@ -18,12 +18,12 @@ const versions = {
     npm: '3.0',
   },
   recommended: {
-    mongo: '3.6',
-    redis: '3.2',
+    mongo: '4.0',
+    redis: '5.4',
     node: latestLTS,
-    npm: '5.8.0',
-    nginx: '1.12.2',
-    nodebb: '1.10.x',
+    npm: '6.4',
+    nginx: '1.10',
+    nodebb: '1.11.x',
   },
 };
 
