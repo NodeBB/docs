@@ -60,21 +60,20 @@ server {
 This configuration works with a NodeBB that is set up with an `url` value
 that contains a subfolder, e.g. `/forum`.
 
-
 ```
 server {
     listen 80;
 
-    server_name forum.example.org;
+    server_name forum.example.org;  # notice no subfolder defined here
 
-    location /forum/ {
+    location /forum/ {  # but it is defined here
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
         proxy_set_header Host $http_host;
         proxy_set_header X-NginX-Proxy true;
 
-        proxy_pass http://127.0.0.1:4567;
+        proxy_pass http://127.0.0.1:4567;  # no subfolder defined here
         proxy_redirect off;
 
         # Socket.IO Support
