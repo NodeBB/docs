@@ -18,7 +18,7 @@ const versions = {
     npm: '3.0',
   },
   recommended: {
-    mongo: '3.6',
+    mongo: '4.0',
     redis: '3.2',
     node: latestLTS,
     npm: '5.8.0',
