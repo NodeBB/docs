@@ -25,8 +25,11 @@ configured:
 * `/path/to/nginx/conf.d/*.conf` -- filenames must end in `.conf`
 * `/path/to/nginx/httpd.conf` -- if all else fails
 
-Below is the basic nginx configuration for a NodeBB build running on
-port `4567`:
+### Example Configurations
+
+#### Basic Setup
+
+Basic nginx configuration for a NodeBB build running on port `4567`:
 
 ```
 server {
@@ -52,7 +55,39 @@ server {
 }
 ```
 
-Below is another nginx configuration for a NodeBB that has port: `["4567","4568"]` in config.json.
+#### Basic with subfolder install
+
+This configuration works with a NodeBB that is set up with an `url` value
+that contains a subfolder, e.g. `/forum`.
+
+```
+server {
+    listen 80;
+
+    server_name forum.example.org;  # notice no subfolder defined here
+
+    location /forum/ {  # but it is defined here
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Host $http_host;
+        proxy_set_header X-NginX-Proxy true;
+
+        proxy_pass http://127.0.0.1:4567;  # no subfolder defined here
+        proxy_redirect off;
+
+        # Socket.IO Support
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+}
+```
+
+#### Basic with multiple ports
+
+Configuration for a NodeBB that runs on two ports. That NodeBB's `config.json`
+will have port set to: `["4567","4568"]`.
 
 ```
 server {
@@ -84,7 +119,9 @@ upstream io_nodes {
 }
 ```
 
-Below is an nginx configuration which uses SSL.
+#### Basic with SSL
+
+Configuration which uses SSL.
 
 ```
 ### redirects http requests to https

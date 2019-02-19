@@ -18,6 +18,8 @@ If you want to take a look at how your changes look, you can run a local install
 
 1. Install pip: `sudo apt-get update && sudo apt-get install python-pip`
 1. Install mkdocs: `pip install mkdocs` (you may need sudo for this, Windows users may need to run `python -m pip install mkdocs` instead)
+1. Create a symbolic link from `src/docs` to `docs`: `ln -s ./src/docs`
+1. Build templates: `node src/compile.js`
 1. Start development mode: `mkdocs serve` (run this from the root of the checked out repository, `python -m mkdocs serve` for Windows)
 1. Browse to `http://localhost:8000`
 

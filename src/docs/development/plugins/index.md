@@ -16,8 +16,7 @@ information.
 
 ## Plugin Hooks
 
-There are three types of hooks: **filters**, **actions**, and **static**
-hooks.
+There are four types of hooks: **filters**, **actions**, **static**, and **response** hooks.
 
 **Filters** act on content, and can be useful if you want to alter
 certain pieces of content as it passes through NodeBB. For example, a
@@ -37,6 +36,8 @@ continuing. They're similar to action hooks, but whereas execution in
 NodeBB continues immediately after an action is fired, static hooks
 grant you a bit of time to run your own custom logic, before resuming
 execution.
+
+**Response** hooks are executed serially and are similar to action hooks until one of the listeners sends a response to the client. In that event, the plugin hooks that come afterward are skipped completely. Response hooks are used in situatons where one or more plugins may elect to send an error to the client, or redirect them somewhere else. Response hooks are structured in a way so that conflicts are avoided.
 
 When you are writing your plugin, make sure a hook exists where you'd
 like something to happen. If a hook isn't present, [file an

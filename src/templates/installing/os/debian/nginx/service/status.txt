@@ -1,0 +1,1 @@
+{{commandPrefix}} sudo systemctl status nginx
