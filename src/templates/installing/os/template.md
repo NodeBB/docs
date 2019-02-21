@@ -26,7 +26,7 @@ v{{versions.recommended.node}}
 
 ## Installing MongoDB
 
-MongoDB is the default database for NodeBB. As noted in the [MongoDB Support Policy](https://www.mongodb.com/support-policy) versions older than **3.x** are officially **End of Life** as of October 2016. 
+MongoDB is the default database for NodeBB. As noted in the [MongoDB Support Policy](https://www.mongodb.com/support-policy) versions older than **3.4** are officially **End of Life** as of December 2018.
 This guide assumes installation of **{{versions.recommended.mongo}}**. If you wish to use another database instead of MongoDB the [Configuring Databases](../../configuring/databases) section has more information.
 
 Official detailed installation instructions can be found in the [MongoDB manual](https://docs.mongodb.com/manual/administration/install-community/). Although out of scope for this guide, some MongoDB production deployments leverage clustering, sharding and replication for high availibility and performance reasons. Please refer to the MongoDB [Replication](https://docs.mongodb.com/v{{versions.recommended.mongo}}/replication/) and [Sharding](https://docs.mongodb.com/v{{versions.recommended.mongo}}/sharding/) topics for further reading. Keep in mind that NodeBB does not require any of these advanced configurations, and doing so may complicate your installation. Keeping it simple often can be best.
@@ -64,7 +64,7 @@ Switch to the built-in `admin` database:
 Create an administrative user (the is different from the `nodebb` user we'll create later). Replace the placeholder `<Enter a secure password>` with your own selected password. Be sure that the `<` and `>` are also not left behind.
 
 ```
-> db.createUser( { user: "admin", pwd: "<Enter a secure password>", roles: [ { role: "readWriteAnyDatabase", db: "admin" }, { role: "userAdminAnyDatabase", db: "admin" } ] } )
+> db.createUser( { user: "admin", pwd: "<Enter a secure password>", roles: [ { role: "root", db: "admin" } ] } )
 ```
 
 This user is scoped to the `admin` database to manage MongoDB once authorization has been enabled.
@@ -153,7 +153,6 @@ Verify the installation of nginx
 
 ```bash
 {{commandPrefix}} nginx -v
-nginx version: nginx/{{versions.recommended.nginx}}
 ```
 
 and that the service will run
