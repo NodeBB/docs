@@ -23,40 +23,9 @@ back up** before beginning!
 ## Upgrade Path
 
 NodeBB's upgrade path is designed so that upgrading between versions is
-straightforward. NodeBB will provide upgrade compatibility (via the
-`--upgrade` flag) between the latest version of a lower branch and the
-latest version of the higher branch. For example, if `v0.2.2` is the
-latest version in the `v0.2.x` branch, you can switch to the `v0.3.x`
-branch and suffer no ill effects. Upgrading from `v0.2.0` to `v0.3.x` is
-not supported, and NodeBB will warn you when attempting to upgrade that
-you are not upgrading cleanly.
-
-### Upgrading between patch revisions
-
-*e.g. v0.1.0 to v0.1.1*
-
-Patch revisions contain bugfixes and other minor changes. Updating to
-the latest version of code for your specific version branch is all that
-is usually required.
-
-**Execute steps 1 through 3.**
-
-### Upgrading between minor revisions
-
-*e.g. v0.1.3 to v0.2.0*
-
-Minor revisions contain new features or substantial changes that are
-still backwards compatible. They may also contain dependent packages
-that require upgrading, and other features may be deprecated (but would
-ideally still be supported).
-
-Execute steps 1 through 4.
+straightforward. 
 
 ## Upgrade Steps
-
-**Note**: After upgrading between revisions (i.e. v0.0.4 to v0.0.5), it
-may be necessary to run the following upgrade steps to ensure that any
-data schema changes are properly upgraded as well:
 
 ### 1. Shut down your forum
 
@@ -69,11 +38,6 @@ $ ./nodebb stop
 ```
 
 ### 2. Back up your data
-
-> **note**
->
-> This section is incomplete, please take care to back up your files
-> properly!
 
 #### Backing up Redis
 
@@ -100,9 +64,9 @@ Ubuntu it's likely to be: sudo service mongodb stop
 
 **Store this file somewhere safe.**
 
-#### Avatars
+#### Uploads
 
-Uploaded images (avatars) are stored in /public/uploads. Feel free to
+Uploaded images and files are stored in /public/uploads. Feel free to
 back up this folder too:
 
 ``` bash
@@ -118,20 +82,20 @@ If you are upgrading from a lower branch to a higher branch, switch
 branches as necessary. ***Make sure you are completely up-to-date on
 your current branch!***.
 
-For example, if upgrading from `v0.3.2` to `v0.4.3`:
+For example, if upgrading from `v1.11.1` to `v1.12.0`:
 
 ``` bash
 $ git fetch    # Grab the latest code from the NodeBB Repository
-$ git checkout v0.4.x    # Type this as-is! Not v0.4.2 or v0.4.3, but "v0.4.x"!
-$ git merge origin/v0.4.x
+$ git checkout v1.12.x    # Type this as-is! Not v1.12.0 but "v1.12.x"!
+$ git merge origin/v1.12.x
 ```
 
-If not upgrading between branches (e.g. `v0.3.3` to `v0.3.4`, just run
+If not upgrading between branches (e.g. `v1.12.0` to `v1.12.1`, just run
 the following commands:
 
 ``` bash
 $ git fetch
-$ git reset --hard origin/v0.3.x    # Replace v0.3.x with the branch name!
+$ git reset --hard origin/v1.12.x    # Replace v1.12.x with the branch name!
 ```
 
 This should retrieve the latest (and greatest) version of NodeBB from
