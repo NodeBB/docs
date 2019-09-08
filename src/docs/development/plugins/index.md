@@ -243,6 +243,10 @@ Then in the source folder were nodebb is installed.
 ```
 npm link my-plugin
 ```
+You will then need to build nodebb:
+```
+./nodebb build
+```
 
 Your plugin should now be available in admin to be activated.
 
