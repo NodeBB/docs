@@ -22,7 +22,7 @@ const versions = {
     redis: '4.0.9',
     node: latestLTS,
     npm: '6.4',
-    nodebb: '1.11.x',
+    nodebb: '1.13.x',
   },
 };
 

@@ -3,6 +3,8 @@
 This installation guide is optimized for 
 **{{name}} {{version}}** and will install NodeBB with MongoDB as the database. Fully patched LTS and equivalent **production** versions of software are assumed and used throughout.
 
+**Confused?** &ndash; A simpler guide for Ubuntu 18.04 with lots of screenshots can be found [on the NodeBB Blog](https://blog.nodebb.org/how-to-install-nodebb-on-digitalocean-ubuntu-18-04/).
+
 ### System Requirements
 
 - **Memory**: Installing NodeBB's dependencies may require more than 512 megabytes of system memory. It is recommended to [enable a swap partition](https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04) to compensate if your Linux system has insufficient memory.

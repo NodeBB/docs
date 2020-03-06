@@ -1,5 +1,5 @@
 site_name: NodeBB Documentation
-theme: yeti
+theme: material
 markdown_extensions:
     - fenced_code
     - tables
