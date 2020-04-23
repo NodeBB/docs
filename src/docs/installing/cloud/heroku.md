@@ -62,3 +62,6 @@ Heroku app:
 1.  `git commit -am "upgrading to latest nodebb"`
 1.  `git push`
 
+Upload Support
+--------------
+Given the Heroku doesn't uses a persistant storage, to avoid losing uploaded assets, remember to follow the solution in [Uploads](https://docs.nodebb.org/admin/uploads/) to setup a persistant storage.
