@@ -18,26 +18,10 @@ information.
 
 There are four types of hooks: **filters**, **actions**, **static**, and **response** hooks.
 
-**Filters** act on content, and can be useful if you want to alter
-certain pieces of content as it passes through NodeBB. For example, a
-filter may be used to alter posts so that any occurrences of "apple"
-gets changed to "orange". Likewise, filters may be used to beautify
-content (i.e. code filters), or remove offensive words (profanity
-filters).
-
-**Actions** are executed at certain points of NodeBB, and are useful if
-you'd like to *do* something after a certain trigger. For example, an
-action hook can be used to notify an admin if a certain user has posted.
-Other uses include analytics recording, or automatic welcome posts on
-new user registration.
-
-**Static** hooks are executed and wait for you to do something before
-continuing. They're similar to action hooks, but whereas execution in
-NodeBB continues immediately after an action is fired, static hooks
-grant you a bit of time to run your own custom logic, before resuming
-execution.
-
-**Response** hooks are executed serially and are similar to action hooks until one of the listeners sends a response to the client. In that event, the plugin hooks that come afterward are skipped completely. Response hooks are used in situatons where one or more plugins may elect to send an error to the client, or redirect them somewhere else. Response hooks are structured in a way so that conflicts are avoided.
+* Filters take an input (provided as a single argument), parse it in some way, and return the changed value.
+* Actions take multiple inputs, and execute actions based on the inputs received. Actions do not return anything.
+* Static hooks are similar to action hooks, except NodeBB will wait for the hook to complete (by calling its passed-in callback) before continuing.
+* Response hooks are similar to action hooks, except that listeners are called one at a time, and ends prematurely if a response is sent to the client.
 
 When you are writing your plugin, make sure a hook exists where you'd
 like something to happen. If a hook isn't present, [file an

@@ -47,6 +47,7 @@ pages:
         - 'configuring/scaling.md'
     - Development:
         - 'development/index.md'
+        - Read API Reference 🔗: '/api'
         - Plugins:
             - 'development/plugins/index.md'
             - 'development/plugins/hooks.md'
