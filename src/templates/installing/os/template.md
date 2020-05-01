@@ -1,6 +1,6 @@
 # Installing on {{name}}
 
-This installation guide is optimized for 
+This installation guide is optimized for
 **{{name}} {{version}}** and will install NodeBB with MongoDB as the database. Fully patched LTS and equivalent **production** versions of software are assumed and used throughout.
 
 **Confused?** &ndash; A simpler guide for Ubuntu 18.04 with lots of screenshots can be found [on the NodeBB Blog](https://blog.nodebb.org/how-to-install-nodebb-on-digitalocean-ubuntu-18-04/).
@@ -122,7 +122,7 @@ Next, clone NodeBB into an appropriate location. Here the local `nodebb` directo
 {{commandPrefix}} cd nodebb
 ```
 
-This clones the NodeBB repository from the 
+This clones the NodeBB repository from the
 `v{{versions.recommended.nodebb}}` branch to the `nodebb` directory. A list of alternative branches are available in the [NodeBB Branches](https://github.com/NodeBB/NodeBB/branches) GitHub page, but only the versioned branches are stable.
 
 NodeBB ships with a command line utility which allows for several functions. We'll first use it to setup NodeBB. This will install modules from _npm_ and then enter the setup utilty.
@@ -131,7 +131,7 @@ NodeBB ships with a command line utility which allows for several functions. We'
 {{nodebb.setup}}
 ```
 
-A series of questions will be prompted with defaults in parentheses. The default settings are for a local server listening on the default port `4567` with a MongoDB instance listening on port `27017`. When prompted be sure to configure the MongoDB username and password that was configured earlier for NodeBB. Once connectivity to the database is confirmed the setup will prompt that initial user setup is running. Since this is a fresh NodeBB install a forum administrator must be configured. Enter the desired administrator information. This will culminate in a `NodeBB Setup Completed` message.
+A series of questions will be prompted with defaults in parentheses. The default settings are for a local server listening on the default port `4567` with a MongoDB instance listening on port `27017`. When prompted for the mongodb username and password, enter `nodebb`, and the password that you configured earlier. Once connectivity to the database is confirmed the setup will prompt that initial user setup is running. Since this is a fresh NodeBB install a forum administrator must be configured. Enter the desired administrator information. This will culminate in a `NodeBB Setup Completed` message.
 
 **Note**: When entering your site URL, make sure it is _exactly_ what you plan on accessing your site at. If you plan on visiting `http://example.org` to open your forum, then enter exactly `http://example.org`.
 
@@ -208,4 +208,4 @@ For more information, go to the [configuring nginx](../configuring/nginx) page.
 
 ## After Installation
 
-Great, you have NodeBB installed and running. You should be able to access `http://forum.example.com` and interact with your forum. 
+Great, you have NodeBB installed and running. You should be able to access `http://forum.example.com` and interact with your forum.
