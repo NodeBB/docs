@@ -121,21 +121,9 @@ See this API call in action:
 
 ### Via Template Variables
 
-In topic.tpl for example, we can add a hidden input like so:
+On every page the data used to render that page is avaiable in `ajaxify.data`
+For example on the topic page you can access the topic title with `ajaxify.data.title`
 
-``` html
-<input type="hidden" template-variable="pageCount" value="{pageCount}" />
-```
-
-The template system will immediately parse all of these and expose them
-via the following method:
-
-``` html
-ajaxify.variables.get('pageCount');
-```
-
-This is the ideal method of letting JS know about important variables
-within the template.
 
 Internationalization
 --------------------
