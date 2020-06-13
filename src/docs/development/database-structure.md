@@ -13,7 +13,7 @@ NodeBB uses the following key names to refer to ids.
  * nid - notification id `notifications:<nid>`
  * eid - event id `event:<eid>`
 
-Whenever you see a key like `user:<uid>` it means `<uid>` is an increasing numeric identifier. Ie `user:1`, `user:2` ,`user:1000` and so on.
+Whenever you see a key like `user:<uid>` it means `<uid>` is an increasing numeric identifier. Ie `user:1`, `user:2` ,`user:1000` and so on. The only exception to this are notifications which use a unique string per notification.
 
 To grab the data of user 100 you can run `hgetall user:100` in redis or `db.objects.findOne({_key: "user:100"})` in mongodb.
 
@@ -378,7 +378,7 @@ Chat Message Object
 
 Notification Object - each notification can have different fields depending on how it was created
 ```
-> db.objects.findOne({_key: /^notifications:/})
+> db.objects.findOne({_key: "notifications:chat_15142_3672"})
 {
         "_id" : ObjectId("5ee0fe343dc567806d463a6f"),
         "_key" : "notifications:chat_15142_3672",
