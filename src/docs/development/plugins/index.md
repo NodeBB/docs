@@ -147,10 +147,10 @@ module.exports = MyPlugin;
 Occasionally, you may need to use NodeBB's libraries. For example, to
 verify that a user exists, you would need to call the `exists` method in
 the `User` class. To allow your plugin to access these NodeBB classes,
-use `module.parent.require`:
+use `require.main.require`:
 
 ``` js
-var User = module.parent.require('./user');
+var User = require.main.require('./src/user');
 User.exists('foobar', function(err, exists) {
     // ...
 });
