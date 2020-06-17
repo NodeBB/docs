@@ -322,8 +322,8 @@ Topic Object
         "deleted" : 0,
         "pinned" : 0,
         "teaserPid" : 25995,
-	"upvotes": 0,
-	"downvotes": 0
+        "upvotes": 0,
+        "downvotes": 0
 }
 ```
 
