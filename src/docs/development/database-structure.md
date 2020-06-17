@@ -343,7 +343,7 @@ Post Object
         "uid" : 747,
         "toPid" : 19999,
         "upvotes" : 0,
-	"downvotes": 0
+        "downvotes": 0
 }
 ```
 
@@ -363,7 +363,7 @@ Plugin Settings Object - plugin settings are saved in these objects `settings:<i
 
 Chat Message Object
 ```
-> db.objects.findOne({_key: /^message:1000/})
+> db.objects.findOne({_key: "message:1000"})
 {
         "_id" : ObjectId("554537872b1e9e3c288d3b5e"),
         "_key" : "message:1000",
@@ -398,9 +398,7 @@ This lets us store all the forum data, now to retrieve it in a sorted fashion we
 
 Let's look at a sample `users:postcount` sorted set.
 
-When users are created a hash is created to store their data at `user:<uid>` and their `postcount` and `uid` is added to a sorted set called `users:postcount`. `postcount` is used as the score and the `uid` is used as the value. 
-
-This query returns the top posters in the forum.
+When users are created an object is created to store their data at `user:<uid>` and their `postcount` and `uid` are added to a sorted set called `users:postcount`. `postcount` is used as the score and the `uid` is used as the value. As the user makes more posts their score is incremented in this sorted set. The below query returns the top posters in the forum.
 
 ```
 > db.objects.find({ _key:"users:postcount" }, { _id: 0, _key: 0 }).sort({ score: -1 }).pretty()
