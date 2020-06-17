@@ -5,6 +5,7 @@ A hash is comparable to a javascript object, sets are collections of unique valu
 For example each user's data is stored in an object with a unique key in the form `user:<uid>` where `<uid>` is the unique id of the user. 
 
 NodeBB uses the following key names to refer to ids.
+
  * uid - user id `user:<uid>`
  * cid - category id `cateogory:<cid>`
  * tid - topic id `topic:<tid>`
@@ -436,9 +437,99 @@ There are many sorted sets in nodebb that let us display the data, for example p
 
 **User Sorted Sets**
 ```
+key: users:joindate
+score: timestamp user was created
+value: uid of user
+```
+
+```
+key: users:online
+score: timestamp user was last online
+value: uid of user
+```
+
+```
+key: users:postcount
+score: postcount of user
+value: uid of user
+```
+
+```
+key: users:reputation
+score: reputation of user
+value: uid of user
+```
+
+```
+key: users:notvalidated
+score: timestamp user was added to this set
+value: uid of user
+```
+
+```
+key: users:flags
+score: number of times user was flagged
+value: uid of user
+```
+
+```
+key: users:banned
+score: timestamp user was banned
+value: uid of user
+```
+
+```
+key: users:banned:expire
+score: timestamp user bann will expire
+value: uid of user
+```
+
+```
+key: uid:<uid>:bans:timestamp
+score: timestamp user was banned
+value: uid:<uid>:ban:<timestamp>
+```
+
+```
 key: username:uid
 score: uid of the user
 value: username of the user
+```
+
+```
+key: userslug:uid
+score: uid
+value: userslug of the user
+```
+
+```
+key: email:uid
+score: uid of user
+value: lowercased email of user
+```
+
+```
+key: email:sorted
+score: 0
+value: <lowercase_email>:<uid>
+```
+
+```
+key: username:sorted
+score: 0
+value: <lowercase_username>:<uid>
+```
+
+```
+key: user:<uid>:usernames
+score: timestamp of username changge
+value: <username>:<timestamp>
+```
+
+```
+key: user:<uid>:emails
+score: timestamp of email change
+value: <email>:<timestamp>
 ```
 
 ```
@@ -446,6 +537,14 @@ key: uid:<uid>:posts
 score: timestamp of post creation
 value: post id
 ```
+
+```
+key: cid:<cid>:uid:<uid>:pids
+score: timestamp of post creation
+value: post id
+```
+
+
 wip
 
 **Category Sorted Sets**
