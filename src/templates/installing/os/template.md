@@ -145,7 +145,7 @@ Finally, you can use the cli utility to start NodeBB:
 
 ## Installing nginx
 
-NodeBB by default runs on port `4567`, meaning that by default you mustaccess it using a port number in addition to the hostname (e.g. `http://example.org:4567`)
+NodeBB by default runs on port `4567`, meaning that by default you must access it using a port number in addition to the hostname (e.g. `http://example.org:4567`)
 
 In order to allow NodeBB to be served without a port, nginx can be set up to proxy all requests to a particular hostname (or subdomain) to an upstream NodeBB server running on any port.
 
