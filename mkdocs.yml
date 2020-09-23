@@ -1,6 +1,6 @@
 site_name: NodeBB Documentation
 theme: material
-repo_url: https://github.com/NodeBB/docs
+repo_url: https://github.com/NodeBB/NodeBB
 markdown_extensions:
     - fenced_code
     - tables
