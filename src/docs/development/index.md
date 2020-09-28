@@ -35,3 +35,20 @@ watching enabled.
 ## Accessing page data
 
 Each page in NodeBB is rendered using json data. You can view this data by prepending `/api` to the url. For example if you are on the `/recent` page you can navigate to `/api/recent` to see the corresponding json data. When NodeBB is started in production mode the json output will not have any formatting so it will be hard to read, to prettify it you can add ?pretty=1 to the url. 
+
+## Testing
+
+In order to run tests on NodeBB, add the following block to your `config.json` file:
+
+```
+"test_database": {
+    "host": "127.0.0.1",
+    "port": "27017",
+    "username": "",
+    "password": "",
+    "database": "test"
+}
+```
+
+Run the whole suite of tests via `npm test` or an individual file via `npx mocha test/your_test_file.js`. 
+
