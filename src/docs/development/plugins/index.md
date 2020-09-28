@@ -56,6 +56,9 @@ Here is a sample, keeping in mind that *not all options are required*:
     "acpScripts": [
         "public/src/admin.js"
     ],
+    "upgrades": [
+        "upgrades/your_upgrade_script.js"
+    ],
     "languages": "path/to/languages",
     "templates": "path/to/templates"
 }
@@ -96,6 +99,9 @@ are compiled into the minified payload served in the Admin Control Panel
 
 The `modules` property allows you to embed third-party AMD-style scripts into your plugin. For more information, see
 [Using Third-Party Libraries](./libraries).
+
+The `upgrades` array is optional, useful for seamlessly updating your plugin's database
+schema via NodeBB's upgrade system. Have a look at this example in NodeBB's [dbsearch plugin](https://github.com/barisusakli/nodebb-plugin-dbsearch/blob/master/upgrades/dbsearch_change_mongodb_schema.js) for further details.
 
 The `languages` property is optional, which allows you to set up your
 own internationalization for your plugin (or theme). Set up a similar
