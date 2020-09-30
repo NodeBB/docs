@@ -1,5 +1,9 @@
 site_name: NodeBB Documentation
-theme: material
+theme:
+    name: material
+    logo: images/nodebb-light.svg
+extra_css:
+    - stylesheets/overrides.css
 repo_url: https://github.com/NodeBB/NodeBB
 markdown_extensions:
     - fenced_code
