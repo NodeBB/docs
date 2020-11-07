@@ -5,7 +5,7 @@ theme:
 extra_css:
     - stylesheets/overrides.css
 repo_url: https://github.com/NodeBB/NodeBB
-edit_uri: https://github.com/NodeBB/docs/edit/master/docs/
+edit_uri: https://github.com/NodeBB/docs/edit/master/src/docs/
 markdown_extensions:
     - fenced_code
     - tables
