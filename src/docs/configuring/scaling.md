@@ -143,7 +143,7 @@ this Redis will also be used as the session store.
         "url": "http://example.org",
         "secret": "your-secret-goes-here",
         "database": "mongo",
-        "port": [4568,4569],
+        "port": [4567, 4568,4569],
         "mongo": {
             "host": "127.0.0.1",
             "port": "27017",
