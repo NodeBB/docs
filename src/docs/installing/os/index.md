@@ -11,6 +11,7 @@ The following are step-by-step guides to help you get up and running on various 
 -   [Arch Linux](./arch)
 -   [CentOS](./centos)
 -   [Debian](./debian)
+-   [Fedora](./fedora)
 -   [FreeBSD](./freebsd)
 -   [Mac](./osx-mavericks)
 -   [SmartOS](./smartos)
