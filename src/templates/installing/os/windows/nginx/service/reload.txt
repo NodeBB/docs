@@ -1,2 +1,2 @@
-{{commandPrefix}} cd C:\nginx
-{{commandPrefix}} nginx -s reload
+cd C:\nginx
+nginx -s reload

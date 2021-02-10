@@ -1,1 +1,1 @@
-{{commandPrefix}} sc query "MongoDB" | findstr STATE
+sc query "MongoDB" | findstr STATE

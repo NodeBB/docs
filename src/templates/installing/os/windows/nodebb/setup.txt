@@ -1,1 +1,1 @@
-{{commandPrefix}} nodebb setup
+nodebb setup

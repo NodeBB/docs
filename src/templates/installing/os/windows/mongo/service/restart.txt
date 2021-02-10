@@ -1,2 +1,2 @@
-{{commandPrefix}} net stop MongoDB
-{{commandPrefix}} net start MongoDB
+net stop MongoDB
+net start MongoDB

@@ -1,1 +1,1 @@
-{{commandPrefix}} tasklist | findstr nginx.exe
+tasklist | findstr nginx.exe

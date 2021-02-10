@@ -18,9 +18,9 @@ Naturally, NodeBB is driven by Node.js, and so it needs to be installed. Node.js
 Verify installation of Node.js and npm. You should have version {{versions.major.node}} of Node.js installed, and version {{versions.major.npm}} of npm installed:
 
 ```bash
-{{commandPrefix}} node -v
+node -v
 v{{versions.recommended.node}}
-{{commandPrefix}} npm -v
+npm -v
 {{versions.recommended.npm}}
 ```
 
@@ -38,7 +38,7 @@ Official detailed installation instructions can be found in the [MongoDB manual]
 Verify installation of MongoDB. You should have version {{versions.recommended.mongo}}:
 
 ```bash
-{{commandPrefix}} mongod --version
+mongod --version
 db version v{{versions.recommended.mongo}}
 ```
 
@@ -54,7 +54,7 @@ Start the `mongod` service and verify service status:
 General MongoDB administration is done through the MongoDB Shell `mongo`. A default installation of MongoDB listens on port `27017` and is accessible locally. Access the shell:
 
 ```bash
-{{commandPrefix}} mongo
+mongo
 ```
 
 Switch to the built-in `admin` database:
@@ -102,7 +102,7 @@ Restart MongoDB and verify the administrative user created earlier can connect:
 
 ```
 {{mongo.service.restart}}
-{{commandPrefix}} mongo -u admin -p your_password --authenticationDatabase=admin
+mongo -u admin -p your_password --authenticationDatabase=admin
 ```
 
 If everything is configured correctly the Mongo Shell will connect. Exit the shell.
@@ -118,8 +118,8 @@ First, we must install `git` as it is used to distribute NodeBB:
 Next, clone NodeBB into an appropriate location. Here the local `nodebb` directory is used, though any destination is fine:
 
 ```
-{{commandPrefix}} git clone -b v{{versions.recommended.nodebb}} https://github.com/NodeBB/NodeBB.git nodebb
-{{commandPrefix}} cd nodebb
+git clone -b v{{versions.recommended.nodebb}} https://github.com/NodeBB/NodeBB.git nodebb
+cd nodebb
 ```
 
 This clones the NodeBB repository from the
@@ -154,7 +154,7 @@ In order to allow NodeBB to be served without a port, nginx can be set up to pro
 Verify the installation of nginx
 
 ```bash
-{{commandPrefix}} nginx -v
+nginx -v
 ```
 
 and that the service will run

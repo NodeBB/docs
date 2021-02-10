@@ -1,2 +1,2 @@
-{{commandPrefix}} cd C:\nginx
-{{commandPrefix}} start nginx
+cd C:\nginx
+start nginx

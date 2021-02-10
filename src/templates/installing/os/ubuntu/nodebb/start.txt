@@ -1,1 +1,1 @@
-{{commandPrefix}} ./nodebb start
+./nodebb start

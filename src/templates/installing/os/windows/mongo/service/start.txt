@@ -1,1 +1,1 @@
-{{commandPrefix}} net start MongoDB
+net start MongoDB

@@ -1,6 +1,6 @@
-Node.js is available from the NodeSource repository. 
+Node.js is available from the NodeSource repository.
 
 ```bash
-{{commandPrefix}} curl -sL https://deb.nodesource.com/setup_{{versions.major.node}}.x | sudo -E bash -
-{{commandPrefix}} sudo apt-get install -y nodejs
+curl -sL https://deb.nodesource.com/setup_{{versions.major.node}}.x | sudo -E bash -
+sudo apt-get install -y nodejs
 ```

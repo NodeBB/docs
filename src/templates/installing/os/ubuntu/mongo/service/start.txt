@@ -1,1 +1,1 @@
-{{commandPrefix}} sudo systemctl start mongod
+sudo systemctl start mongod
