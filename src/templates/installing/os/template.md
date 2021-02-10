@@ -18,10 +18,8 @@ Naturally, NodeBB is driven by Node.js, and so it needs to be installed. Node.js
 Verify installation of Node.js and npm. You should have version {{versions.major.node}} of Node.js installed, and version {{versions.major.npm}} of npm installed:
 
 ```bash
-node -v
-v{{versions.recommended.node}}
-npm -v
-{{versions.recommended.npm}}
+node -v (should output "v{{versions.recommended.node}}" or similar)
+npm -v (should output "{{versions.recommended.npm}}" or similar)
 ```
 
 ### Database
