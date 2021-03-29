@@ -42,7 +42,7 @@ Please consult [Upgrading NodeBB](../configuring/upgrade)
 ### I installed an incompatible plugin, and now my forum won't start!
 
 If you know which plugin caused problems, disable it by running:
-`./nodebb reset -r nodebb-plugin-pluginName`
+`./nodebb reset -p nodebb-plugin-pluginName`
 
 Otherwise, disable all plugins by running: `./nodebb reset -p`
 
