@@ -16,7 +16,7 @@ Some of these values are saved via the setup script:
     secret is changed, all existing sessons will no longer validate and
     users will need to log in again.
 * `database` defines the primary database used by NodeBB. (e.g.
-    `redis`, `mongo` or `postgress`) -- for more information, see
+    `redis`, `mongo` or `postgres`) -- for more information, see
     Configuring Databases &lt;databases&gt;
 * `redis`, `mongo` and `postgres` are objects that contain database-related
     connection information, they contain some or all of the following:
@@ -59,8 +59,8 @@ NodeBB:
 
 * `isCluster` Set this to true if you have multiple machines each running a single NodeBB process. This setting is not required if you have multiple NodeBB processes running either on a single or multiple machines.
 
-* `session_store` This is an object similar to the `redis`, `mongo` or `postgress` block. It defines a database to use for sessions. For example by setting this to a different redis instance you can separate your data and sessions into two different redis instances.
-    * `name` (Name of database to use `redis`, `mongo` or `postgres`
+* `session_store` This is an object similar to the `redis`, `mongo` or `postgres` block. It defines a database to use for sessions. For example by setting this to a different redis instance you can separate your data and sessions into two different redis instances.
+    * `name` (Name of database to use `redis`, `mongo` or `postgres`)
     * other settings are identical to the database block for the datastore.
 
 * `logFile` (Default: `logs/output.log`) Specifies the path, relative to the NodeBB root install, that the log file will be stored. If this doesn't exist it will be created. Log files will be rotated to the same directory when the current log file gets above 1 Megabyte, to a maximum of 3 archived.
