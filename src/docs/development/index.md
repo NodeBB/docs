@@ -52,3 +52,11 @@ In order to run tests on NodeBB, add the following block to your `config.json` f
 
 Run the whole suite of tests via `npm test` or an individual file via `npx mocha test/your_test_file.js`. 
 
+If you need to activate a certain plugin for testing as well, add the following block to your `config.json` file:
+
+```
+"test_plugins": [
+   "nodebb-plugin-xyz"
+]
+```
+
