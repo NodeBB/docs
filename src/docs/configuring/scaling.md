@@ -51,7 +51,7 @@ Your Nginx config will need to be modified add the following `location`
 blocks:
 
     location @nodebb {
-        proxy_pass http://127.0.0.1:4567;
+        proxy_pass http://io_nodes;
     }
 
     location ~ ^/assets/(.*) {
