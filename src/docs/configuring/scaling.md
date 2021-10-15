@@ -9,35 +9,6 @@ This article attempts to outline the various strategies that can be
 employed by those finding that NodeBB is not running as fast as it
 should under full load.
 
-Utilise clustering
-------------------
-
-By default, NodeBB will run on one process, and certain calls may take
-longer than others, resulting in a lag or queue for the same resources.
-To combat this, you can instruct NodeBB to run on multiple processes by
-adding the `port` property into your `config.json`:
-
-    {
-        "port": ["4567", "4568", "4569"]  // will start three processes
-    }
-
-Keep in mind you need to start nodebb with `node loader.js` or
-`./nodebb start` so that 3 workers can be spawned. Using `node app.js` will
-only use the first port in the array.
-
-A proxy server like Nginx is required in order to load balance requests
-between all of the servers. Add an `upstream` block to your config:
-
-    upstream io_nodes {
-        ip_hash;
-        server 127.0.0.1:4567;
-        server 127.0.0.1:4568;
-        server 127.0.0.1:4569;
-    }
-
-... and alter the `proxy_pass` value to read:
-`proxy_pass http://io_nodes;`
-
 Use a proxy server to serve static assets
 -----------------------------------------
 
@@ -65,7 +36,7 @@ blocks:
     }
 
     location / {
-        proxy_pass http://io_nodes;
+        proxy_pass http://127.0.0.1:4567;
     }
 
 **Note**: This configuration is only applicable to NodeBB versions v1.4.3 and above.
@@ -76,6 +47,34 @@ Furthermore, you can instruct Nginx to serve these assets compressed:
     gzip_min_length 1000;
     gzip_proxied    off;
     gzip_types      text/plain application/xml text/javascript application/javascript application/x-javascript text/css application/json;
+
+Utilise clustering
+------------------
+
+By default, NodeBB will run on one process, and certain calls may take
+longer than others, resulting in a lag or queue for the same resources.
+To combat this, you can instruct NodeBB to run on multiple processes by
+adding the `port` property into your `config.json`:
+
+    {
+        "port": ["4567", "4568", "4569"]  // will start three processes
+    }
+
+Keep in mind you need to start nodebb with `node loader.js` or
+`./nodebb start` so that 3 workers can be spawned. Using `node app.js` will
+only use the first port in the array.
+
+A proxy server like Nginx is required in order to load balance requests
+between all of the servers. Add an `upstream` block to your config:
+
+    upstream io_nodes {
+        ip_hash;
+        server 127.0.0.1:4567;
+        server 127.0.0.1:4568;
+        server 127.0.0.1:4569;
+    }
+
+... and alter the `proxy_pass` directive in your `location /` block to read: `proxy_pass http://io_nodes;`
 
 Sample Nginx configuration with all of the above applied
 --------------------------------------------------------
