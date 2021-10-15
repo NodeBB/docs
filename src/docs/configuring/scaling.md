@@ -132,12 +132,7 @@ Sample Nginx configuration with all of the above applied
 Configure Redis
 ---------------
 
-When you setup NodeBB to use more than one process, it is advisable to
-configure Redis as well. Each NodeBB process can communicate with the
-others through Redis pub-sub. Install Redis on your server and add a
-`redis` block to your config.json. A sample `config.json` that uses mongodb
-as datastore and Redis for pubsub looks like this. When configured like
-this Redis will also be used as the session store.
+When you setup NodeBB to use more than one process, Redis needs to be configured alongside your primary data store. Each NodeBB process can communicate with the others through Redis pub-sub. Install Redis on your server and add a `redis` block to your config.json. A sample `config.json` that uses mongodb as datastore and Redis for pubsub looks like this.
 
     {
         "url": "http://example.org",
@@ -155,3 +150,5 @@ this Redis will also be used as the session store.
             "database": 0
         }
     }
+
+When configured like so, Redis will also be used as the session store. Outside of user session data and message passing between processes, no other data is stored on Redis, and so it is not necessary that it be backed up. If the database is lost, then existing user sessions will no longer be valid, and users will have to log in again.
