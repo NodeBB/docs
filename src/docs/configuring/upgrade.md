@@ -89,20 +89,20 @@ If you are upgrading from a lower branch to a higher branch, switch
 branches as necessary. ***Make sure you are completely up-to-date on
 your current branch!***.
 
-For example, if upgrading from `v1.11.1` to `v1.12.0`:
+For example, if upgrading from `v1.17.2` to `v1.18.0`:
 
 ``` bash
 $ git fetch    # Grab the latest code from the NodeBB Repository
-$ git checkout v1.12.x    # Type this as-is! Not v1.12.0 but "v1.12.x"!
-$ git merge origin/v1.12.x
+$ git checkout v1.18.x    # Type this as-is! Not v1.18.0 but "v1.18.x"!
+$ git merge origin/v1.18.x
 ```
 
-If not upgrading between branches (e.g. `v1.12.0` to `v1.12.1`, just run
+If not upgrading between branches (e.g. `v1.18.0` to `v1.18.4`, just run
 the following commands:
 
 ``` bash
 $ git fetch
-$ git reset --hard origin/v1.12.x    # Replace v1.12.x with the branch name!
+$ git reset --hard origin/v1.18.x    # Replace v1.18.x with the branch name!
 ```
 
 This should retrieve the latest (and greatest) version of NodeBB from

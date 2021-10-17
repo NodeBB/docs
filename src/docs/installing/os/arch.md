@@ -16,7 +16,7 @@ Redis please look at the
 Next, clone this repository:
 
 ```
-$ git clone -b v1.10.x https://github.com/NodeBB/NodeBB.git nodebb
+$ git clone -b v1.18.x https://github.com/NodeBB/NodeBB.git nodebb
 $ cd nodebb
 ```
 
