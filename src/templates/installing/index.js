@@ -12,7 +12,7 @@ try {
 
 const versions = {
   minimum: {
-    mongo: '3.0',
+    mongo: '3.2',
     redis: '2.6.12',
     node: '12.0',
     npm: '6.9',
