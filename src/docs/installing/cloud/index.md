@@ -9,7 +9,6 @@ the cloud using popular PaaS solutions.
 * [DigitalOcean](http://www.blogsynthesis.com/install-nodebb-on-digitalocean/) (external)
 * [Heroku](./heroku)
 * [Jelastic](http://docs.jelastic.com/nodebb) (external)
-* [Koding.com](./koding)
 * [Nitrous.IO](./nitrous)
 * [Openshift](./openshift)
 * RoseHosting.com
