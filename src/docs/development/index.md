@@ -1,5 +1,19 @@
 # Getting Started
 
+We try to make working with NodeBB as seamless and open-ended as possible.
+
+NodeBB uses [benchpress](https://github.com/benchpressjs/benchpressjs) as its templating engine, [express](https://expressjs.org) on the backend to serve pages, and [require.js](https://requirejs.org) to serve as a module loader for individual pages. Of course, there are other dependencies, but these are the main ones that concern plugin developers.
+
+The easiest way to get started is by looking at the [Quickstart plugin](https://github.com/nodebb/nodebb-plugin-quickstart). This is a template repository, meaning you are not meant to install it on a NodeBB installation, but rather should fork it to serve as a base for your own plugin.
+
+Take a look at our [Quickstart plugin breakdown](./quickstart) for more details.
+
+## Accessing page data
+
+Each page in NodeBB is rendered using json data. You can view this data by prepending `/api` to the url. For example if you are on the `/recent` page you can navigate to `/api/recent` to see the corresponding json data. When NodeBB is started in production mode the json output will not have any formatting so it will be hard to read, to prettify it you can add ?pretty=1 to the url.
+
+## Asset building
+
 NodeBB requires a build step before it can run and serve pages to end users. This build process can be
 manually invoked by running `./nodebb build`. However, as the build process itself can take a long time
 depending on your particular computer specifications, there are other strategies to optimize the
@@ -32,10 +46,6 @@ console to stop NodeBB, build, and restart NodeBB.
 Alternatively, you can run `grunt --skip`, which skips the build step and simply runs NodeBB with file
 watching enabled.
 
-## Accessing page data
-
-Each page in NodeBB is rendered using json data. You can view this data by prepending `/api` to the url. For example if you are on the `/recent` page you can navigate to `/api/recent` to see the corresponding json data. When NodeBB is started in production mode the json output will not have any formatting so it will be hard to read, to prettify it you can add ?pretty=1 to the url. 
-
 ## Testing
 
 In order to run tests on NodeBB, add the following block to your `config.json` file:
@@ -50,7 +60,7 @@ In order to run tests on NodeBB, add the following block to your `config.json` f
 }
 ```
 
-Run the whole suite of tests via `npm test` or an individual file via `npx mocha test/your_test_file.js`. 
+Run the whole suite of tests via `npm test` or an individual file via `npx mocha test/your_test_file.js`.
 
 If you need to activate a certain plugin for testing as well, add the following block to your `config.json` file:
 

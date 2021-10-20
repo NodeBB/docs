@@ -52,12 +52,14 @@ pages:
         - 'configuring/scaling.md'
     - Development:
         - 'development/index.md'
+        - 'development/quickstart.md'
         - Read API Reference 🔗: '/api/read'
         - Write API Reference 🔗: '/api/write'
         - Plugins:
             - 'development/plugins/index.md'
             - 'development/plugins/hooks.md'
             - 'development/plugins/libraries.md'
+            - 'development/plugins/plugin.json.md'
         - Themes:
             - 'development/themes/index.md'
             - Templating System: 'development/themes/templates.md'
