@@ -156,8 +156,8 @@ When configured like so, Redis will also be used as the session store. Outside o
 
 By default, each NodeBB instance assumes it is acting alone and runs scheduled jobs such as pruning notifications and sending out email digests. NodeBB will know if it is part of a local fleet (that is, if NodeBB is running on multiple ports as configured in `config.json`) and act accordingly, but if it is part of a horizontally scaled setup, it won't proactively communicate with its neighbours and elect a primary server.
 
-In that event, all but one server should have its `config.json` updated to contain an additional config property: `jobsDisabled`. When set to `1`, it will disable these jobs, and so they will only be run on the one server.
+In that event, all but one server should have its `config.json` updated to contain an additional config property: `jobsDisabled`. When set to `true`, it will disable these jobs, and so they will only be run on the one server.
 
-**Note**: If your setup consists of multiple machines each running a single instance of NodeBB (one port), then you will also need to set `isCluster` to `1`.
+**Note**: If your setup consists of multiple machines each running a single instance of NodeBB (one port), then you will also need to set `isCluster` to `true`.
 
 For more information, see [our article on `config.json`](/configuring/config).

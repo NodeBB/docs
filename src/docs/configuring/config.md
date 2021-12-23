@@ -57,7 +57,7 @@ NodeBB:
 
 * `sessionKey` (Default: `express.sid`) Specifies the session key to use.
 
-* `isCluster` Set this to true if you have multiple machines each running a single NodeBB process. This setting is not required if you have multiple NodeBB processes running either on a single or multiple machines.
+* `isCluster` Set this to `true` if you have multiple machines each running a single NodeBB process. This setting is not required if you have multiple NodeBB processes running either on a single or multiple machines.
 
 * `session_store` This is an object similar to the `redis`, `mongo` or `postgres` block. It defines a database to use for sessions. For example by setting this to a different redis instance you can separate your data and sessions into two different redis instances.
     * `name` (Name of database to use `redis`, `mongo` or `postgres`)
