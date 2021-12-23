@@ -151,3 +151,13 @@ When you setup NodeBB to use more than one process, Redis needs to be configured
     }
 
 When configured like so, Redis will also be used as the session store. Outside of user session data and message passing between processes, no other data is stored on Redis, and so it is not necessary that it be backed up. If the database is lost, then existing user sessions will no longer be valid, and users will have to log in again.
+
+## Handling Duplicate Digests, etc.
+
+By default, each NodeBB instance assumes it is acting alone and runs scheduled jobs such as pruning notifications and sending out email digests. NodeBB will know if it is part of a local fleet (that is, if NodeBB is running on multiple ports as configured in `config.json`) and act accordingly, but if it is part of a horizontally scaled setup, it won't proactively communicate with its neighbours and elect a primary server.
+
+In that event, all but one server should have its `config.json` updated to contain an additional config property: `jobsDisabled`. When set to `1`, it will disable these jobs, and so they will only be run on the one server.
+
+**Note**: If your setup consists of multiple machines each running a single instance of NodeBB (one port), then you will also need to set `isCluster` to `1`.
+
+For more information, see [our article on `config.json`](/configuring/config).
