@@ -13,22 +13,36 @@ You can call the `./nodebb` executable to start and stop NodeBB:
 
 ``` bash
 $ ./nodebb
+Usage: ./nodebb [options] [command]
 
 Welcome to NodeBB
 
-Usage: ./nodebb {start|stop|reload|restart|log|setup|reset|upgrade|dev}
+Options:
+  -V, --version                                       output the version number
+  --json-logging                                      Output to logs in JSON format (default: false)
+  --log-level <level>                                 Default logging level to use (default: "info")
+  --config <value>                                    Specify a config file (default: "config.json")
+  -d, --dev                                           Development mode, including verbose logging (default: false)
+  -l, --log                                           Log subprocess output to console (default: false)
+  -h, --help                                          display help for command
 
-        start   Start the NodeBB server
-        stop    Stops the NodeBB server
-        reload  Restarts NodeBB
-        restart Restarts NodeBB
-        log     Opens the logging interface (useful for debugging)
-        setup   Runs the NodeBB setup script
-        reset   Disables all plugins, restores the default theme.
-        activate        Activate a plugin on start up.
-        plugins List all plugins that have been installed.
-        upgrade Run NodeBB upgrade scripts, ensure packages are up-to-date
-        dev     Start NodeBB in interactive development mode
+Commands:
+  start                           Start the NodeBB server
+  stop                            Stop the NodeBB server
+  restart                         Restart the NodeBB server
+  status                          Check the running status of the NodeBB server
+  log                             Open the output log (useful for debugging)
+  setup [options] [config]        Run the NodeBB setup script, or setup with an initial config
+  install                         Launch the NodeBB web installer for configuration setup
+  build [options] [targets...]    Compile static assets (JS, CSS, templates, languages)
+  activate [plugin]               Activate a plugin for the next startup of NodeBB (nodebb-plugin- prefix is optional)
+  plugins                         List all installed plugins
+  events [count]                  Outputs the most recent administrative events recorded by NodeBB
+  info                            Outputs various system info
+  reset [options]                 Reset plugins, themes, settings, etc
+  user [command]                  Manage users
+  upgrade [options] [scripts...]  Run NodeBB upgrade scripts and ensure packages are up-to-date, or run a particular upgrade script
+  help [command]                  Display help for [command]
 ```
 
 ### How do I upgrade my NodeBB to a newer version?

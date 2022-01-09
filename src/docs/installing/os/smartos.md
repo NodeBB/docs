@@ -6,9 +6,9 @@ Requirements
 
 NodeBB requires the following software to be installed:
 
--   Node.js (version 0.10 or greater, instructions below).
--   Redis (version 2.6 or greater, instructions below) or MongoDB
-    (version 2.6 or greater).
+-   Node.js (version 12 or greater, instructions below).
+-   Redis (version 2.6.12 or greater, instructions below) or MongoDB
+    (version 3.2 or greater).
 -   nginx (version 1.3.13 or greater, **only if** intending to use nginx
     to proxy requests to a NodeBB server).
 
@@ -96,7 +96,7 @@ Installation
     different folder name):
 
     > ```
-    > $ git clone -b v1.10.x https://github.com/NodeBB/NodeBB.git nodebb
+    > $ git clone -b v1.18.x https://github.com/NodeBB/NodeBB.git nodebb
     > $ cd nodebb
     > ```
 

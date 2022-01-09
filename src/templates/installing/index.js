@@ -12,17 +12,17 @@ try {
 
 const versions = {
   minimum: {
-    mongo: '3.0',
-    redis: '2.0',
-    node: '8.0',
-    npm: '3.0',
+    mongo: '3.2',
+    redis: '2.6.12',
+    node: '12.0',
+    npm: '6.9',
   },
   recommended: {
-    mongo: '4.0',
-    redis: '4.0.9',
+    mongo: '5.0',
+    redis: '6.2.6',
     node: latestLTS,
-    npm: '6.4',
-    nodebb: '1.16.x',
+    npm: '6.14',
+    nodebb: '1.18.x',
   },
 };
 

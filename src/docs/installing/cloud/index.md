@@ -9,11 +9,10 @@ the cloud using popular PaaS solutions.
 * [DigitalOcean](http://www.blogsynthesis.com/install-nodebb-on-digitalocean/) (external)
 * [Heroku](./heroku)
 * [Jelastic](http://docs.jelastic.com/nodebb) (external)
-* [Koding.com](./koding)
 * [Nitrous.IO](./nitrous)
 * [Openshift](./openshift)
 * RoseHosting.com
-    * [CentOS](https://www.rosehosting.com/blog/how-to-install-nodebb-on-a-centos-7-vps/)
+    * [CentOS](https://www.rosehosting.com/blog/how-to-install-nodebb-on-a-centos-7-vps/) (external)
     * [Ubuntu](https://www.rosehosting.com/blog/install-and-setup-nodebb-with-redis-and-nginx-on-ubuntu-12-04/) (external)
 
 **Note**

@@ -25,10 +25,10 @@ yum -y install git redis ImageMagick npm
 Now we need install nodejs via npm as the repo package is too old.
 
 ```
-curl https://raw.githubusercontent.com/creationix/nvm/v0.13.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 source ~/.bash_profile
 nvm list-remote
-nvm install v0.12.7 # as of this writing check the result of the list-remote to see all choices
+nvm install v14.18.1 # as of this writing check the result of the list-remote to see all choices
 ```
 
 Now start redis and set it to start on reboot
@@ -46,7 +46,7 @@ Next, clone the NodeBB repository:
 
 ```
 cd /path/to/nodebb/install/location
-git clone -b v1.10.x https://github.com/NodeBB/NodeBB nodebb
+git clone -b v1.18.x https://github.com/NodeBB/NodeBB nodebb
 cd nodebb
 ```
 

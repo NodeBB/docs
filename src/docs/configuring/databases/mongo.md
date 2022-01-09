@@ -81,8 +81,6 @@ To add a new database called nodebb, type:
 
 To add a user to access the nodebb database, type:
 
-For MongoDB 2.6.x and 3.2.x
-
 ```
 > db.createUser( { user: "nodebb", pwd: "<Enter in a secure password>", roles: [ "readWrite" ] } )
 ```
@@ -107,13 +105,8 @@ Oops! Looks like something went wrong!
 not authorized on nodebb to execute command { serverStatus: 1 }
 ```
 
-For earlier versions of MongoDB (if the above throws an error)
 
-```
-> db.addUser( { user: "nodebb", pwd: "<Enter in a secure password>", roles: [ "readWrite" ] } )
-```
-
-**Note**: NodeBB requires MongoDB 2.6.0 or higher. The role `readWrite`
+**Note**: NodeBB requires MongoDB 3.0 or higher. The role `readWrite`
 provides read or write any collection within a specific database to
 user.
 
@@ -127,12 +120,6 @@ Modify `/etc/mongodb.conf`.
 ```
 
 To enable authentication, type:
-
-For MongoDB 2.6.x
-
-Uncomment `auth = true`.
-
-For MongoDB 3.2.x
 
 Uncomment `security:` and add `authorization: enabled` below it (and
 don't forget to put two spaces before the second line). It should look
