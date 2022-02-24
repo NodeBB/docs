@@ -27,7 +27,7 @@ blocks:
 
     location ~ ^/assets/(.*) {
         root /path/to/nodebb/;
-        try_files /build/public/$1 /public/$1 @nodebb;
+        try_files /build/webpack/$1 /build/public/$1 /public/$1 @nodebb;
     }
 
     location /plugins/ {
@@ -39,7 +39,7 @@ blocks:
         proxy_pass http://127.0.0.1:4567;
     }
 
-**Note**: This configuration is only applicable to NodeBB versions v1.4.3 and above.
+**Note**: `/build/webpack/$1` is only needed for v2.0.0 and up. It is safe to omit that directory for v1.x installs.
 
 Furthermore, you can instruct Nginx to serve these assets compressed:
 
@@ -113,7 +113,7 @@ Sample Nginx configuration with all of the above applied
 
         location ~ ^/assets/(.*) {
             root /path/to/nodebb/;
-            try_files /build/public/$1 /public/$1 @nodebb;
+            try_files /build/webpack/$1 /build/public/$1 /public/$1 @nodebb;
         }
 
         location /plugins/ {
