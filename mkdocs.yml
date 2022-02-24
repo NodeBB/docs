@@ -41,6 +41,7 @@ pages:
             - 'configuring/proxies/index.md'
             - Apache (v2.4+): 'configuring/proxies/apache.md'
             - Apache (v2.2): 'configuring/proxies/apache2.2.md'
+            - Caddy: 'configuring/proxies/caddy.md'
             - NginX: 'configuring/proxies/nginx.md'
             - Node.js: 'configuring/proxies/node.md'
             - 'configuring/proxies/varnish.md'
