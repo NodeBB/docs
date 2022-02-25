@@ -27,19 +27,12 @@ blocks:
 
     location ~ ^/assets/(.*) {
         root /path/to/nodebb/;
-        try_files /build/webpack/$1 /build/public/$1 /public/$1 @nodebb;
-    }
-
-    location /plugins/ {
-        root /path/to/nodebb/build/public/;
-        try_files $uri @nodebb;
+        try_files /build/public/$1 /public/$1 @nodebb;
     }
 
     location / {
         proxy_pass http://127.0.0.1:4567;
     }
-
-**Note**: `/build/webpack/$1` is only needed for v2.0.0 and up. It is safe to omit that directory for v1.x installs.
 
 Furthermore, you can instruct Nginx to serve these assets compressed:
 
@@ -113,15 +106,13 @@ Sample Nginx configuration with all of the above applied
 
         location ~ ^/assets/(.*) {
             root /path/to/nodebb/;
-            try_files /build/webpack/$1 /build/public/$1 /public/$1 @nodebb;
+            try_files /build/public/$1 /public/$1 @nodebb;
         }
 
         location / {
             proxy_pass http://io_nodes;
         }
     }
-
-**Note**: `/build/webpack/$1` is only needed for v2.0.0 and up. It is safe to omit that directory for v1.x installs.
 
 Configure Redis
 ---------------
