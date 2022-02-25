@@ -38,11 +38,6 @@ example.org {
         file_server
     }
 
-    handle /plugins/* {
-        root * /path/to/nodebb/build/public
-        file_server browse
-    }
-
     handle {
         reverse_proxy localhost:4567
     }

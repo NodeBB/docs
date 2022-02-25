@@ -116,17 +116,12 @@ Sample Nginx configuration with all of the above applied
             try_files /build/webpack/$1 /build/public/$1 /public/$1 @nodebb;
         }
 
-        location /plugins/ {
-            root /path/to/nodebb/build/public/;
-            try_files $uri @nodebb;
-        }
-
         location / {
             proxy_pass http://io_nodes;
         }
     }
 
-**Note**: This configuration is only applicable to NodeBB versions v1.4.3 and above.
+**Note**: `/build/webpack/$1` is only needed for v2.0.0 and up. It is safe to omit that directory for v1.x installs.
 
 Configure Redis
 ---------------
