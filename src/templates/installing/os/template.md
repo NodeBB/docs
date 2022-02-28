@@ -133,7 +133,7 @@ A series of questions will be prompted with defaults in parentheses. The default
 
 **Note**: When entering your site URL, make sure it is _exactly_ what you plan on accessing your site at. If you plan on visiting `http://example.org` to open your forum, then enter exactly `http://example.org`.
 
-A configuration file [config.json](../../configuring/config) will be created in the root of the nodebb directory. This file can be modified should you need to make changes such as changing the database location or credentials used to access the database.
+A configuration file [config.json](../../../configuring/config) will be created in the root of the nodebb directory. This file can be modified should you need to make changes such as changing the database location or credentials used to access the database.
 
 Finally, you can use the cli utility to start NodeBB:
 
