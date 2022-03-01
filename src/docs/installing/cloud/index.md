@@ -4,6 +4,7 @@ Installing NodeBB on the Cloud
 The following are step-by-step guides to help you get up and running on
 the cloud using popular PaaS solutions.
 
+* [alwaysdata](https://www.alwaysdata.com/en/marketplace/nodebb/) (external)
 * [Cloud9](https://community.nodebb.org/topic/7983/setting-up-nodebb-on-cloud-9) (external)
 * [Cloudron.io](./cloudron)
 * [DigitalOcean](http://www.blogsynthesis.com/install-nodebb-on-digitalocean/) (external)
