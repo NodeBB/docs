@@ -22,7 +22,7 @@ example.org
 reverse_proxy localhost:4567
 ```
 
-Save those two lines into `/etc/caddy/Caddyfile` and reload Caddy (`systemctl reload caddy`).
+Save those two lines into `/etc/caddy/Caddyfile` and reload Caddy (`systemctl reload caddy`). This configuration will work even if you have configured NodeBB's `url` to contain a subfolder.
 
 ----
 
@@ -45,3 +45,5 @@ example.org {
 ```
 
 **Neat!**
+
+In this example, you'll need to modify `/path/to/nodebb` to point to your NodeBB installation. If you are configuring a subfolder install, prepend the folder name to `/assets` (e.g. `/forum/assets/*`).
