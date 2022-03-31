@@ -34,7 +34,7 @@ example.org {
 
     handle_path /assets/* {
         root * /path/to/nodebb
-        try_files /build/webpack/{path} /build/public/{path} /public/{path}
+        try_files /build/public/{path} /public/{path}
         file_server
     }
 
