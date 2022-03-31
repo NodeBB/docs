@@ -9,7 +9,7 @@ edit_uri: https://github.com/NodeBB/docs/edit/master/src/docs/
 markdown_extensions:
     - fenced_code
     - tables
-pages:
+nav:
     - 'index.md'
     - Installation:
         - via OS:
