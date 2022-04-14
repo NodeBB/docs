@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "async": "^2",
+    "async": "^3",
     "body-parser": "^1.19.0",
     "deasync": "^0.1.12",
     "express": "^4.17.1",
