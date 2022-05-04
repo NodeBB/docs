@@ -27,7 +27,7 @@ npm -v (should output "{{versions.recommended.npm}}" or similar)
 ## Installing MongoDB
 
 MongoDB is the default database for NodeBB. As noted in the [MongoDB Support Policy](https://www.mongodb.com/support-policy/legacy) versions older than **4.0** are officially **End of Life** as of October 2021.
-This guide assumes installation of **{{versions.recommended.mongo}}**. If you wish to use another database instead of MongoDB the [Configuring Databases](../../configuring/databases) section has more information.
+This guide assumes installation of **{{versions.recommended.mongo}}**. If you wish to use another database instead of MongoDB the [Configuring Databases](../../../configuring/databases) section has more information.
 
 Official detailed installation instructions can be found in the [MongoDB manual](https://docs.mongodb.com/manual/administration/install-community/). Although out of scope for this guide, some MongoDB production deployments leverage clustering, sharding and replication for high availibility and performance reasons. Please refer to the MongoDB [Replication](https://docs.mongodb.com/v{{versions.recommended.mongo}}/replication/) and [Sharding](https://docs.mongodb.com/v{{versions.recommended.mongo}}/sharding/) topics for further reading. Keep in mind that NodeBB does not require any of these advanced configurations, and doing so may complicate your installation. Keeping it simple often can be best.
 
