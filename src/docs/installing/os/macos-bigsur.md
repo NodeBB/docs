@@ -133,11 +133,11 @@ After you've installed MongoDB, we can continue with NodeBB. Clone NodeBB into a
 Here the local nodebb directory is used, though any destination is fine:
 
 ```sh
-git clone -b v1.18.x https://github.com/NodeBB/NodeBB.git nodebb
+git clone -b v1.19.x https://github.com/NodeBB/NodeBB.git nodebb
 cd nodebb
 ```
 
-This clones the NodeBB repository from the v1.18.x branch to the nodebb directory. A list of alternative branches are
+This clones the NodeBB repository from the v1.19.x branch to the nodebb directory. A list of alternative branches are
 available in the [NodeBB Branches](https://github.com/NodeBB/NodeBB/branches) GitHub page, but only the versioned branches are stable.
 
 NodeBB ships with a command line utility which allows for several functions. We'll first use it to setup NodeBB.

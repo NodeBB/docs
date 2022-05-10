@@ -10,7 +10,7 @@ flavour of unix, as NodeBB does not run on Windows.
 1.  Verify your Heroku account by adding a credit card (at
     <http://heroku.com/verify>). *Required for enabling mLab MongoDB Add-on.*
 1.  Clone the repository:
-    `git clone -b v1.18.x https://github.com/NodeBB/NodeBB.git /path/to/repo/clone`
+    `git clone -b v1.19.x https://github.com/NodeBB/NodeBB.git /path/to/repo/clone`
 1.  `cd /path/to/repo/clone`
 1.  Create the heroku app: `heroku create`
 1.  Enable [mLab MongoDB](https://elements.heroku.com/addons/mongolab) 
@@ -40,7 +40,7 @@ flavour of unix, as NodeBB does not run on Windows.
 git add -f Procfile config.json package.json build && git commit -am "adding Procfile and configs for Heroku"
 ```
 
-1. Push to heroku: `git push -u heroku v1.18.x:master`
+1. Push to heroku: `git push -u heroku v1.19.x:master`
     * Ensure that a proper SSH key was added to your account, otherwise the push will not succeed!
 1. Initialise a single dyno: `heroku ps:scale web=1`
 1. Visit your app!

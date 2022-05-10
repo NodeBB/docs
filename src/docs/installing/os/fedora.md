@@ -78,15 +78,15 @@ mkdir -p /opt/nodebb
 ```
 
 Next, clone the NodeBB repository:
-   * As of the creation of this guide, the current branch is v1.18.x
+   * As of the creation of this guide, the current branch is v1.19.x
    * Update accordingly
 
 ```
-git clone -b v1.18.x https://github.com/NodeBB/NodeBB /opt/nodebb
+git clone -b v1.19.x https://github.com/NodeBB/NodeBB /opt/nodebb
 ```
 
 \*\*Note: To clone the master branch you can use the same command with
-out the "-b v1.18.x" option.
+out the "-b v1.19.x" option.
 
 
 It is bad practice to run NodeBB as a privileged user, so create a user 
