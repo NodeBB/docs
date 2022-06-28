@@ -194,6 +194,9 @@ This will expose the plugin debug logs, allowing you to see if your
 plugin is loaded, and its hooks registered. Activate your plugin from
 the administration panel, and test it out.
 
+You can also run the `app.js` file in debug mode in your favorite IDE so you can add breakpoints to your plugin!
+When the forum reaches them, it will stop and wait for the debugger, and you can easily see the information and variables currently being defined.
+
 ## Disabling Plugins
 
 You can disable plugins from the ACP, but if your forum is crashing due
