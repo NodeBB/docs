@@ -184,18 +184,15 @@ var MyPlugin = {
 
 ## Testing
 
-Run NodeBB in development mode:
+You can run NodeBB in development mode by executing `./nodebb dev` or `./nodebb start -dl` (the `-l` just tells NodeBB to immediately show you the live server logs, the `-d` signifies "development mode").
 
-```
-./nodebb dev
-```
+This will expose the plugin debug logs, allowing you to see if your plugin is loaded, and its hooks registered. Activate your plugin from the administration panel, and test it out.
 
-This will expose the plugin debug logs, allowing you to see if your
-plugin is loaded, and its hooks registered. Activate your plugin from
-the administration panel, and test it out.
+### Attaching a debugger
 
-You can also run the `app.js` file in debug mode in your favorite IDE so you can add breakpoints to your plugin!
-When the forum reaches them, it will stop and wait for the debugger, and you can easily see the information and variables currently being defined.
+If supported, breakpoints can be added to plugin files, and investigated using your IDE's built-in debugger. This is useful for seeing the information and variables currently being defined.
+
+The appropriate entry point for a debugger is the `app.js` file at the root level of the NodeBB installation folder.
 
 ## Disabling Plugins
 
