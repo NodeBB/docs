@@ -26,14 +26,14 @@ future updates seemless. The [Node.js LTS Plan](https://github.com/nodejs/LTS) d
 As time of writing this instruction, Node.js 14 is the Active LTS so we are going to install it:
 
 ```sh
-brew install node@14
-brew link node@14 # since we are installing an alternative version, we have to manually link it
+brew install node@16
+brew link node@16 # since we are installing an alternative version, we have to manually link it
 ```
 
-Verify installation of Node.js and npm. You should have version 14 of Node.js installed, and version 6 of npm installed:
+Verify installation of Node.js and npm. You should have version 16 of Node.js installed, and version 6 of npm installed:
 
 ```sh
-node -v # v14.x.x
+node -v # v16.x.x
 npm -v # 6.x.x
 ```
 

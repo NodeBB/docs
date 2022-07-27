@@ -22,8 +22,7 @@ back up** before beginning!
 
 ## Upgrade Path
 
-NodeBB's upgrade path is designed so that upgrading between versions is
-straightforward. 
+NodeBB's upgrade path is designed so that upgrading between versions is straightforward.
 
 ## Upgrade Steps
 
@@ -76,10 +75,10 @@ tar -czf ~/nodebb_assets.tar.gz ./uploads
 
 ### 3. Grab the latest and greatest code
 
-Before upgrading NodeBB make sure you have the required nodejs version. NodeBB supports the latest stable versions of nodejs. (v12, v14, v16 etc.) To upgrade nodejs run
+Before upgrading NodeBB make sure you have the required nodejs version. NodeBB supports the latest stable versions of nodejs. (v16, etc.) To upgrade nodejs run
 
 ``` bash
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
