@@ -84,54 +84,62 @@ sudo apt-get install -y nodejs
 
 Navigate to your NodeBB: `$ cd /path/to/nodebb`.
 
-If you are upgrading from a lower branch to a higher branch, switch
-branches as necessary. ***Make sure you are completely up-to-date on
-your current branch!***.
+There are multiple ways NodeBB can be installed. You could either be on the main branch (`master`), a release branch (e.g. `v2.x`), or using archived downloads of NodeBB.
 
-For example, if upgrading from `v1.17.2` to `v1.18.0`:
+Don't know what branch you are on? Execute
+`git rev-parse --abbrev-ref HEAD` to find out.
 
-``` bash
-$ git fetch    # Grab the latest code from the NodeBB Repository
-$ git checkout v1.18.x    # Type this as-is! Not v1.18.0 but "v1.18.x"!
-$ git merge origin/v1.18.x
-```
-
-If not upgrading between branches (e.g. `v1.18.0` to `v1.18.4`, just run
-the following commands:
+#### via main branch
 
 ``` bash
-$ git fetch
-$ git reset --hard origin/v1.18.x    # Replace v1.18.x with the branch name!
+$ git fetch    # Grab the latest code from the NodeBB repository
+$ git reset --hard v2.2.5    # Replace this with the version you want to upgrade to
 ```
 
 This should retrieve the latest (and greatest) version of NodeBB from
 the repository.
 
-Don't know what branch you are on? Execute
-`git rev-parse --abbrev-ref HEAD` to find out.
+#### via release branches
 
-Alternatively, download and extract the latest versioned copy of the
-code from [the Releases
-Page](https://github.com/NodeBB/NodeBB/releases). Overwrite any files as
-necessary. This method is not supported.
+If you are upgrading from a lower branch to a higher branch, switch
+branches as necessary. ***Make sure you are completely up-to-date on
+your current branch!***.
+
+For example, if upgrading from `v1.19.8` to `v2.2.5`:
+
+``` bash
+$ git fetch    # Grab the latest code from the NodeBB repository
+$ git checkout v2.x    # Switch to the v2.x branch since we are now upgrading to NodeBB version 2
+$ git reset --hard origin/v2.x
+```
+
+If not upgrading between branches (e.g. `v2.2.4` to `v2.2.5`), just run
+the following commands:
+
+``` bash
+$ git fetch
+$ git reset --hard origin/v2.x
+```
+
+This should retrieve the latest (and greatest) version of NodeBB from the repository.
+
+#### via archived release
+
+Alternatively, download and extract the latest versioned copy of the code from [the Releases Page](https://github.com/NodeBB/NodeBB/releases).
+Overwrite any files as necessary. This method is not supported.
 
 ### 4. Run the NodeBB upgrade script
 
-This script will install any missing dependencies, upgrade any plugins
-or themes (if an upgrade is available), and migrate the database if
-necessary.
+This script will install any missing dependencies, upgrade any plugins or themes (if an upgrade is available), and migrate the database if necessary.
 
 ``` bash
 $ ./nodebb upgrade
 ```
 
-**Note**: `./nodebb upgrade` is only available after v0.3.0. If you are
-running an earlier version, run these instead:
-
--   `npm install`
--   `ls -d node_modules/nodebb* | xargs -n1 basename | xargs npm update`
--   `node app --upgrade`
-
 ### 5. Start up NodeBB & Test!
+
+``` bash
+$ ./nodebb start -l
+```
 
 You should now be running the latest version of NodeBB.
