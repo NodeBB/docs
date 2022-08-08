@@ -46,7 +46,7 @@ NodeBB:
     bind to. You can specify an array of ports and NodeBB will spawn
     port.length processes. If you use multiple ports you need to
     configure a load balancer to proxy requests to the different ports.
-* `package_manager` Specifies the package manager that NodeBB will invoke. If not set, will fall back to lockfile detection (and if no lockfiles are present, will use npm.) — *Available as of NodeBB v2.4.0*
+* `package_manager` Specifies the package manager that NodeBB will invoke. If not set, will fall back to lockfile detection (and if no lockfiles are present, will use npm.)
 * `sessionKey` (Default: `express.sid`) Specifies the session key to use.
 * `session_store` This is an object similar to the `redis`, `mongo` or `postgres` block. It defines a database to use for sessions. For example by setting this to a different redis instance you can separate your data and sessions into two different redis instances.
     * `name` (Name of database to use `redis`, `mongo` or `postgres`)
