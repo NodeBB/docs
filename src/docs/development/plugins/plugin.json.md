@@ -24,6 +24,10 @@ Here is a sample, keeping in mind that *not all options are required*:
     "acpScripts": [
         "public/src/admin.js"
     ],
+    "modules": {
+		"../client/myplugin.js": "./public/src/myplugin.js",
+		"../admin/plugins/myplugin.js": "./public/src/admin.js"
+	},
     "upgrades": [
         "upgrades/your_upgrade_script.js"
     ],
