@@ -13,11 +13,12 @@ executable.
 
 ## systemd
 
-Newer releases of Ubuntu/CentOS/Debian/OpenSuse use systemd to manage their services. The following is a systemd service example you can use, but **assumes the following**:
+The new standard for Ubuntu/CentOS/Debian/OpenSuse is to use `systemd` to manage their services. The following is a systemd service example you can use, but **assumes the following**:
 
 * MongoDB is installed via package manager and is managed by `systemd`
 * Node.js is installed via package manager and can be invoked via the `env` executable
 * NodeBB is run under the unprivileged user `nodebb`
+* You will [use the systemd journal](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs) to manage NodeBB's logs
 
 ```
 [Unit]
@@ -29,22 +30,21 @@ After=system.slice multi-user.target mongod.service
 Type=forking
 User=nodebb
 
-StandardOutput=syslog
-StandardError=syslog
-SyslogIdentifier=nodebb
-
 WorkingDirectory=/path/to/nodebb
 PIDFile=/path/to/nodebb/pidfile
-ExecStart=/usr/bin/env node loader.js
+ExecStart=/usr/bin/env node loader.js --no-silent
 Restart=always
 
 [Install]
 WantedBy=multi-user.target
 ```
 
-Replace your username (`nodebb`) and the path to NodeBB as appropriate.
+Replace the value of `User` (currently set to `nodebb`, above) with the system user you wish to run NodeBB, and the path to NodeBB (`/path/to/nodebb`) as appropriate.
+You'll most likely want to set the `User` to a system user with as few privileges as possible.
 
-Save the file to `/etc/systemd/system/nodebb.service`. Start and stop NodeBB by doing the following:
+Save the file to `/etc/systemd/system/nodebb.service`.
+
+From here, you can proceed to start and stop NodeBB by doing the following:
 
 ```
 $ systemctl start nodebb
@@ -57,6 +57,8 @@ If you would like NodeBB to automatically start up on system boot:
 $ systemctl enable mongod
 $ systemctl enable nodebb
 ```
+
+If you do not wish to use `journalctl` to view the NodeBB logs, you can switch back to having logs appended to `logs/output.log` by removing `--no-silent` from the `ExecStart` directive.
 
 For more information on configuring systemd, please consult [the manpage for the systemd service](https://www.freedesktop.org/software/systemd/man/systemd.service.html).
 
