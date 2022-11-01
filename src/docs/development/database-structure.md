@@ -542,18 +542,106 @@ value: post id
 ```
 
 
-wip
+
 
 **Category Sorted Sets**
 
-wip
+```
+key: categories:cid
+score: order of category
+value: category id
+```
+
+```
+key: cid:<cid>:children
+score: order of category
+value: category id
+```
+
+```
+key: categories:name
+score: 0
+value: <lowercase_categoryname>:<cid>
+```
+	
+```
+key: cid:<cid>:tids
+score: last post timestamp
+value: topic id
+```
+
+```
+key: cid:<cid>:tids:posts
+score: post count of topic
+value: topic id
+```
+
+```
+key: cid:<cid>:tids:votes
+score: vote count of topic
+value: topic id
+```
+
+```
+key: cid:<cid>:tids:views
+score: viewcount of topic
+value: topic id
+```
+
+```
+key: cid:<cid>:tids:pinned
+score: order of pinned tid
+value: topic id
+```
 	
 **Topic Sorted Sets**
+```
+key: topics:tid
+score: topic timestamp
+value: topic id
+```
 
-wip
+```
+key: topics:posts
+score: topic post count
+value: topic id
+```
+
+```
+key: topics:tid
+score: topic vote count
+value: topic id
+```
+
+```
+key: topics:tid
+score: topic viewcount
+value: topic id
+```
+
+```
+key: tid:<tid>:posters
+score: number of posts made by user
+value: user id
+```
+
 
 **Post Sorted Sets**
+```
+key: posts:pid
+score: post timetstamp
+value: post id
+```
 
-wip
+```
+key: tid:<tid>:posts
+score: post timestamp
+value: post id
+```
 	
+```
+key: tid:<tid>:posts:votes
+score: post vote count
+value: post id
+```
 	
