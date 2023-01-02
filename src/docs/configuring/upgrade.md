@@ -128,7 +128,29 @@ This should retrieve the latest (and greatest) version of NodeBB from the reposi
 Alternatively, download and extract the latest versioned copy of the code from [the Releases Page](https://github.com/NodeBB/NodeBB/releases).
 Overwrite any files as necessary. This method is not supported.
 
-### 4. Run the NodeBB upgrade script
+### 4. Update npm
+
+Before you run the upgrade script you should upgrade npm and update the packages to prevent errors during the nodebb upgrade process.
+
+It may be necessary to run this command with `sudo` if you get a permission denied error.
+
+``` bash
+$ npm install -g npm@latest
+```
+
+Update the packages.
+
+``` bash
+$ npm update
+```
+
+In addition, it is a good idea to fix vulnerabilities that npm detects.
+
+``` bash
+$ npm audit fix
+```
+
+### 5. Run the NodeBB upgrade script
 
 This script will install any missing dependencies, upgrade any plugins or themes (if an upgrade is available), and migrate the database if necessary.
 
@@ -136,7 +158,7 @@ This script will install any missing dependencies, upgrade any plugins or themes
 $ ./nodebb upgrade
 ```
 
-### 5. Start up NodeBB & Test!
+### 6. Start up NodeBB & Test!
 
 ``` bash
 $ ./nodebb start -l
