@@ -608,13 +608,13 @@ value: topic id
 ```
 
 ```
-key: topics:tid
+key: topics:votes
 score: topic vote count
 value: topic id
 ```
 
 ```
-key: topics:tid
+key: topics:views
 score: topic viewcount
 value: topic id
 ```
