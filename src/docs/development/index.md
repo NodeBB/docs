@@ -2,7 +2,7 @@
 
 We try to make working with NodeBB as seamless and open-ended as possible.
 
-NodeBB uses [benchpress](https://github.com/benchpressjs/benchpressjs) as its templating engine, [express](https://expressjs.org) on the backend to serve pages, and [require.js](https://requirejs.org) to serve as a module loader for individual pages. Of course, there are other dependencies, but these are the main ones that concern plugin developers.
+NodeBB uses [benchpress](https://github.com/benchpressjs/benchpressjs) as its templating engine, [express](https://expressjs.org) on the backend to serve pages, and [webpack](https://webpack.js.org/) to bundle client side javascript. Of course, there are other dependencies, but these are the main ones that concern plugin developers.
 
 The easiest way to get started is by looking at the [Quickstart plugin](https://github.com/nodebb/nodebb-plugin-quickstart). This is a template repository, meaning you are not meant to install it on a NodeBB installation, but rather should fork it to serve as a base for your own plugin.
 
