@@ -40,9 +40,9 @@ To access values in objects:
 And finally you can loop through arrays and create blocks like so:
 
 ``` html
-<!-- BEGIN posts -->
+{{{ each posts }}}
 {posts.content}
-<!-- END posts -->
+{{{ end }}}
 ```
 
 The above will create X copies of the above block, for each item in the
@@ -56,46 +56,46 @@ API call as above for our example. You can write IF conditionals like
 so:
 
 ``` html
-<!-- IF unreplied -->
+{{{ if unreplied }}}
 This thread is unreplied!
-<!-- ENDIF unreplied -->
+{{{ end }}}
 ```
 
 Another example:
 
 ``` html
-<!-- IF !disableSocialButtons -->
+{{{ if !disableSocialButtons }}}
 <button>Share on Facebook</button>
-<!-- ELSE -->
+{{{ else }}}
 Sharing has been disabled.
-<!-- ENDIF !disableSocialButtons -->
+{{{ end }}}
 ```
 
 We can check for the length of an array like so:
 
 ``` html
-<!-- IF posts.length -->
+{{{ if posts.length }}}
 There be some posts
-<!-- ENDIF posts.length -->
+{{{ end }}}
 ```
 
 While looping through an array, we can check if our current index is the
 @first or @last like so:
 
 ``` html
-<!-- BEGIN posts -->
-  <!-- IF @first -->
+{{{ each posts }}}
+  {{{ if @first }}}
     <h1>Main Author: {posts.username}</h1>
-  <!-- ENDIF @first -->
+  {{{ end }}}
   {posts.content}
-  <!-- IF @last -->
+  {{{ if @last }}}
     End of posts. Click here to scroll to the top.
-  <!-- ENDIF @last -->
-<!-- END posts -->
+  {{{ end }}}
+{{{ end }}}
 ```
 
 For more advanced documentation, have a look at the
-[templates.js](https://github.com/psychobunny/templates.js) repository
+[bencpressjs](https://github.com/benchpressjs/benchpressjs/tree/master/docs) repository
 
 Exposing template variables to client-side JavaScript
 -----------------------------------------------------
@@ -111,7 +111,7 @@ any other API call. For example, if we wanted to know more about a
 specific user we could make a call like so:
 
 ``` js
-$.get(RELATIVE_PATH + '/api/user/psychobunny', {}, function(user) {
+$.get(config.relative_path + '/api/user/psychobunny', {}, function(user) {
     console.log(user)
 });
 ```
@@ -122,7 +122,7 @@ See this API call in action:
 ### Via Template Variables
 
 On every page the data used to render that page is avaiable in `ajaxify.data`
-For example on the topic page you can access the topic title with `ajaxify.data.title`
+For example on the topic page you can access the topic title with `ajaxify.data.title` or the category id with `ajaxify.data.cid`
 
 
 Internationalization
@@ -173,9 +173,9 @@ and dynamically sticking it in an already loaded `<ul>`
 
 ``` html
 Some stuff here...
-<!-- BEGIN posts -->
+{{{ each posts }}}
 We just want to pull this block only.
-<!-- END posts -->
+{{{ end }}}
 ... some stuff here
 ```
 
