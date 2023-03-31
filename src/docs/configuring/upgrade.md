@@ -75,7 +75,7 @@ tar -czf ~/nodebb_assets.tar.gz ./uploads
 
 ### 3. Grab the latest and greatest code
 
-Before upgrading NodeBB make sure you have the required nodejs version. NodeBB supports the latest stable versions of nodejs. (v16, etc.) To upgrade nodejs run
+Before upgrading NodeBB make sure you have the required nodejs version. NodeBB supports the latest stable versions of nodejs. (v18, etc.) To upgrade nodejs run
 
 ``` bash
 curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
@@ -84,7 +84,7 @@ sudo apt-get install -y nodejs
 
 Navigate to your NodeBB: `$ cd /path/to/nodebb`.
 
-There are multiple ways NodeBB can be installed. You could either be on the main branch (`master`), a release branch (e.g. `v2.x`), or using archived downloads of NodeBB.
+There are multiple ways NodeBB can be installed. You could either be on the main branch (`master`), a release branch (e.g. `v2.x`), or using archived downloads from [releases of NodeBB repo](https://github.com/NodeBB/NodeBB/releases).
 
 Don't know what branch you are on? Execute
 `git rev-parse --abbrev-ref HEAD` to find out.
