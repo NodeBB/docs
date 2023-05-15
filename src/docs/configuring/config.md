@@ -55,7 +55,7 @@ NodeBB:
     * `transports` (Default: `["polling", "websocket"]`) Can be used to configure socket.io transports.
     * `address` (Default: `""`) Address of socket.io server can be empty
     * `origins` (Defaults to `url` in `config.json` on all ports) Defined a different url for socket.io connections, in the format `domain.tld:port` (e.g. `example.org:*`)
-        * If you need to enter enable origins, separate them using commas (e.g. `https://example.org:*,https://example.net:*`)
+        * If you need to enter multiple origins, separate them using commas (e.g. `https://example.org:*,https://example.net:*`)
 * `upload_path` (Default: `/public/uploads`) Specifies the path,
     relative to the NodeBB root install, that uploaded files will be
     saved in.
