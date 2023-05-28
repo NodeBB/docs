@@ -11,8 +11,8 @@ Here is a sample, keeping in mind that *not all options are required*:
     "staticDirs": {
         "images": "public/images"
     },
-    "less": [
-        "assets/style.less"
+    "scss": [
+        "assets/style.scss"
     ],
     "hooks": [
         { "hook": "filter:post.save", "method": "filter" },
@@ -48,7 +48,7 @@ to the public at the route `/plugins/{YOUR-PLUGIN-ID}`.
 
 * e.g. The `staticDirs` hash in the sample configuration maps `/path/to/your/plugin/public/images` to `/plugins/my-plugin/images`
 
-The `less` property contains an array of paths (relative to your
+The `scss` property contains an array of paths (relative to your
 plugin's directory), that will be precompiled into the CSS served by
 NodeBB.
 

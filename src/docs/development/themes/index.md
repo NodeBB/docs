@@ -46,16 +46,16 @@ The theme's folder must contain at least two files for it to be a valid
 theme:
 
 1.  `theme.json`
-2.  `theme.less`
+2.  `theme.scss`
 
-`theme.less` is where your theme's styles will reside. NodeBB expects
-LESS to be present in this file, and will precompile it down to CSS
-on-demand. For more information regarding LESS, take a look at [the
-project homepage](http://lesscss.org/).
+`theme.scss` is where your theme's styles will reside. NodeBB expects
+SCSS to be present in this file, and will precompile it down to CSS
+on-demand. For more information regarding SCSS, take a look at [the
+project homepage](https://sass-lang.com/).
 
-**Note**: A *suggested* organization for `theme.less` is to `@import`
+**Note**: A *suggested* organization for `theme.scss` is to `@import`
 multiple smaller files instead of placing all of the styles in the main
-`theme.less` file.
+`theme.scss` file.
 
 Configuration
 -------------
