@@ -61,4 +61,4 @@ There are two ways this file can be exposed to NodeBB:
 
 ## Styling
 
-Styling is defined as a set of LESS files exposed to NodeBB via the `less` array property in `plugin.json`. You can define and organize your LESS files as you wish.
+Styling is defined as a set of SASS files exposed to NodeBB via the `scss` array property in `plugin.json`. You can define and organize your SASS files as you wish.
