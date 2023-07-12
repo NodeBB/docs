@@ -26,7 +26,7 @@ Save those two lines into `/etc/caddy/Caddyfile` and reload Caddy (`systemctl re
 
 ----
 
-If you want a more robust setup with compression and direct file-serving for built assets (as mentioned in [Scaling NodeBB](../scaling)):
+If you want a more robust setup with compression and direct file-serving for built assets (as mentioned in [Scaling NodeBB](../../scaling)):
 
 ```
 example.org {
