@@ -108,7 +108,7 @@ cd /opt/nodebb
 sudo -u nodebb ./nodebb setup
 ```
 
-The wizards will ask what database to use, make sure you specify `postgresql` and then use the same information as used above when the database was created.
+The wizards will ask what database to use, make sure you specify `postgres` and then use the same information as used above when the database was created.
 
 Lastly, we run the forum, again as the nodebb user.
 
