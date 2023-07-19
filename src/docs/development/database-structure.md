@@ -644,4 +644,38 @@ key: tid:<tid>:posts:votes
 score: post vote count
 value: post id
 ```
-	
+
+**Chat Sorted Sets**
+key: uid:<uid>:chat:rooms
+score: timestamp of last message
+value: chat room id
+
+key: uid:<uid>:chat:rooms:read
+score: timestamp of when user read chat room
+value: chat room id
+
+key: chat:room:<roomId>:mids
+score: timestamp of message
+value: message id
+
+key: chat:room:<roomId>:uids
+score: timestamp when user joined room
+value: uid
+
+key: chat:room:<roomId>:owners
+score: timestamp when user became owner
+value: uid
+
+key: chat:rooms:public
+score: timestamp when chat room is created
+value: chat room id
+
+key: chat:rooms:public:order
+score: order of chat room
+value: chat room id
+
+key: chat:rooms
+score: timestamp when room is created
+value: chat room id
+
+
