@@ -59,7 +59,9 @@ NodeBB:
 * `upload_path` (Default: `/public/uploads`) Specifies the path,
     relative to the NodeBB root install, that uploaded files will be
     saved in.
-
+* `fontawesome` This is an object that defines additional settings for FontAwesome, the icon library used by NodeBB.
+    * `pro` Set this to `true` if you want to use the paid FontAwesome Pro icons. Note that you'll need to install FontAwesome Pro package yourself before NodeBB can use it. You can do so by following the instructions on https://fontawesome.com/docs/web/setup/packages
+    * `styles` (Default: `"*"`) Specifies which styles of icons NodeBB will allow to be used. `"*"` means all supported styles will be used, which currently means `["solid", "brands", "regular"]` if `fontawesome:pro` is false and `["solid", "brands", "regular", "light", "thin", "duotone", "sharp"]` otherwise.
 
 
 
