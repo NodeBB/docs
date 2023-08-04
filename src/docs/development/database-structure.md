@@ -1,4 +1,4 @@
-NodeBB stores data using different structures based on redis. These are `hashes`, `sets`, `sortedsets` and `lists`.
+NodeBB stores data using different structures based on redis (see [here](https://community.nodebb.org/post/25924)). These are `hashes`, `sets`, `sortedsets` and `lists`.
 
 A hash is comparable to a javascript object, sets are collections of unique values, sorted sets are same as sets but they have an extra score field that lets sorting the values. Lists are similar to an array in JS.
 
