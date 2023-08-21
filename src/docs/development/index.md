@@ -38,6 +38,20 @@ The full list is can be found by running the following command:
 
 > If you're curious about the source, please refer to [this link](https://github.com/NodeBB/NodeBB/blob/c44ddb10e7ef5b822781e7e6b6e4859d5edc223d/src/meta/aliases.js#L6-L21)
 
+## grunt
+
+For optimized development, the NodeBB team (and many of the plugin authors) use [Grunt](https://gruntjs.com/)
+as part of their workflow. The pre-requisite dependencies are installed with NodeBB during the `npm install`
+step, although you may need to install `grunt-cli` (or your distribution's appropriate package for grunt)
+to allow `grunt` to be called via the command line.
+
+Once installed, you can simply run `grunt` to build all assets and run NodeBB. Grunt will also watch for
+file changes and selectively build a subset of NodeBB's assets so there is no need to hop back to the
+console to stop NodeBB, build, and restart NodeBB.
+
+Alternatively, you can run `grunt --skip`, which skips the build step and simply runs NodeBB with file
+watching enabled.
+
 ## Testing
 
 In order to run tests on NodeBB, add the following block to your `config.json` file:
