@@ -30,7 +30,7 @@ For example, if you are making changes to your plugin's administrative pages, yo
 
 ... which would build only the ACP javascript, ACP stylesheets, and templates.
 
-The full list is can be found [in the codebase itself](https://github.com/nodebb/nodebb-theme-persona).
+The full list is can be found [in the codebase itself]([https://github.com/nodebb/nodebb/](https://github.com/NodeBB/NodeBB/blob/c44ddb10e7ef5b822781e7e6b6e4859d5edc223d/src/meta/aliases.js#L6-L21)).
 
 ## grunt
 
