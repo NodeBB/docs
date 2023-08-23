@@ -11,7 +11,7 @@ This installation guide is optimized for
 
 ## Installing Node.js
 
-Naturally, NodeBB is driven by Node.js, and so it needs to be installed. Node.js is a rapidly evolving platform and so installation of the current LTS version of Node.js is recommended to make future updates seemless. The [Node.js LTS Plan](https://github.com/nodejs/LTS) details the LTS release schedule including projected end-of-life.
+Naturally, NodeBB is driven by Node.js, and so it needs to be installed. Node.js is a rapidly evolving platform and so installation of the current LTS version of Node.js is recommended to make future updates seamless. The [Node.js LTS Plan](https://github.com/nodejs/LTS) details the LTS release schedule including projected end-of-life.
 
 {{node.install}}
 
