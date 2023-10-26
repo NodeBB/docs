@@ -32,8 +32,8 @@ While it is possible to upgrade NodeBB while it is running, it is
 definitely not recommended, particularly if it is an active forum:
 
 ``` bash
-$ cd /path/to/nodebb
-$ ./nodebb stop
+cd /path/to/nodebb
+./nodebb stop
 ```
 
 ### 2. Back up your data
@@ -82,7 +82,7 @@ curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-Navigate to your NodeBB: `$ cd /path/to/nodebb`.
+Navigate to your NodeBB: `cd /path/to/nodebb`.
 
 There are multiple ways NodeBB can be installed. You could either be on the main branch (`master`), a release branch (e.g. `v2.x`), or using archived downloads from [releases of NodeBB repo](https://github.com/NodeBB/NodeBB/releases).
 
@@ -92,8 +92,8 @@ Don't know what branch you are on? Execute
 #### via main branch
 
 ``` bash
-$ git fetch    # Grab the latest code from the NodeBB repository
-$ git reset --hard v2.2.5    # Replace this with the version you want to upgrade to
+git fetch    # Grab the latest code from the NodeBB repository
+git reset --hard v2.2.5    # Replace this with the version you want to upgrade to
 ```
 
 This should retrieve the latest (and greatest) version of NodeBB from
@@ -108,17 +108,17 @@ your current branch!***.
 For example, if upgrading from `v1.19.8` to `v2.2.5`:
 
 ``` bash
-$ git fetch    # Grab the latest code from the NodeBB repository
-$ git checkout v2.x    # Switch to the v2.x branch since we are now upgrading to NodeBB version 2
-$ git reset --hard origin/v2.x
+git fetch    # Grab the latest code from the NodeBB repository
+git checkout v2.x    # Switch to the v2.x branch since we are now upgrading to NodeBB version 2
+git reset --hard origin/v2.x
 ```
 
 If not upgrading between branches (e.g. `v2.2.4` to `v2.2.5`), just run
 the following commands:
 
 ``` bash
-$ git fetch
-$ git reset --hard origin/v2.x
+git fetch
+git reset --hard origin/v2.x
 ```
 
 This should retrieve the latest (and greatest) version of NodeBB from the repository.
@@ -133,13 +133,13 @@ Overwrite any files as necessary. This method is not supported.
 This script will install any missing dependencies, upgrade any plugins or themes (if an upgrade is available), and migrate the database if necessary.
 
 ``` bash
-$ ./nodebb upgrade
+./nodebb upgrade
 ```
 
 ### 5. Start up NodeBB & Test!
 
 ``` bash
-$ ./nodebb start -l
+./nodebb start -l
 ```
 
 You should now be running the latest version of NodeBB.
