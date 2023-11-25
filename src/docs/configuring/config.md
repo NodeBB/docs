@@ -11,7 +11,8 @@ Some of these values are saved via the setup script:
 * `url` is the full web-accessible address that points to your NodeBB.
     If you don't have a domain, an IP address will work fine (e.g.
     `http://127.0.0.1:4567`). Subfolder installations also define their
-    folder here as well (e.g. `http://127.0.0.1:4567/forum`)
+    folder here as well (e.g. `http://127.0.0.1:4567/forum`). If the url is
+    changed to a sub-folder you need to rebuild nodebb with `./nodebb build`
 * `secret` is a text string used to hash cookie sessions. If the
     secret is changed, all existing sessons will no longer validate and
     users will need to log in again.
