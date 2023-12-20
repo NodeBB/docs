@@ -70,7 +70,7 @@ are compiled into the minified payload served in the Admin Control Panel
 (ACP)
 
 The `modules` property allows you to embed third-party AMD-style scripts into your plugin. For more information, see
-[Using Third-Party Libraries](./libraries).
+[Using Third-Party Libraries](https://docs.nodebb.org/development/plugins/libraries/).
 
 The `upgrades` array is optional, useful for seamlessly updating your plugin's database
 schema via NodeBB's upgrade system. Have a look at this example in NodeBB's [dbsearch plugin](https://github.com/barisusakli/nodebb-plugin-dbsearch/blob/master/upgrades/dbsearch_change_mongodb_schema.js) for further details.
