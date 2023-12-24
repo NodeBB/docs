@@ -11,8 +11,8 @@ const versions = {
     mongo: '5.0',
     redis: '6.2.6',
     node: 'lts',
-    npm: '8.11.0',
-    nodebb: '2.x',
+    npm: '10.2.3',
+    nodebb: '3.x',
   },
 };
 
