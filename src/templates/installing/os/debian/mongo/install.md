@@ -8,6 +8,4 @@ curl -fsSL https://pgp.mongodb.com/server-{{versions.recommended.mongo}}.asc | \
 echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-{{versions.recommended.mongo}}.gpg ] http://repo.mongodb.org/apt/debian bullseye/mongodb-org/{{versions.recommended.mongo}} main" | sudo tee /etc/apt/sources.list.d/mongodb-org-{{versions.recommended.mongo}}.list
 sudo apt-get update
 sudo apt-get install -y mongodb-org
-sudo systemctl start mongod
-sudo systemctl enable mongod
 ```
