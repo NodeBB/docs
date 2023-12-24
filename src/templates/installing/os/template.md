@@ -100,7 +100,12 @@ Restart MongoDB and verify the administrative user created earlier can connect:
 
 ```
 {{mongo.service.restart}}
-mongo -u admin -p your_password --authenticationDatabase=admin
+```
+
+To connect to a MongoDB deployment that requires authentication, use the `--username` and `--authenticationDatabase` options. mongosh prompts you for a password, which it hides as you type.
+
+```
+mongosh "mongodb://hostname:port" --username admin --authenticationDatabase admin
 ```
 
 If everything is configured correctly the Mongo Shell will connect. Exit the shell.
