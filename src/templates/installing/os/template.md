@@ -52,7 +52,7 @@ Start the `mongod` service and verify service status:
 General MongoDB administration is done through the MongoDB Shell `mongo`. A default installation of MongoDB listens on port `27017` and is accessible locally. Access the shell:
 
 ```bash
-mongo
+mongosh
 ```
 
 Switch to the built-in `admin` database:
