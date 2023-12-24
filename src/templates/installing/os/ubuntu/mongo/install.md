@@ -1,6 +1,7 @@
 The following is an abbreviation of the official [MongoDB installation guide for Ubuntu](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/). If you're having issues, fall back to using that guide instead.
 
 ```bash
+sudo apt-get install gnupg curl
 curl -fsSL https://pgp.mongodb.com/server-{{versions.recommended.mongo}}.asc | \
    sudo gpg -o /usr/share/keyrings/mongodb-server-{{versions.recommended.mongo}}.gpg \
    --dearmor
