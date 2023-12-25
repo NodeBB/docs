@@ -1,4 +1,4 @@
-Node.js is available from the NodeSource Ubuntu binary distributions repository.
+Node.js is available from the NodeSource Debian binary distributions repository.
 
 1. Download and import the Nodesource GPG key
 
