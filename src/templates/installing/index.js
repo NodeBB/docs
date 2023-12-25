@@ -10,8 +10,8 @@ const versions = {
   recommended: {
     mongo: '7.0',
     redis: '6.2.6',
-    node: 'lts',
-    npm: '8.11.0',
+    node: '20',
+    npm: '10',
     nodebb: '2.x',
   },
 };
