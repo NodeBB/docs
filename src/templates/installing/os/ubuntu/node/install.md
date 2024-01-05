@@ -20,3 +20,4 @@ echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.co
 ```sh
 sudo apt-get update
 sudo apt-get install nodejs -y
+```
