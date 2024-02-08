@@ -64,6 +64,9 @@ NodeBB:
     * `pro` Set this to `true` if you want to use the paid FontAwesome Pro icons. Note that you'll need to install FontAwesome Pro package yourself before NodeBB can use it. You can do so by following the instructions on https://fontawesome.com/docs/web/setup/packages
     * `styles` (Default: `"*"`) Specifies which styles of icons NodeBB will allow to be used. `"*"` means all supported styles will be used, which currently means `["solid", "brands", "regular"]` if `fontawesome:pro` is false and `["solid", "brands", "regular", "light", "thin", "duotone", "sharp"]` otherwise.
 * `plugins:active` An array of active plugins `["nodebb-plugin-mentions", "nodebb-plugin-markdown"]`, if set this array is used instead of reading active plugins from the database.
+* `ssl` An object with secure sockets layer options. If this property is present, NodeBB will use a secure https server:
+    * `key` File path of the private key file.
+    * `cert` File path of the public certificate file.
 
 
 
