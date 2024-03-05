@@ -19,7 +19,7 @@ nav:
             - 'CentOS': 'installing/os/centos.md'
             - 'installing/os/debian.md'
             - 'FreeBSD/OpenBSD': 'installing/os/freebsd.md'
-            - 'OSX': 'installing/os/osx-mavericks.md'
+            - 'MacOS': 'installing/os/macOS.md'
             - 'SmartOS': 'installing/os/smartos.md'
             - 'Windows': 'installing/os/windows.md'
         - via the Cloud:
