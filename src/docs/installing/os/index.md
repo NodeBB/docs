@@ -13,7 +13,7 @@ The following are step-by-step guides to help you get up and running on various 
 -   [Debian](./debian)
 -   [Fedora](./fedora)
 -   [FreeBSD](./freebsd)
--   [Mac](./osx-mavericks)
+-   [macOS](./macOS)
 -   [SmartOS](./smartos)
 -   [Ubuntu](./ubuntu)
 -   [Windows](./windows)
