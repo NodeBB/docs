@@ -52,6 +52,11 @@ nav:
             - 'configuring/plugins/search.md'
         - Upgrading: 'configuring/upgrade.md'
         - 'configuring/scaling.md'
+    - Federation (v4):
+        - Quick Start: 'activitypub/index.md'
+        - Pre-release Info: 'activitypub/prerelease.md'
+        - 'activitypub/settings.md'
+        - 'activitypub/privileges.md'
     - Development:
         - 'development/index.md'
         - 'development/quickstart.md'
