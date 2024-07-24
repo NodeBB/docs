@@ -11,6 +11,7 @@ the cloud using popular PaaS solutions.
 * [Jelastic](http://docs.jelastic.com/nodebb) (external)
 * [Nitrous.IO](./nitrous.md)
 * [Openshift](./openshift.md)
+* [Elestio](./elestio.md)
 * RoseHosting.com
     * [CentOS](https://www.rosehosting.com/blog/how-to-install-nodebb-on-a-centos-7-vps/) (external)
     * [Ubuntu](https://www.rosehosting.com/blog/install-and-setup-nodebb-with-redis-and-nginx-on-ubuntu-12-04/) (external)

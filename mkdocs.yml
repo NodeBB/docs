@@ -32,6 +32,7 @@ nav:
             - 'installing/cloud/heroku.md'
             - 'installing/cloud/nitrous.md'
             - 'installing/cloud/openshift.md'
+            - 'installing/cloud/elestio.md'
     - Configuration:
         - Running NodeBB: 'configuring/running.md'
         - config.json: 'configuring/config.md'
