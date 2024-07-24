@@ -60,13 +60,6 @@ If you know which plugin caused problems, disable it by running:
 
 Otherwise, disable all plugins by running: `./nodebb reset -p`
 
-### Is it possible to install NodeBB via FTP?
-
-It is possible to transfer the files to your remote server using FTP,
-but you do require shell access to the server in order to actually
-"start" NodeBB. Here is [a handy guide for installing NodeBB on
-DigitalOcean](http://burnaftercompiling.com/nodebb/setting-up-a-nodebb-forum-for-dummies/)
-
 ### I'm getting an "npm ERR!" error
 
 For the most part, errors involving `npm` are due to Node.js being
