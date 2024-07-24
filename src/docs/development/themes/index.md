@@ -103,4 +103,4 @@ If your theme is dependent on a theme that is not nodebb-theme-vanilla,
 you should set the `baseTheme` configuration in your `theme.json` to the
 appropriate theme.
 
-For more information, please see the detailed article on [the templating system](./templates)
+For more information, please see the detailed article on [the templating system](./templates.md)

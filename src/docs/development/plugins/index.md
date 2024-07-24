@@ -28,7 +28,7 @@ like something to happen. If a hook isn't present, [file an
 issue](https://github.com/NodeBB/NodeBB/issues) and we'll include it in
 the next version of NodeBB.
 
-For more information on hooks, please consult [the hooks page](./hooks).
+For more information on hooks, please consult [the hooks page](./hooks.md).
 
 ## Writing the plugin library
 

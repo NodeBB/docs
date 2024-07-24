@@ -14,7 +14,7 @@ Cloning the repository and inspecing the files themselves can be overwhelming, s
 
 Our first stop is is the `plugin.json` file, this plugin's main configuration area. NodeBB looks at this file to determine the plugin's name, hook listeners, and files.
 
-[Click here for a more detailed look at the file format and options](../plugins/plugin.json)
+[Click here for a more detailed look at the file format and options](./plugins/plugin.json.md)
 
 `plugin.json` has an option called `library`, which is defined as `library.js`, let's look at that next.
 
@@ -32,7 +32,7 @@ In this particular hook, we set up some routes and mount them to the express rou
 
 You can discover additional hooks by inspecting the NodeBB database, or by [viewing the continually updated list of hooks](https://github.com/NodeBB/NodeBB/wiki/Hooks).
 
-For more information on [plugin hooks, click here](../plugins/hooks).
+For more information on [plugin hooks, click here](./plugins/hooks.md).
 
 ## Client-side logic
 

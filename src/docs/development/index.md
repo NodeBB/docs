@@ -6,7 +6,7 @@ NodeBB uses [benchpress](https://github.com/benchpressjs/benchpressjs) as its te
 
 The easiest way to get started is by looking at the [Quickstart plugin](https://github.com/nodebb/nodebb-plugin-quickstart). This is a template repository, meaning you are not meant to install it on a NodeBB installation, but rather should fork it to serve as a base for your own plugin.
 
-Take a look at our [Quickstart plugin breakdown](./quickstart) for more details.
+Take a look at our [Quickstart plugin breakdown](./quickstart.md) for more details.
 
 ## Accessing page data
 

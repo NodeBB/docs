@@ -117,4 +117,5 @@ sudo -u nodebb ./nodebb start
 ```
 
 NodeBB can also be started with helper programs, such as `forever`.
-Take a look at the options [here](../../running/index).
+Take a look at the options [here](../../configuring/running.md).
+

@@ -18,8 +18,10 @@ nav:
             - 'Arch Linux': 'installing/os/arch.md'
             - 'CentOS': 'installing/os/centos.md'
             - 'installing/os/debian.md'
+            - 'installing/os/fedora.md'
             - 'FreeBSD/OpenBSD': 'installing/os/freebsd.md'
             - 'MacOS': 'installing/os/macOS.md'
+            - 'installing/os/macos-bigsur.md'
             - 'SmartOS': 'installing/os/smartos.md'
             - 'Windows': 'installing/os/windows.md'
         - via the Cloud:
@@ -28,7 +30,6 @@ nav:
             - 'installing/cloud/cloudron.md'
             - 'installing/cloud/docker.md'
             - 'installing/cloud/heroku.md'
-            - 'installing/cloud/koding.md'
             - 'installing/cloud/nitrous.md'
             - 'installing/cloud/openshift.md'
     - Configuration:

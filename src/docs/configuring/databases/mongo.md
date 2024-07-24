@@ -136,7 +136,7 @@ Restart MongoDB.
 # service mongodb restart
 ```
 
-Step 8: Configuring NodeBB 
+Step 8: Configuring NodeBB
 -------------------------
 
 Make sure you are in your NodeBB root folder. If not, just type:
@@ -176,7 +176,7 @@ $ ./nodebb start
 Now visit `yourdomainorip.com:4567` and your NodeBB installation should
 be running.
 
-NodeBB can also be started with helper programs, such as [supervisor or forever](../../running/index). You can also [use `nginx` as a reverse proxy](../../configuring/proxies).
+NodeBB can also be started with helper programs, such as [supervisor or forever](../running.md). You can also [use `nginx` as a reverse proxy](../proxies/index.md).
 
 Advanced Settings
 ===========

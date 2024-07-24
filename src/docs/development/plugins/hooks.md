@@ -63,7 +63,7 @@ In addition to hooks executed on certain actions, a pair of hooks are also fired
 
 A widget defined by a plugin needs to let NodeBB know what's in the widget (e.g. html, and other assorted data). This is handled via a plugin hook fired whenever a widget is rendered. The hook name itself is defined by the widget name, so if a widget with the `widget` property set to `mywidget` is rendered, the hook `filter:widget.render:mywidget` will be fired.
 
-For more information, please consult the [page on writing widgets](../widgets)
+For more information, please consult the [page on writing widgets](../widgets.md)
 
 ## How to use hooks
 

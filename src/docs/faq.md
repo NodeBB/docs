@@ -47,11 +47,11 @@ Commands:
 
 ### How do I upgrade my NodeBB to a newer version?
 
-Please consult [Upgrading NodeBB](../configuring/upgrade)
+Please consult [Upgrading NodeBB](./configuring/upgrade.md)
 
 ### I upgraded NodeBB and now X isn't working properly!
 
-Please consult [Upgrading NodeBB](../configuring/upgrade)
+Please consult [Upgrading NodeBB](./configuring/upgrade.md)
 
 ### I installed an incompatible plugin, and now my forum won't start!
 
@@ -94,8 +94,8 @@ higher than 0.8
 
 ### URLs on my NodeBB (or emails) still have the port number in them!
 
-If you are using [nginx](../configuring/proxies/nginx) or
-[Apache](../configuring/proxies/apache) as a reverse proxy, you
+If you are using [nginx](./configuring/proxies/nginx.md) or
+[Apache](./configuring/proxies/apache.md) as a reverse proxy, you
 don't need the port to be shown. Simply run ./nodebb setup and specify
 the base URL without a port number.
 

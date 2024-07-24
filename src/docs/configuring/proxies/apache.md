@@ -8,7 +8,7 @@ In order to allow NodeBB to be served without a port, Apache can be set up to pr
 Requirements
 ----------------------------
 
-**Note**: This requires Apache v2.4.x or greater. If your version of Apache is older, please see [Apache v2.2.x Instructions](proxies/apache2.2)
+**Note**: This requires Apache v2.4.x or greater. If your version of Apache is older, please see [Apache v2.2.x Instructions](./apache2.2.md)
 
 You have to enable the following Apache mods:
 
@@ -36,7 +36,7 @@ Below is a minimal Apache virtualhost configuration for NodeBB running on port `
         Order deny,allow
         Allow from all
     </Proxy>
-    
+
     RewriteEngine On
     RewriteCond %{REQUEST_URI}  ^/socket.io            [NC]
     RewriteCond %{QUERY_STRING} transport=websocket    [NC]
@@ -47,12 +47,12 @@ Below is a minimal Apache virtualhost configuration for NodeBB running on port `
 </VirtualHost>
 ```
 
-This is a more advanced Apache virtualhost configuration which uses TLS, HTTP/2, static file cache headers 
+This is a more advanced Apache virtualhost configuration which uses TLS, HTTP/2, static file cache headers
 and redirects http traffic **permanently** to HTTPS!
 
 ```apache
 <VirtualHost *:80>
-    ServerName www.example.com 
+    ServerName www.example.com
     ServerAlias example.com
 
     # Rewrite any http traffic to the main url https site
@@ -74,7 +74,7 @@ and redirects http traffic **permanently** to HTTPS!
     # Basic security headers
     Header always set X-Content-Type-Options "nosniff"
     Header always set X-Xss-Protection "1; mode=block"
-    
+
     # NodeBB header
     RequestHeader set X-Forwarded-Proto "https"
 
@@ -122,8 +122,8 @@ error page when your forum isn't running.
 
 ## Create your custom error page
 
-You can create your own `503.html` or you use the one included with your NodeBB installation. To make your own create a 
-new file `503.html` and place it in a subfolder of your NodeBB public folder `/path/to/nodebb/public/error-documents`. 
+You can create your own `503.html` or you use the one included with your NodeBB installation. To make your own create a
+new file `503.html` and place it in a subfolder of your NodeBB public folder `/path/to/nodebb/public/error-documents`.
 If you want to use the one included with NodeBB, copy the `503.html` from the `public` folder to the subfolder mentioned above.
 
 Be sure to add content to your `503_custom.html` file. Here's an example which you
@@ -145,7 +145,7 @@ can copy and paste:
 ## Configure Apache to use your custom error page
 
 We now need to tell Apache to use our page when the relevant error
-occurs. Open your vhost file `/etc/apache2/sites-available/www.example.com.conf`. 
+occurs. Open your vhost file `/etc/apache2/sites-available/www.example.com.conf`.
 
 Add this to your active virtual host section and change the paths accordingly.
 
