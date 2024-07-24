@@ -12,20 +12,20 @@ Theme](https://github.com/nodebb/nodebb-theme-quickstart) and adjust it
 for your customisations.
 
 The quickstart theme is a **child theme** (see below) of NodeBB's default
-theme (Persona), and thus inherits all of its styling and templates from
+theme (Harmony), and thus inherits all of its styling and templates from
 its parent theme.
 
-If you want to overwrite an existing template, copy it from [the Persona
-repository](https://github.com/nodebb/nodebb-theme-persona) into your
+If you want to overwrite an existing template, copy it from [the Harmony
+repository](https://github.com/nodebb/nodebb-theme-harmony) into your
 theme's `/templates` directory, taking care to follow the same directory
 structure. You may have to create this directory.
 
-Then rebuild NodeBB's assets and your template should override Persona's
+Then rebuild NodeBB's assets and your template should override Harmony's
 template of the same path.
 
 e.g. If you want to modify topic.tpl, you would:
 
-1. Copy the contents of `nodebb-theme-persona/templates/topic.tpl`
+1. Copy the contents of `nodebb-theme-harmony/templates/topic.tpl`
 1. Create `nodebb-theme-mytheme/templates`
 1. Create a new file `nodebb-theme-mytheme/templates/topic.tpl` with the contents of the original topic.tpl file
 1. Make your changes as necessary.
@@ -103,4 +103,4 @@ If your theme is dependent on a theme that is not nodebb-theme-vanilla,
 you should set the `baseTheme` configuration in your `theme.json` to the
 appropriate theme.
 
-For more information, please see the detailed article on [the templating system](./templates)
+For more information, please see the detailed article on [the templating system](./templates.md)

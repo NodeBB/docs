@@ -27,7 +27,7 @@ npm -v (should output "{{versions.recommended.npm}}" or similar)
 ## Installing MongoDB
 
 MongoDB is the default database for NodeBB. As noted in the [MongoDB Support Policy](https://www.mongodb.com/support-policy/legacy) versions older than **4.0** are officially **End of Life** as of October 2021.
-This guide assumes installation of **{{versions.recommended.mongo}}**. If you wish to use another database instead of MongoDB the [Configuring Databases](../../../configuring/databases) section has more information.
+This guide assumes installation of **{{versions.recommended.mongo}}**. If you wish to use another database instead of MongoDB the [Configuring Databases](../../configuring/databases/index.md) section has more information.
 
 Official detailed installation instructions can be found in the [MongoDB manual](https://docs.mongodb.com/manual/administration/install-community/). Although out of scope for this guide, some MongoDB production deployments leverage clustering, sharding and replication for high availibility and performance reasons. Please refer to the MongoDB [Replication](https://docs.mongodb.com/v{{versions.recommended.mongo}}/replication/) and [Sharding](https://docs.mongodb.com/v{{versions.recommended.mongo}}/sharding/) topics for further reading. Keep in mind that NodeBB does not require any of these advanced configurations, and doing so may complicate your installation. Keeping it simple often can be best.
 
@@ -52,7 +52,7 @@ Start the `mongod` service and verify service status:
 General MongoDB administration is done through the MongoDB Shell `mongo`. A default installation of MongoDB listens on port `27017` and is accessible locally. Access the shell:
 
 ```bash
-mongo
+mongosh
 ```
 
 Switch to the built-in `admin` database:
@@ -100,7 +100,12 @@ Restart MongoDB and verify the administrative user created earlier can connect:
 
 ```
 {{mongo.service.restart}}
-mongo -u admin -p your_password --authenticationDatabase=admin
+```
+
+To connect to a MongoDB deployment that requires authentication, use the `--username` and `--authenticationDatabase` options. mongosh prompts you for a password, which it hides as you type.
+
+```
+mongosh "mongodb://hostname:port" --username admin --authenticationDatabase admin
 ```
 
 If everything is configured correctly the Mongo Shell will connect. Exit the shell.
@@ -133,7 +138,7 @@ A series of questions will be prompted with defaults in parentheses. The default
 
 **Note**: When entering your site URL, make sure it is _exactly_ what you plan on accessing your site at. If you plan on visiting `http://example.org` to open your forum, then enter exactly `http://example.org`.
 
-A configuration file [config.json](../../../configuring/config) will be created in the root of the nodebb directory. This file can be modified should you need to make changes such as changing the database location or credentials used to access the database.
+A configuration file [config.json](../../configuring/config.md) will be created in the root of the nodebb directory. This file can be modified should you need to make changes such as changing the database location or credentials used to access the database.
 
 Finally, you can use the cli utility to start NodeBB:
 
@@ -202,7 +207,7 @@ After making changes to nginx configs, you have to reload the service for change
 {{nginx.service.reload}}
 ```
 
-For more information, go to the [configuring nginx](../configuring/nginx) page.
+For more information, go to the [configuring nginx](../../configuring/proxies/nginx.md) page.
 
 ## After Installation
 

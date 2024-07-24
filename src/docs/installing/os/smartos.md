@@ -55,7 +55,7 @@ Installation
 
     > If you want to use MongoDB, LevelDB, or another database instead
     > of Redis please look at the
-    > [Configuring Databases](../../configuring/databases) section.
+    > [Configuring Databases](../../configuring/databases/index.md) section.
     >
     > **Note:** These steps quickly setup a redis server but do not
     > fine-tuned it for production.
@@ -148,4 +148,4 @@ issue](https://github.com/NodeBB/NodeBB/issues).
 Upgrading NodeBB
 ----------------
 
-**Note:** Detailed upgrade instructions are listed in [Upgrading NodeBB](../../configuring/upgrade).
+**Note:** Detailed upgrade instructions are listed in [Upgrading NodeBB](../../configuring/upgrade.md).

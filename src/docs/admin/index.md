@@ -6,4 +6,4 @@ of its look and feel. Administrative functions such as user and group management
 
 The ACP is only accessible to administrators, and thus should be protected from unauthorised access whenever possible.
 
-* [Dashboard](./dashboard)
+* [Dashboard](./dashboard.md)

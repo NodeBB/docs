@@ -146,4 +146,4 @@ In that event, all but one server should have its `config.json` updated to conta
 
 **Note**: If your setup consists of multiple machines each running a single instance of NodeBB (one port), then you will also need to set `isCluster` to `true`.
 
-For more information, see [our article on `config.json`](/configuring/config).
+For more information, see [our article on `config.json`](./config.md).

@@ -40,7 +40,7 @@ systemctl enable redis
 
 If you want to use MongoDB, LevelDB, or another database instead of
 Redis please look at the
-[Configuring Databases](../../configuring/databases) section.
+[Configuring Databases](../../configuring/databases/index.md) section.
 
 Next, clone the NodeBB repository:
 
@@ -77,4 +77,5 @@ Lastly, we run the forum.
 ```
 
 NodeBB can also be started with helper programs, such as `forever`.
-Take a look at the options [here](../../running/index).
+Take a look at the options [here](../../configuring/running.md).
+

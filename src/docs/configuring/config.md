@@ -11,7 +11,8 @@ Some of these values are saved via the setup script:
 * `url` is the full web-accessible address that points to your NodeBB.
     If you don't have a domain, an IP address will work fine (e.g.
     `http://127.0.0.1:4567`). Subfolder installations also define their
-    folder here as well (e.g. `http://127.0.0.1:4567/forum`)
+    folder here as well (e.g. `http://127.0.0.1:4567/forum`). If the url is
+    changed to a sub-folder you need to rebuild nodebb with `./nodebb build`
 * `secret` is a text string used to hash cookie sessions. If the
     secret is changed, all existing sessons will no longer validate and
     users will need to log in again.
@@ -46,6 +47,7 @@ NodeBB:
     bind to. You can specify an array of ports and NodeBB will spawn
     port.length processes. If you use multiple ports you need to
     configure a load balancer to proxy requests to the different ports.
+* `max-memory` Specifies the maximum memory a nodebb process can use in megabytes. 
 * `package_manager` Specifies the package manager that NodeBB will invoke. If not set, will fall back to lockfile detection (and if no lockfiles are present, will use npm.)
 * `sessionKey` (Default: `express.sid`) Specifies the session key to use.
 * `session_store` This is an object similar to the `redis`, `mongo` or `postgres` block. It defines a database to use for sessions. For example by setting this to a different redis instance you can separate your data and sessions into two different redis instances.
@@ -62,7 +64,10 @@ NodeBB:
 * `fontawesome` This is an object that defines additional settings for FontAwesome, the icon library used by NodeBB.
     * `pro` Set this to `true` if you want to use the paid FontAwesome Pro icons. Note that you'll need to install FontAwesome Pro package yourself before NodeBB can use it. You can do so by following the instructions on https://fontawesome.com/docs/web/setup/packages
     * `styles` (Default: `"*"`) Specifies which styles of icons NodeBB will allow to be used. `"*"` means all supported styles will be used, which currently means `["solid", "brands", "regular"]` if `fontawesome:pro` is false and `["solid", "brands", "regular", "light", "thin", "duotone", "sharp"]` otherwise.
-
+* `plugins:active` An array of active plugins `["nodebb-plugin-mentions", "nodebb-plugin-markdown"]`, if set this array is used instead of reading active plugins from the database.
+* `ssl` An object with secure sockets layer options. If this property is present, NodeBB will use a secure https server:
+    * `key` File path of the private key file.
+    * `cert` File path of the public certificate file.
 
 
 

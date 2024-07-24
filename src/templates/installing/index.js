@@ -4,15 +4,15 @@ const versions = {
   minimum: {
     mongo: '3.2',
     redis: '2.6.12',
-    node: '14.0',
-    npm: '6.9',
+    node: '18.0',
+    npm: '8.6.0',
   },
   recommended: {
-    mongo: '5.0',
+    mongo: '7.0',
     redis: '6.2.6',
     node: 'lts',
-    npm: '8.11.0',
-    nodebb: '2.x',
+    npm: '10.2.3',
+    nodebb: '3.x',
   },
 };
 

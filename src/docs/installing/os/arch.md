@@ -11,7 +11,7 @@ $ sudo pacman -S git nodejs npm redis imagemagick icu
 
 If you want to use MongoDB, LevelDB, or another database instead of
 Redis please look at the
-[Configuring Databases](../../configuring/databases) section.
+[Configuring Databases](../../configuring/databases/index.md) section.
 
 Next, clone this repository:
 
@@ -37,4 +37,4 @@ $ ./nodebb start
 
 NodeBB can also be started with helper programs, such as `supervisor`
 and `forever`.
-Take a look at the options [here](../../running/index).
+Take a look at the options [here](../../configuring/running.md).

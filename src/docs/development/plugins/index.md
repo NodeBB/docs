@@ -28,7 +28,7 @@ like something to happen. If a hook isn't present, [file an
 issue](https://github.com/NodeBB/NodeBB/issues) and we'll include it in
 the next version of NodeBB.
 
-For more information on hooks, please consult [the hooks page](./hooks).
+For more information on hooks, please consult [the hooks page](./hooks.md).
 
 ## Writing the plugin library
 
@@ -162,21 +162,21 @@ Your plugin should now be available in admin to be activated.
 
 You can use the same hooks sytem that NodeBB uses for plugins to create
 your own hooks that other plugins can hook into require the plugin
-librray in your code var plugins = module.parent.require('./plugins');
-and then use the plugins.fireHook command where ever you want them to
+library in your code `const plugins = require.main.require('./src/plugins');`
+and then use the `plugins.hooks.fire` command where ever you want them to
 be.
 
 With this code any plugins can do things to the postData variable by
-hooking into the filter:myplugin.mymethod as they would a normall
+hooking into the filter:myplugin.mymethod as they would a normal
 function. Once the plugins are done you can continue to work on the
 variable just as you normally would.
 
 ``` js
-var Plugins = module.parent.require('./plugins');
+var Plugins = require.main.require('./src/plugins');
 var MyPlugin = {
-        myMethod: function(postData) {
+        myMethod: async function(postData) {
             // do something with postData here
-            plugins.fireHook('filter:myplugin.mymethod', {postData : postData });
+            const result = await plugins.hooks.fire('filter:myplugin.mymethod', { postData : postData });
             // do more things with postData here
         }
     };
