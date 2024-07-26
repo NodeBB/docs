@@ -12,6 +12,6 @@ This page is styled in a manner similar to [Mozilla's Specification Positions](h
 | f1d5 | NodeInfo in Fediverse Software | positive | yes | [Proposal](https://codeberg.org/fediverse/fep/src/branch/main/fep/f1d5/fep-f1d5.md)
 | [1b12](./1b12.md) | Group Federation | positive | yes | [Proposal](https://codeberg.org/fediverse/fep/src/branch/main/fep/1b12/fep-1b12.md)
 | 400e | Publicly-appendable ActivityPub collections | neutral | no | [Proposal](https://codeberg.org/fediverse/fep/src/branch/main/fep/400e/fep-400e.md)
-| 7888 | Demystifying the context property | positive | yes | [Proposal](https://codeberg.org/fediverse/fep/src/branch/main/fep/7888/fep-7888.md)
+| [7888](./7888.md) | Demystifying the context property | positive | yes | [Proposal](https://codeberg.org/fediverse/fep/src/branch/main/fep/7888/fep-7888.md)
 | 8b32 | Object Integrity Proofs | positive | no | [Proposal](https://codeberg.org/fediverse/fep/src/branch/main/fep/8b32/fep-8b32.md)
 | | All other FEPs | defer | | |
