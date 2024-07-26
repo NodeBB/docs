@@ -59,6 +59,9 @@ nav:
         - Pre-release Info: 'activitypub/prerelease.md'
         - 'activitypub/settings.md'
         - 'activitypub/privileges.md'
+        - FEPs:
+            - Overview: 'activitypub/fep/index.md'
+            - 'activitypub/fep/1b12.md'
     - Development:
         - 'development/index.md'
         - 'development/quickstart.md'
