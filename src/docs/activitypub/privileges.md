@@ -8,7 +8,7 @@ These effects are listed below:
 
 * Global
 	* View Users (`view:users`)
-		* Whether a remote user can retrieve a local user's profile
+		* Whether a remote user can retrieve a local user's profile and/or follow them.
 		* *N.B. "guests" will also need the `view:users` privilege for profiles to be retrievable via the fediverse*
 * Per category
 	* Find Category (`find`)
