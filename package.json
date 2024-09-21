@@ -3,7 +3,7 @@
     "async": "^2",
     "body-parser": "^1.19.0",
     "deasync": "^0.1.12",
-    "express": "^4.19.2",
+    "express": "^4.20.0",
     "klaw": "^2.1.1",
     "klaw-sync": "^3.0.2",
     "mkdirp": "^0.5.1",
