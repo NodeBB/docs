@@ -32,6 +32,8 @@ All of those examples present and organize their content in a different manner, 
 
 NodeBB belongs to a subset of ActivityPub implementors who structure their content in topics (or threads). A forum-style presentation of content allows for topics to be organized logically, which is a departure from the somewhat ephemeral nature of social networks found today.
 
+Typically, content is also presented in chronological order (or reverse so when listing topics). This presents a recency bias for content, but also allows for more algorithmic-free discovery of new content. As topics receive replies, they are bumped up to the top of the list, allowing others to re-discover the content.
+
 Additionally, NodeBB contains strong tooling for local community building. Not all categories need be federated, and some can be kept within the local community for more focused discussion.
 
 ## Discovering Content
@@ -39,6 +41,8 @@ Additionally, NodeBB contains strong tooling for local community building. Not a
 When first enabled, it may seem as though there is not much remote content to view, or even none at all. This lack of content is due to ActivityPub being a "follow-based" protocol. Content is streamed to you in real-time from your followers, and vice versa. Unlike traditional social media, there is no centralized authority to artificially boost your content for viewership purposes, or to expose you to new content.
 
 Remote users can be discovered by using the search bar. Enter the handle of a remote user (e.g. `julian@community.nodebb.org`) to see their profile and follow them!
+
+For more information, see the [Discovery](./discovery.md) page.
 
 ## The "Uncategorized" category
 
