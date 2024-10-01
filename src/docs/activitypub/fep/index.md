@@ -8,10 +8,12 @@ This page is styled in a manner similar to [Mozilla's Specification Positions](h
 
 | Identifier | Proposal | Position | Implemented | More
 |-|-|-|-|-|
-| d36d | Sharing Content Across Federated Forums | neutral | no | [Proposal](https://codeberg.org/fediverse/fep/src/branch/main/fep/d36d/fep-d36d.md)
-| f1d5 | NodeInfo in Fediverse Software | positive | yes | [Proposal](https://codeberg.org/fediverse/fep/src/branch/main/fep/f1d5/fep-f1d5.md)
-| [1b12](./1b12.md) | Group Federation | positive | yes | [Proposal](https://codeberg.org/fediverse/fep/src/branch/main/fep/1b12/fep-1b12.md)
-| 400e | Publicly-appendable ActivityPub collections | neutral | no | [Proposal](https://codeberg.org/fediverse/fep/src/branch/main/fep/400e/fep-400e.md)
-| [7888](./7888.md) | Demystifying the context property | positive | yes | [Proposal](https://codeberg.org/fediverse/fep/src/branch/main/fep/7888/fep-7888.md)
-| 8b32 | Object Integrity Proofs | positive | no | [Proposal](https://codeberg.org/fediverse/fep/src/branch/main/fep/8b32/fep-8b32.md)
+| d36d | Sharing Content Across Federated Forums | neutral | no | [Proposal](https://w3id.org/fep/d36d)
+| f1d5 | NodeInfo in Fediverse Software | positive | yes | [Proposal](https://w3id.org/fep/f1d5)
+| [1b12](./1b12.md) | Group Federation | positive | yes | [Proposal](https://w3id.org/fep/1b12)
+| 400e | Publicly-appendable ActivityPub collections | neutral | partial | [Proposal](https://w3id.org/fep/400e)
+| [7888](./7888.md) | Demystifying the context property | positive | yes | [Proposal](https://w3id.org/fep/7888)
+| 8b32 | Object Integrity Proofs | positive | no | [Proposal](https://w3id.org/fep/8b32)
+| [7458](./7458.md) | Using the replies collection | positive | partial | [Proposal](https://w3id.org/fep/7458)
+| 171b | Conversation Containers | positive | no | *TBD*
 | | All other FEPs | defer | | |
