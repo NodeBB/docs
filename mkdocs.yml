@@ -65,6 +65,7 @@ nav:
             - 'activitypub/fep/1b12.md'
             - 'activitypub/fep/7888.md'
             - 'activitypub/fep/7458.md'
+            - 'activitypub/fep/c0e0.md'
     - Development:
         - 'development/index.md'
         - 'development/quickstart.md'

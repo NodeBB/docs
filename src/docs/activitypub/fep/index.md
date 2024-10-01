@@ -8,12 +8,13 @@ This page is styled in a manner similar to [Mozilla's Specification Positions](h
 
 | Identifier | Proposal | Position | Implemented | More
 |-|-|-|-|-|
-| d36d | Sharing Content Across Federated Forums | neutral | no | [Proposal](https://w3id.org/fep/d36d)
-| f1d5 | NodeInfo in Fediverse Software | positive | yes | [Proposal](https://w3id.org/fep/f1d5)
 | [1b12](./1b12.md) | Group Federation | positive | yes | [Proposal](https://w3id.org/fep/1b12)
+| 171b | Conversation Containers | positive | no | *TBD*
 | 400e | Publicly-appendable ActivityPub collections | neutral | partial | [Proposal](https://w3id.org/fep/400e)
+| [7458](./7458.md) | Using the replies collection | positive | partial | [Proposal](https://w3id.org/fep/7458)
 | [7888](./7888.md) | Demystifying the context property | positive | yes | [Proposal](https://w3id.org/fep/7888)
 | 8b32 | Object Integrity Proofs | positive | no | [Proposal](https://w3id.org/fep/8b32)
-| [7458](./7458.md) | Using the replies collection | positive | partial | [Proposal](https://w3id.org/fep/7458)
-| 171b | Conversation Containers | positive | no | *TBD*
+| [c0e0](./c0e0.md) | Emoji reactions | positive | no | [Proposal](https://w3id.org/fep/c0e0)
+| d36d | Sharing Content Across Federated Forums | neutral | no | [Proposal](https://w3id.org/fep/d36d)
+| f1d5 | NodeInfo in Fediverse Software | positive | yes | [Proposal](https://w3id.org/fep/f1d5)
 | | All other FEPs | defer | | |
