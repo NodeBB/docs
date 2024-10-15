@@ -60,6 +60,7 @@ nav:
         - 'activitypub/settings.md'
         - 'activitypub/privileges.md'
         - 'activitypub/discovery.md'
+        - 'activitypub/visibility.md'
         - FEPs:
             - Overview: 'activitypub/fep/index.md'
             - 'activitypub/fep/1b12.md'
