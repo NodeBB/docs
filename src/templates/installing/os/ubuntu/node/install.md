@@ -1,23 +1,14 @@
-Node.js is available from the NodeSource Ubuntu binary distributions repository.
-
-1. Download and import the Nodesource GPG key
+Node.js is available from the NodeSource Ubuntu binary [distributions repository](https://github.com/nodesource/distributions?tab=readme-ov-file#using-ubuntu-nodejs-lts). Download the setup script.
 
 ```sh
 sudo apt-get update
 sudo apt-get install -y ca-certificates curl gnupg
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+curl -fsSL https://deb.nodesource.com/setup_lts.x -o nodesource_setup.sh
 ```
 
-2. Create deb repository
+Run the script and install Node.js.
 
 ```sh
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_{{versions.major.node}}.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-```
-
-3. Run Update and Install
-
-```sh
-sudo apt-get update
-sudo apt-get install nodejs -y
+sudo -E bash nodesource_setup.sh
+sudo apt-get install -y nodejs
 ```
