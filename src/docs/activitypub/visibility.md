@@ -6,7 +6,7 @@ There is also the concept of a "public address" that, when included, signifies t
 
 ## Public content
 
-When public content is received by NodeBB, it is parsed into a post object, and slotted into an existing topic if available, creating a new topic if not.
+When public content is received by NodeBB, **it is parsed into a post object**, and slotted into an existing topic if available, creating a new topic if not.
 
 NodeBB will attempt to backfill a topic with additional replies if available, and will attempt to traverse up the reply chain otherwise.
 
@@ -14,7 +14,7 @@ If a specific category is mentioned, then the topic will be slotted in that cate
 
 ## Private content
 
-If the public address is not present in the recipients list, then NodeBB will parse it into a chat message, and add it to a room if available, creating a new chat room if not.
+If the public address is not present in the recipients list, then **NodeBB will parse it into a chat message**, and add it to a room if available, creating a new chat room if not.
 
 When a new chat room is created, its recipients are the individuals addressed in the received activity. Those users are added to the chat room as though they were in the chat.
 
