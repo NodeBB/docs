@@ -78,6 +78,7 @@ nav:
             - 'development/plugins/hooks.md'
             - 'development/plugins/libraries.md'
             - 'development/plugins/plugin.json.md'
+            - 'development/plugins/statics.md'
             - 'development/plugins/uncategorized.md'
         - Themes:
             - 'development/themes/index.md'

@@ -48,6 +48,8 @@ to the public at the route `/plugins/{YOUR-PLUGIN-ID}`.
 
 * e.g. The `staticDirs` hash in the sample configuration maps `/path/to/your/plugin/public/images` to `/plugins/my-plugin/images`
 
+[More information about static directories can be found here](./statics.md).
+
 The `scss` property contains an array of paths (relative to your
 plugin's directory), that will be precompiled into the CSS served by
 NodeBB.
