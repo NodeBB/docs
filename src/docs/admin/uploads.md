@@ -20,8 +20,8 @@ To enable automatic Amazon S3 file storage, install
 nodebb-plugin-s3-uploads-updated
 
 ``` bash
-$ npm install nodebb-plugin-s3-uploads-updated
+$ npm i @nodebb-community/nodebb-plugin-s3-uploads-updated
 ```
 
 Follow the instructions on the plugin page:
-<https://github.com/LouiseMcMahon/nodebb-plugin-s3-uploads#nodebb-s3-uploads-plugin>
+<https://github.com/NodeBB-Community/nodebb-plugin-s3-uploads>
