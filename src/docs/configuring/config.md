@@ -4,7 +4,7 @@ The NodeBB Config (`config.json`)
 The majority of NodeBB's configuration is handled by the Administrator
 Control Panel (ACP), although a handful of server-related options are
 defined in the configuration file (`config.json`) located at NodeBB's
-root folder.
+root folder. Any changes made to config.json file require a restart of NodeBB.
 
 Some of these values are saved via the setup script:
 
