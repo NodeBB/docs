@@ -1,4 +1,5 @@
 site_name: NodeBB Documentation
+site_description: Documentation portal for NodeBB Forum Software
 theme:
     name: material
     logo: images/nodebb-light.svg
@@ -9,6 +10,8 @@ edit_uri: https://github.com/NodeBB/docs/edit/master/src/docs/
 markdown_extensions:
     - fenced_code
     - tables
+plugins:
+    - social
 nav:
     - 'index.md'
     - Installation:
