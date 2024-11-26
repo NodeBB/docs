@@ -16,5 +16,6 @@ This page is styled in a manner similar to [Mozilla's Specification Positions](h
 | 8b32 | Object Integrity Proofs | positive | no | [Proposal](https://w3id.org/fep/8b32)
 | [c0e0](./c0e0.md) | Emoji reactions | positive | no | [Proposal](https://w3id.org/fep/c0e0)
 | d36d | Sharing Content Across Federated Forums | neutral | no | [Proposal](https://w3id.org/fep/d36d)
+| fb2a | Actor metadata | positive | yes | [Proposal](https://w3id.org/fep/fb2a)
 | f1d5 | NodeInfo in Fediverse Software | positive | yes | [Proposal](https://w3id.org/fep/f1d5)
 | | All other FEPs | defer | | |
