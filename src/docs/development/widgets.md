@@ -36,7 +36,7 @@ when publishing.
 Listen to this hook to register your widget:
 
 ``` json
-"hook": "filter:widgets.getWidgets", "method": "defineWidgets", "callbacked": true
+"hook": "filter:widgets.getWidgets", "method": "defineWidgets"
 ```
 
 Pass this back in the array:
@@ -82,11 +82,9 @@ Or you can render template file by `widget.req.app.render` (
 see also [templating system](./themes/templates.md)). For example:
 
 ```javascript
-Plugin.renderWidget = function (widget, callback) {
-  widget.req.app.render('widgets/my-widget', function (error, html) {
-    widget.html = html;
-    callback(error, html);
-  };
+Plugin.renderWidget = async function (widget) {
+  widget.html = await widget.req.app.renderAsync('widgets/my-widget');
+  return widget
 };
 ```
 
