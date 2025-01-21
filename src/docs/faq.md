@@ -45,6 +45,16 @@ Commands:
   help [command]                  Display help for [command]
 ```
 
+### How do I reset the admin password?
+
+The `./nodebb` can be used to reset any users password. All you need to know is the user id. To set a new password, you can use the following command:
+
+```
+./nodebb user reset <uid> --password <new-password>
+```
+
+Hint: The admin user id in a default installation is `1`. 
+
 ### How do I upgrade my NodeBB to a newer version?
 
 Please consult [Upgrading NodeBB](./configuring/upgrade.md)
