@@ -11,6 +11,7 @@ markdown_extensions:
     - fenced_code
     - tables
 plugins:
+    - search
     - social
 nav:
     - 'index.md'
