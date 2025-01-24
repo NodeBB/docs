@@ -16,6 +16,14 @@ If enabled, your NodeBB installation would become part of a larger decentralized
 
 [More information about ActivityPub](https://activitypub.rocks/).
 
+## Upgrading to v4
+
+When coming from a version of NodeBB lesser than v4.0.0, your installation will automatically run several upgrade scripts; one of those scripts will **intentionally disable** ActivityPub integration so as to not surprise administrators of existing installations.  (See "Enabling Federation", below.)
+
+Once enabled, pre-existing categories will not federate out-of-the-box. You will need to modify their privileges so that the "fediverse" pseudo-user is granted viewing and posting privileges on a per-category basis.
+
+*N.B. New installations of NodeBB v4+ will have ActivityPub enabled, and all categories will federate by default.*
+
 ## Enabling Federation
 
 ActivityPub integration is controlled via a global toggle switch in the admin panel (`ACP > Settings > Federation`).
