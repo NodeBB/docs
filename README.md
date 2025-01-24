@@ -18,7 +18,7 @@ If you want to take a look at how your changes look, you can run a local install
 
 1. Install pip: `sudo apt-get update && sudo apt-get install python3-pip`
 1. Install mkdocs: `pip3 install mkdocs` (you may need sudo for this, Windows users may need to run `python -m pip install mkdocs` instead)
-1. Install the `material` theme: `pip3 install mkdocs-material`
+1. Install the `material` theme: `pip3 install mkdocs-material "mkdocs-material[imaging]"`
 1. From repo root, create a symbolic link pointing to `src/docs`: `ln -s ./src/docs`
 1. Install dependencies: `yarn` or `npm`
 1. Build templates: `node src/compile.js`
