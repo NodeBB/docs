@@ -14,6 +14,7 @@ This page is styled in a manner similar to [Mozilla's Specification Positions](h
 | [7458](./7458.md) | Using the replies collection | positive | partial | [Proposal](https://w3id.org/fep/7458)
 | [7888](./7888.md) | Demystifying the context property | positive | yes | [Proposal](https://w3id.org/fep/7888)
 | 8b32 | Object Integrity Proofs | positive | no | [Proposal](https://w3id.org/fep/8b32)
+| 9967 | Polls | positive | no | [Proposal](https://w3id.org/fep/9967)
 | [c0e0](./c0e0.md) | Emoji reactions | positive | no | [Proposal](https://w3id.org/fep/c0e0)
 | d36d | Sharing Content Across Federated Forums | neutral | no | [Proposal](https://w3id.org/fep/d36d)
 | fb2a | Actor metadata | positive | yes | [Proposal](https://w3id.org/fep/fb2a)
