@@ -14,9 +14,9 @@ This article deals with the `filter:parse:post` hook, which is called by `posts.
 * `type` is a nullable string that hints to plugins what the desired output is. The values are one of the following:
 	* `null`/`falsy`, which is automatically passed to plugins as `default`.
 	* `default`, html for display in the front-end.
+	* `plaintext`, self-explanatory, no html markup intended.
 	* `activitypub.note`, html for federation to remote instances (see [Federation](../../activitypub/index.md)); typically a subset of valid html tags are used, such as those related to text formatting.
 	* `activitypub.article`, html for federation to remote instances (see [Federation](../../activitypub/index.md)); this type is reserved for future use.
-	* `plaintext`, self-explanatory, no html markup intended.
 	* `markdown`, markdown for federation to remote instances (see [Federation](../../activitypub/index.md)); in most cases this is the same as the raw content
 
 ## Guidance
