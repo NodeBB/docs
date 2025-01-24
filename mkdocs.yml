@@ -3,6 +3,8 @@ site_description: Documentation portal for NodeBB Forum Software
 theme:
     name: material
     logo: images/nodebb-light.svg
+    features:
+        - content.code.copy
 extra_css:
     - stylesheets/overrides.css
 repo_url: https://github.com/NodeBB/NodeBB
