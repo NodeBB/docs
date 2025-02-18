@@ -31,9 +31,9 @@ If you want a more robust setup with compression and direct file-serving for bui
 ```
 example.org {
     encode zstd gzip
+    root * /path/to/nodebb
 
     handle_path /assets/* {
-        root * /path/to/nodebb
         try_files /build/public/{path} /public/{path}
         file_server
     }
