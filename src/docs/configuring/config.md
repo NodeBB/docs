@@ -42,6 +42,7 @@ NodeBB:
 * `isCluster` Set this to `true` if you have multiple machines each running a single NodeBB process. This setting is not required if you have multiple NodeBB processes running either on a single or multiple machines.
 * `jobsDisabled` This can be added to disable jobs that are run on a certain interval.
     - For example "jobsDisabled":true will disable daily digest emails and notification pruning. This option is useful for installations that run multiple NodeBB backends in order to scale. In such a setup, only one backend should handle jobs, and the other backends would set `jobsDisabled` to `true`.
+* `acpPluginInstallDisabled` Set this to `true` to prevent plugin installation\upgrade through the ACP (Administrator Control Panel). When enabled, plugins can only be installed using `./nodebb install` or through npm directly.
 * `logFile` (Default: `logs/output.log`) Specifies the path, relative to the NodeBB root install, that the log file will be stored. If this doesn't exist it will be created. Log files will be rotated to the same directory when the current log file gets above 1 Megabyte, to a maximum of 3 archived.
 * `port` (Default: `4567`) Specifies the port number that NodeBB will
     bind to. You can specify an array of ports and NodeBB will spawn
@@ -68,6 +69,3 @@ NodeBB:
 * `ssl` An object with secure sockets layer options. If this property is present, NodeBB will use a secure https server:
     * `key` File path of the private key file.
     * `cert` File path of the public certificate file.
-
-
-
