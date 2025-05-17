@@ -32,14 +32,16 @@ let
   MYSQL_UNIX_PORT = "${MYSQL_HOME}/mysql.sock";
   MYSQL_PID_FILE = "${MYSQL_HOME}/mysql.pid";
 
-  JSON_CONFIG_TEST = {
-    test_database = {
-      socketPath = "${MYSQL_UNIX_PORT}";
-      username = "${mysqlUsername}_test";
-      password = "${mysqlPassword}";
-      database = "${mysqlDatabase}_test";
-    };
-  };
+  JSON_CONFIG_TEST = ''
+    {
+      "test_database": {
+        "socketPath": "${MYSQL_UNIX_PORT}",
+        "username": "${mysqlUsername}_test",
+        "password": "${mysqlPassword}",
+        "database": "${mysqlDatabase}_test"
+      }
+    }
+  '';
 
   UUID_SECRET = builtins.replaceStrings [ "\n" ] [ "" ] (
     builtins.readFile (
@@ -49,71 +51,56 @@ let
     )
   );
 
-  JSON_CONFIG = {
-    url = "http://localhost:4567";
-    secret = "${UUID_SECRET}";
-    database = "mysql";
-    mysql = {
-      host = "127.0.0.1";
-      port = "3306";
-      socketPath = "${MYSQL_UNIX_PORT}";
-      username = "${mysqlUsername}";
-      password = "${mysqlPassword}";
-      database = "${mysqlDatabase}";
-    };
-    port = "4567";
-    admin = {
-      username = "${nodebbAdminUsername}";
-      password = {
-        value = "${nodebbAdminPassword}";
-        confirm = "${nodebbAdminPassword}";
-      };
-      email = "${nodebbAdminEmail}";
-    };
-  };
+  JSON_CONFIG = ''
+    {
+      "url": "http://localhost:4567",
+      "port": "4567",
+      "secret": "${UUID_SECRET}",
+      "database": "mysql",
+      "mysql:host": "127.0.0.1",
+      "mysql:port": "3306",
+      "mysql:socketPath": "${MYSQL_UNIX_PORT}",
+      "mysql:username": "${mysqlUsername}",
+      "mysql:password": "${mysqlPassword}",
+      "mysql:database": "${mysqlDatabase}",
+      "admin:username": "${nodebbAdminUsername}",
+      "admin:password": "${nodebbAdminPassword}",
+      "admin:password:confirm": "${nodebbAdminPassword}",
+      "admin:email": "${nodebbAdminEmail}"
+    }
+  '';
 
-  # Function to flatten the attribute set with ":" as separator
-  flattenAttrs =
-    attrs:
-    let
-      flatten =
-        prefix: attrs:
-        builtins.foldl' (
-          acc: key:
-          let
-            value = attrs.${key};
-            newPrefix = if prefix == "" then key else "${prefix}:${key}";
-            # Special case for i.e. admin.password.value to map to admin:password
-            finalKey = if key == "value" then "${prefix}" else newPrefix;
-          in
-          if builtins.isAttrs value then
-            acc // (flatten newPrefix value)
-          else
-            acc // { "${finalKey}" = value; }
-        ) { } (builtins.attrNames attrs);
-    in
-    flatten "" attrs;
+  JSON_VSCODE_TASKS = ''
+    {
+      "version": "2.0.0",
+      "tasks": [
+        {
+          "label": "Run grunt",
+          "type": "shell",
+          "command": "node ./node_modules/.bin/grunt",
+          "runOptions": {
+            "runOn": "folderOpen"
+          }
+        }
+      ]
+    }
+  '';
 
-  JSON_CONFIG_FLATTENED = flattenAttrs JSON_CONFIG;
-
-  JSON_VSCODE_TASKS = {
-    version = "2.0.0";
-    tasks = [
-      {
-        label = "Run grunt";
-        type = "shell";
-        command = "node ./node_modules/.bin/grunt";
-        runOptions = {
-          runOn = "folderOpen";
-        };
+  JSON_VSCODE_SETTINGS = ''
+    {
+      "mochaExplorer.env": {
+        "CI": "true"
       }
-    ];
-  };
+    }
+  '';
 
   masterOverlays = [
     (
       self: super:
       let
+        nix-vscode-extensions = import (
+          fetchTarball "https://github.com/nix-community/nix-vscode-extensions/archive/master.tar.gz"
+        );
         nixpkgsMaster =
           import
             (builtins.fetchTarball {
@@ -121,12 +108,26 @@ let
             })
             {
               config.allowUnfree = true;
+              overlays = [
+                nix-vscode-extensions.overlays.default
+              ];
             };
       in
       {
         # nodejs_20 version is 20.18 of NixOS 24.11 but we need 20.19 for require(ESM)
         nodejs_20 = nixpkgsMaster.nodejs_20;
-        vscode = nixpkgsMaster.vscode;
+        vscode = (
+          nixpkgsMaster.vscode-with-extensions.override {
+            vscode = nixpkgsMaster.vscode;
+            vscodeExtensions = with nixpkgsMaster.vscode-marketplace; [
+              ms-vscode.test-adapter-converter
+              hbenl.vscode-test-explorer
+              hbenl.vscode-mocha-test-adapter
+
+              jnoortheen.nix-ide
+            ];
+          }
+        );
       }
     )
   ];
@@ -224,18 +225,21 @@ pkgs.mkShell {
 
       if [ ${toString development} ]; then
         echo "Writing config.json for test_database for development mode..."
-        echo '${builtins.toJSON JSON_CONFIG_TEST}' | jq . --indent 4 > config.json
+        echo '${JSON_CONFIG_TEST}' | jq . --indent 4 > config.json
+
+        echo "setting up grunt task for VSCode for development mode..."
+        mkdir -p .vscode
+        echo '${JSON_VSCODE_TASKS}' | jq . --indent 4 > .vscode/tasks.json
+
+        echo "setting up Mocha Test Explorer plugin for VSCode for development mode..."
+        echo '${JSON_VSCODE_SETTINGS}' | jq . --indent 4 > .vscode/settings.json
       fi
 
-      node ./nodebb setup '${builtins.toJSON JSON_CONFIG_FLATTENED}'
+      node ./nodebb setup '${JSON_CONFIG}'
 
       if [ ${toString development} ]; then
         echo "Running npm install for development mode..."
         npm install
-
-        echo "setting up grunt task for VSCode for development mode..."
-        mkdir -p .vscode
-        echo '${builtins.toJSON JSON_VSCODE_TASKS}' | jq . --indent 4 > .vscode/tasks.json
       fi
     fi
 
