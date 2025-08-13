@@ -3,7 +3,9 @@
 This installation guide is optimized for
 **{{name}} {{version}}** and will install NodeBB with MongoDB as the database. Fully patched LTS and equivalent **production** versions of software are assumed and used throughout.
 
-**Confused?** &ndash; A simpler guide for Ubuntu 18.04 with lots of screenshots can be found [on the NodeBB Blog](https://blog.nodebb.org/how-to-install-nodebb-on-digitalocean-ubuntu-18-04/).
+**Confused?** &ndash; A simpler guide for Ubuntu 20.04 with lots of screenshots can be found [on the NodeBB Blog](https://nodebb.org/blog/tutorial-install-nodebb-on-digitalocean-ubuntu-20-04).
+
+
 
 ### System Requirements
 
