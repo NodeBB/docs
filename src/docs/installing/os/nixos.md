@@ -13,7 +13,7 @@ let
   # adjust the following variables as needed
   # Define NodeBB version and repository
   nodebbRepo = "https://github.com/MBanucu/NodeBB.git";
-  nodebbBranch = "mysql-backup2"; # MySQL branch
+  nodebbBranch = "mysql-20250813"; # MySQL branch
 
   # Define NodeBB admin credentials
   nodebbAdminUsername = "admin"; # Set your admin username
