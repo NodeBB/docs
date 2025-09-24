@@ -12,7 +12,7 @@ const versions = {
     redis: '6.2.6',
     node: '22.x',
     npm: '10.8.2',
-    nodebb: '3.x',
+    nodebb: '4.x',
   },
 };
 
