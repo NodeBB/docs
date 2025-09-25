@@ -2,9 +2,9 @@
 
 const versions = {
   minimum: {
-    mongo: '3.2',
-    redis: '2.6.12',
-    node: '18.0',
+    mongo: '5.0',
+    redis: '7.2',
+    node: '20.0',
     npm: '8.6.0',
   },
   recommended: {
