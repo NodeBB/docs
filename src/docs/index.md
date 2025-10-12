@@ -19,7 +19,7 @@ number of ways you can help us, even if you aren't a programmer.
 
 -   Join our [community](https://community.nodebb.org) and give us a hard time about bugs and missing features
 -   [Like and share our content on Facebook](http://www.facebook.com/NodeBB)
--   [Follow us on Twitter](https://www.twitter.com/NodeBB) and perhaps tweet **\#NodeBB is the most awesome forum software @NodeBB**
+-   [Follow us on X (Twitter)](https://x.com/NodeBB) and perhaps POST (tweet) **\#NodeBB is the most awesome forum software @NodeBB**
 -   Tell everybody about NodeBB, including your grandma and her cats.
 -   [Submit a pull request, or two, or three..](https://www.github.com/NodeBB/NodeBB)
 -   Build a new theme
