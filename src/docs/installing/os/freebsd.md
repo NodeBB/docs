@@ -6,11 +6,11 @@ It should work, with slight modifications, for all other relatively modern versi
 This setup has been verified using a clean jail without any modifications.
 
 For this example we are using:
-- Redis for the database
+- `Redis` for the database
 - `/user/home/nodebb` for the home directoy of the new `nodebb` user
 - `/user/local/www/nodebb` for the new public directoy of NodeBB
 
-The rest ist fairly straight forwarded:
+The rest is fairly straight forwarded:
 - This user needs to be created prior the installation with:  
 ```
 pw user add -n nodebb -m -s /bin/sh -d /usr/home/nodebb -c "NodeBB User"
@@ -39,7 +39,7 @@ git clone -b v4.x.x https://github.com/NodeBB/NodeBB.git
 cd NodeBB
 ```
 > Version prior including 4.7.2:  
-> Please be aware the the usage of sass-embedded ist not working on FreeBSD.  
+> Please be aware the the usage of sass-embedded is not (!) working on FreeBSD.  
 > [There might be a modification](https://github.com/NodeBB/NodeBB/issues/13867) for the file `src/utils.js` needed.  
 > `cp src/utils.js src/utils.js.bak`  
 > `sed -i '' "s|const sass = require('sass-embedded');|const sass = require('sass');|g" src/utils.jsc`  
