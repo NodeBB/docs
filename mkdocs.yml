@@ -21,6 +21,7 @@ nav:
         - via OS:
             - 'installing/os/index.md'
             - 'Ubuntu (Recommended)': 'installing/os/ubuntu.md'
+            - 'NixOS (very easy)': 'installing/os/nixos.md'
             - 'Arch Linux': 'installing/os/arch.md'
             - 'CentOS': 'installing/os/centos.md'
             - 'installing/os/debian.md'
