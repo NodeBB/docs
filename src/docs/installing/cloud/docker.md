@@ -16,7 +16,7 @@ You will need to choose the type of database first. In this repo you can choose 
 - postgres
 - redis
 
-For MongoDB, PostgreSQL (legacy), Redis support respectively.
+For MongoDB, PostgreSQL, Redis support respectively.
 This will be supplied along with the main Docker Compose launch command as extra file source.
 Let's call this `{DATABASE}` shall we?
 
