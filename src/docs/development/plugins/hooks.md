@@ -1,5 +1,3 @@
-// TODO ASYNC hooks
-
 # Available Hooks
 
 The following is a list of all hooks present in NodeBB. This list is intended to guide developers who are looking to write plugins for NodeBB. For more information, please consult Writing Plugins for NodeBB &lt;create&gt;.
