@@ -1,9 +1,6 @@
 Writing Widgets for NodeBB
 ==========================
 
-See the original [blog post](http://blog.nodebb.org/widgets-system/) for
-a high level overview and screenshots of the widget system.
-
 Embedding HTML and JavaScript
 -----------------------------
 
