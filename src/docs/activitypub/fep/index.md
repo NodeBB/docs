@@ -14,7 +14,7 @@ This page is styled in a manner similar to [Mozilla's Specification Positions](h
 | 11dd | Context Ownership and Inheritance | positive | yes | [Proposal](https://w3id.org/fep/11dd)
 | [1b12](./1b12.md) | Group Federation | positive | yes | [Proposal](https://w3id.org/fep/1b12)
 | 171b | Conversation Containers | defer | no | [Proposal](https://w3id.org/fep/171b)
-| 3b86 | Activity Intents | positive | yes | [Proposal](https://w3id.org/fep/3b86)
+| [3b86](./3b86.md) | Activity Intents | positive | yes | [Proposal](https://w3id.org/fep/3b86)
 | 400e | Publicly-appendable ActivityPub collections | defer | no | [Proposal](https://w3id.org/fep/400e)
 | 4f05 | Soft Deletion | positive | yes | [Proposal](https://w3id.org/fep/4f05)
 | 9098 | Custom emojis | positive | yes | [Proposal](https://w3id.org/fep/9098)
