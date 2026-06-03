@@ -85,6 +85,33 @@ Plugin.renderWidget = async function (widget) {
 };
 ```
 
+### Rendering a widget only on certain pages
+
+A widget's render hook fires on every page where the widget is placed, so widgets
+that are only relevant to a particular template (e.g. the topic page) need to detect
+the current location and render nothing elsewhere. The page can be derived from the
+properties described above — prefer `widget.req.path` for the URL and the widget's
+area `template`:
+
+```javascript
+Plugin.renderWidget = async function (widget) {
+  const template = (widget.area && widget.area.template) || '';
+  const path = (widget.req && widget.req.path) || (widget.area && widget.area.url) || '';
+
+  const onTopicPage = template === 'topic.tpl' || /^\/topic\//.test(path);
+  if (!onTopicPage) {
+    widget.html = '';   // render nothing on pages we don't care about
+    return widget;
+  }
+
+  widget.html = '<div>…</div>';
+  return widget;
+};
+```
+
+Because `widget.html` is inserted as raw HTML, remember to escape any dynamic values
+you interpolate into it.
+
 Defining Widget Areas in Themes
 -------------------------------
 

@@ -44,7 +44,8 @@ The quickstart plugin mounted a route for the admin settings page, at `/admin/pl
 
 No matter the mount point, NodeBB will attempt to `require` a client-side library based on the template name. In this case, navigating to the admin settings page will cause NodeBB to call `require('admin/plugins/quickstart')` and execute the `.init()` method, if one is available. Otherwise, it will do nothing.
 
-**Note**: Mounted pages that are **not** in the admin namespace are prefixed `forum/`. For example, if you have a mounted page `/foobar` that loads template `views/foobar`, NodeBB will attempt to call `require('forum/views/foobar')`.
+!!! note
+    Mounted pages that are **not** in the admin namespace are prefixed `forum/`. For example, if you have a mounted page `/foobar` that loads template `views/foobar`, NodeBB will attempt to call `require('forum/views/foobar')`.
 
 We can define a require.js module to NodeBB and specify its name, so that it is loaded when called directly.
 

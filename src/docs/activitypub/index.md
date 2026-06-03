@@ -1,4 +1,5 @@
-***Important Note**: Federation is currently only available in pre-release versions of NodeBB v4.*
+!!! important
+    Federation is currently only available in pre-release versions of NodeBB v4.
 
 Technical details on enabling federation [can be found here](./prerelease.md).
 

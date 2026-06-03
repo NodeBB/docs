@@ -80,6 +80,10 @@ User.exists('foobar', function(err, exists) {
 });
 ```
 
+For a tour of the libraries plugins reach for most often — the database wrapper,
+users, groups, topics, privileges, notifications, and the controller/route helpers —
+along with a couple of common recipes, see [Using Core Libraries](./core-libraries.md).
+
 ## Installing the plugin
 
 In almost all cases, your plugin should be published in

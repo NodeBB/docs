@@ -53,9 +53,10 @@ SCSS to be present in this file, and will precompile it down to CSS
 on-demand. For more information regarding SCSS, take a look at [the
 project homepage](https://sass-lang.com/).
 
-**Note**: A *suggested* organization for `theme.scss` is to `@import`
-multiple smaller files instead of placing all of the styles in the main
-`theme.scss` file.
+!!! note
+    A *suggested* organization for `theme.scss` is to `@import`
+    multiple smaller files instead of placing all of the styles in the main
+    `theme.scss` file.
 
 Configuration
 -------------

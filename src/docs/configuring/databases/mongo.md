@@ -9,8 +9,9 @@ access.
 **These instructions are for Ubuntu. Adjust them accordingly for your
 distro.**
 
-**Note:** If you have to add `sudo` to any command, do so. No one is
-going to hold it against you ;)
+!!! note
+    If you have to add `sudo` to any command, do so. No one is
+    going to hold it against you ;)
 
 Step 1: Install MongoDB
 -----------------------
@@ -28,8 +29,9 @@ greater than the package manager), so I'm leaving this to the official
 wiki. The instructions to install can be found on
 [Joyent](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager).
 
-**Note: NPM is installed along with node.js, so there is no need to
-install it separately**
+!!! note
+    NPM is installed along with node.js, so there is no need to
+    install it separately
 
 Step 3: Install the Base Software Stack
 -------------------------
@@ -106,9 +108,10 @@ not authorized on nodebb to execute command { serverStatus: 1 }
 ```
 
 
-**Note**: NodeBB requires MongoDB 3.0 or higher. The role `readWrite`
-provides read or write any collection within a specific database to
-user.
+!!! note
+    NodeBB requires MongoDB 3.0 or higher. The role `readWrite`
+    provides read or write any collection within a specific database to
+    user.
 
 Step 7: Configure MongoDB
 -------------------------
