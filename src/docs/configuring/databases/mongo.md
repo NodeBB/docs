@@ -109,7 +109,7 @@ not authorized on nodebb to execute command { serverStatus: 1 }
 
 
 !!! note
-    NodeBB requires MongoDB 3.0 or higher. The role `readWrite`
+    NodeBB requires MongoDB 4.2 or higher. The role `readWrite`
     provides read or write any collection within a specific database to
     user.
 

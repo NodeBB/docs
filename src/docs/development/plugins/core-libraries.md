@@ -1,11 +1,16 @@
 # Using Core Libraries
 
-`Availability: >=4.0.0`
-
 As shown in [Writing Plugins](./index.md#using-nodebb-libraries-to-enhance-your-plugin),
 a plugin reaches NodeBB's internals through `require.main.require('./src/...')`. This
 page is a practical tour of the libraries plugins use most, plus a couple of common
 recipes that combine them.
+
+!!! note
+    `require.main.require('./src/...')` works on all current versions, but it is being
+    deprecated starting with NodeBB v4.12.0. The future-proof way to require core
+    modules is `nodebb.require('./src/user')`. The examples below use
+    `require.main.require` for compatibility; substitute `nodebb.require` if you are
+    targeting v4.12.0 or newer.
 
 !!! note
     This is a curated starting point, **not** an exhaustive API reference. NodeBB's
@@ -120,11 +125,9 @@ const notifObj = await notifications.create({
     path: '/topic/' + slug,                          // where the notification links to
 });
 
-// create() can return a falsy value (e.g. when there is nothing to send),
-// so always check before pushing.
-if (notifObj) {
-    await notifications.push(notifObj, recipientUids);
-}
+// push() returns early if notifObj is null (e.g. when there is nothing to
+// send), so there's no need to guard the call yourself.
+await notifications.push(notifObj, recipientUids);
 ```
 
 The `bodyShort` is a [language string](../i18n.md) and may include positional

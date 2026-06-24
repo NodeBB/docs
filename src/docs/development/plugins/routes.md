@@ -1,7 +1,5 @@
 # Adding Routes
 
-`Availability: >=4.0.0`
-
 Beyond hooking into existing pages, a plugin can register its own routes: HTML
 **pages** rendered with a template, and JSON **REST API** endpoints consumed by
 client-side scripts. NodeBB provides a small set of route helpers so that your
