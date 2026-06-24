@@ -19,8 +19,9 @@ Server Access
 1.  Select: `Create Instance`
 1.  Create the newest `smartos nodejs` image.
 
-    > **Note:** The following steps have been tested with images:
-    > `smartos nodejs 13.1.0` `smartos nodejs 13.2.3`
+    !!! note
+        The following steps have been tested with images:
+        `smartos nodejs 13.1.0` `smartos nodejs 13.2.3`
 
 1.  Wait for your instance to show `Running` then click on its name.
 1.  Find your `Login` and admin password. If the `Credentials` section
@@ -30,8 +31,9 @@ Server Access
 
 1.  SSH into your server as the admin not root: `ssh admin@0.0.0.0`
 
-    > **Note:** For Windows users that do not have ssh installed, here
-    > is an option: [Cygwin.com](http://cygwin.com)
+    !!! note
+        For Windows users that do not have ssh installed, here
+        is an option: [Cygwin.com](http://cygwin.com)
 
 Installation
 ------------
@@ -127,7 +129,8 @@ Installation
 
 1.  Start NodeBB process manually:
 
-    > **Note:** This should not be used for production but instead create a deamon manually, use Forever, or use Supervisor. Take a look at the options [here])../../running/index).
+    !!! note
+        This should not be used for production but instead create a deamon manually, use Forever, or use Supervisor. Take a look at the options [here])../../running/index).
 
     > ```
     > $ node app
@@ -141,11 +144,13 @@ Installation
 
 ----
 
-**Note:** If these instructions are unclear or if you run into trouble,
-please let us know by [filing an
-issue](https://github.com/NodeBB/NodeBB/issues).
+!!! note
+    If these instructions are unclear or if you run into trouble,
+    please let us know by [filing an
+    issue](https://github.com/NodeBB/NodeBB/issues).
 
 Upgrading NodeBB
 ----------------
 
-**Note:** Detailed upgrade instructions are listed in [Upgrading NodeBB](../../configuring/upgrade.md).
+!!! note
+    Detailed upgrade instructions are listed in [Upgrading NodeBB](../../configuring/upgrade.md).

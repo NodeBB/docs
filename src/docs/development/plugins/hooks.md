@@ -14,6 +14,65 @@ Most filter hooks called from NodeBB will pass a single argument in the form of 
 
 NodeBB will execute all of the registered listeners _sequentially_, and wait for all of them to return data back (transformed or not) before continuing onwards with execution.
 
+### Inspecting the payload
+
+The exact shape of a filter's payload varies from hook to hook, and the safest way
+to discover it is to log the argument the first time you wire up a listener:
+
+```js
+plugin.myMethod = async (data) => {
+    console.log(require('util').inspect(data, { depth: 1 }));
+    return data;
+};
+```
+
+A few things to keep in mind:
+
+* Singular and plural variants of a hook usually carry **different** shapes. For
+  example `filter:topic.get` receives `{ topic, uid }` (a single topic), while
+  `filter:topics.get` receives `{ topics, uid }` (an array). Code written against
+  one will not work against the other.
+* Always `return` the payload object — returning `undefined` drops it for the next
+  listener and for core.
+* Guard against missing fields, since other plugins (or future core changes) may
+  alter what is present: `if (!data || !data.topic) { return data; }`.
+
+### Signalling an error from a filter
+
+Some filters let a plugin reject or veto the operation in progress (for example,
+validating a username before a user is created). **The convention is not uniform
+across hooks**, so check how the calling code consumes the result:
+
+* Most validation filters expect you to **throw** an error whose message is a
+  [translation key](../i18n.md). NodeBB surfaces the translated message to the user
+  and aborts the operation.
+
+    ```js
+    plugin.checkUsernameOnCreate = async (data) => {
+        // filter:user.create — reject by throwing
+        if (isReserved(data.user.username)) {
+            throw new Error('[[myplugin:error.reserved-username]]');
+        }
+        return data;
+    };
+    ```
+
+* A few filters instead expect you to set an **`error` property on the payload** and
+  return it normally. `filter:username.check` is one such hook:
+
+    ```js
+    plugin.checkUsername = async (data) => {
+        // filter:username.check — reject by setting data.error
+        if (isReserved(data.username)) {
+            data.error = new Error('[[myplugin:error.reserved-username]]');
+        }
+        return data;
+    };
+    ```
+
+When in doubt, look at where the hook is fired in the NodeBB source to see whether it
+inspects a thrown error or a returned `error` field.
+
 ## Action hooks
 
 **Actions**, true to their name, are executed when NodeBB does a certain action. They are useful if you'd like to *do* something asynchronously after a certain trigger.

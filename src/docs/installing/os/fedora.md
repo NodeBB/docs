@@ -85,8 +85,9 @@ Next, clone the NodeBB repository:
 git clone -b v2.x https://github.com/NodeBB/NodeBB /opt/nodebb
 ```
 
-\*\*Note: To clone the master branch you can use the same command with
-out the "-b v2.x" option.
+!!! note
+    To clone the master branch you can use the same command with
+    out the "-b v2.x" option.
 
 
 It is bad practice to run NodeBB as a privileged user, so create a user

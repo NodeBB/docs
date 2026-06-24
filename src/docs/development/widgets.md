@@ -85,6 +85,9 @@ Plugin.renderWidget = async function (widget) {
 };
 ```
 
+Because `widget.html` is inserted as raw HTML, remember to escape any dynamic values
+you interpolate into it.
+
 Defining Widget Areas in Themes
 -------------------------------
 

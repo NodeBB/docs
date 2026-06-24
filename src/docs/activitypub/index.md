@@ -1,10 +1,8 @@
-***Important Note**: Federation is currently only available in pre-release versions of NodeBB v4.*
-
 Technical details on enabling federation [can be found here](./prerelease.md).
 
 ----
 
-`Availability: >4.0.0`
+`Availability: >=4.0.0`
 
 "Federation", used in a technical sense, is the ability for a software to interact with others outside of its own domain. NodeBB is working towards federation in version 4 by adopting the ActivityPub protocol.
 

@@ -8,8 +8,7 @@ options:
 -   [Mongo](./mongo.md) (default, [see installation guides](../../installing/os/index.md))
 -   [Redis](./redis.md)
 
-> **Note**
->
-> If you would like to write your own database driver for NodeBB, please
-> visit our [community forum](https://community.nodebb.org) and we can
-> point you in the right direction.
+!!! note
+    If you would like to write your own database driver for NodeBB, please
+    visit our [community forum](https://community.nodebb.org) and we can
+    point you in the right direction.

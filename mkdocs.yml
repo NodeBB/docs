@@ -12,6 +12,14 @@ edit_uri: https://github.com/NodeBB/docs/edit/master/src/docs/
 markdown_extensions:
     - fenced_code
     - tables
+    - admonition
+    - pymdownx.highlight:
+        anchor_linenums: true
+        line_spans: __span
+        pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
 plugins:
     - search
     - social
@@ -83,6 +91,9 @@ nav:
         - Plugins:
             - 'development/plugins/index.md'
             - 'development/plugins/hooks.md'
+            - 'development/plugins/routes.md'
+            - 'development/plugins/core-libraries.md'
+            - 'development/plugins/settings.md'
             - 'development/plugins/libraries.md'
             - 'development/plugins/plugin.json.md'
             - 'development/plugins/statics.md'

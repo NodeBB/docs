@@ -218,13 +218,12 @@ cd ~/app-root/repo && ./nodebb start
 
 ----
 
-**Note**
-
-Starting, stopping, reloading, or restarting NodeBB now works on
-Openshift. Be sure you always do this before doing it. (Replace
-\[string\] with a nodeBB command of your choice). You can recover your
-application from critical plugin failures for example by running
-./nodebb stop followed by ./nodebb reset -p nodebb-plugin-name
+!!! note
+    Starting, stopping, reloading, or restarting NodeBB now works on
+    Openshift. Be sure you always do this before doing it. (Replace
+    \[string\] with a nodeBB command of your choice). You can recover your
+    application from critical plugin failures for example by running
+    ./nodebb stop followed by ./nodebb reset -p nodebb-plugin-name
 
 ```
 rhc app ssh -a nodebb

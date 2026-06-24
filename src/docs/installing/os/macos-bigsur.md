@@ -153,8 +153,9 @@ enter `nodebb`, and the password that you configured earlier. Once connectivity 
 that initial user setup is running. Since this is a fresh NodeBB install a forum administrator must be configured.
 Enter the desired administrator information. This will culminate in a _NodeBB Setup Completed_ message.
 
-**Note:** When entering your site URL, make sure it is exactly what you plan on accessing your site at.
-If you plan on visiting `http://example.org` to open your forum, then enter exactly `http://example.org`.
+!!! note
+    When entering your site URL, make sure it is exactly what you plan on accessing your site at.
+    If you plan on visiting `http://example.org` to open your forum, then enter exactly `http://example.org`.
 
 A configuration file [config.json](https://docs.nodebb.org/installing/configuring/config) will be created in the root of the nodebb directory.
 This file can be modified should you need to make changes such as changing the database location or credentials used to access the database.

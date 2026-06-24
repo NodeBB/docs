@@ -13,7 +13,7 @@ NodeBB has a Database Abstraction Layer (DBAL) that allows one to write  drivers
 * Redis (default, see :doc:`installation guides <../installing/os>`)
 * :doc:`Mongo <databases/mongo>`
 
-.. note::
+!!! note
 
     If you would like to write your own database driver for NodeBB, please visit our `community forum <https://community.nodebb.org>`_ and we can point you in the right direction.
 

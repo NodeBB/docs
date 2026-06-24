@@ -8,7 +8,8 @@ In order to allow NodeBB to be served without a port, Apache can be set up to pr
 Requirements
 ----------------------------
 
-**Note**: This requires Apache v2.4.x or greater. If your version of Apache is older, please see [Apache v2.2.x Instructions](./apache2.2.md)
+!!! note
+    This requires Apache v2.4.x or greater. If your version of Apache is older, please see [Apache v2.2.x Instructions](./apache2.2.md)
 
 You have to enable the following Apache mods:
 

@@ -1,8 +1,9 @@
 Heroku
 ======
 
-**Note**: Installations to Heroku require a local machine with some
-flavour of unix, as NodeBB does not run on Windows.
+!!! note
+    Installations to Heroku require a local machine with some
+    flavour of unix, as NodeBB does not run on Windows.
 
 1.  Download and install [Heroku Toolbelt](https://toolbelt.heroku.com/)
     for your operating system

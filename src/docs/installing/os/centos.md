@@ -50,8 +50,9 @@ git clone -b v2.x https://github.com/NodeBB/NodeBB nodebb
 cd nodebb
 ```
 
-\*\*Note: To clone the master branch you can use the same command with
-out the "-b" option.
+!!! note
+    To clone the master branch you can use the same command with
+    out the "-b" option.
 
 Initiate the setup script by running the app with the `setup` flag:
 
