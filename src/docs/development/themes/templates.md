@@ -41,17 +41,15 @@ And finally you can loop through arrays and create blocks like so:
 
 ``` html
 {{{ each posts }}}
-{posts.content}
+{{posts.content}}
 {{{ end }}}
 ```
 
 The above will create X copies of the above block, for each item in the
 posts array.
 
-The values `title` and `posts.content` are already escaped by NodeBB. 
-If you are displaying user generated content in your theme, make sure to
-escape it before displaying them using validator.escape() or the 
-`escape` helper like so `{escape(myValue)}`.
+`{}` html escapes the varilable. `{{}}` does not escape and outputs raw content. 
+Make sure the value you use with `{{}}` is sanitize if it comes from untrusted sources.
 
 Templating Logic
 ----------------
@@ -106,8 +104,7 @@ Exposing template variables to client-side JavaScript
 -----------------------------------------------------
 
 There are two ways of letting our JS know about data from the
-server-side, apart from WebSockets (TODO: will be covered in a different
-article).
+server-side:
 
 ### Via jQuery.get
 
@@ -141,7 +138,7 @@ file](http://community.nodebb.org/language/en-GB/register.json) as an
 example. We can now do something like the following:
 
 ``` html
-[[register:help.username_restrictions, {minimumUsernameLength}, {maximumUsernameLength}]]
+{{tx("register:help.username_restrictions", minimumUsernameLength, maximumUsernameLength)}}
 ```
 
 Which will translate this string:
