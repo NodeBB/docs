@@ -39,6 +39,10 @@ NodeBB:
     of a barrier to password cracking.
 * `bind_address` (Default: `0.0.0.0`, or all interfaces) Specifies the local address that NodeBB should bind to.
     - By default, NodeBB will listen to requests on all interfaces, but when set, NodeBB will only accept connections from that interface.
+* `trust_proxy` (Default: `false`) Enables Express' proxy trust handling for `req.ip` and related values.
+    - Only set this to true when NodeBB is behind a reverse proxy that strips or overwrites untrusted `X-Forwarded-For` headers.
+    - If this is left unset, NodeBB will not trust forwarded client IP headers.
+    - For more information see expressjs docs https://expressjs.com/en/5x/guide/behind-proxies/
 * `isCluster` Set this to `true` if you have multiple machines each running a single NodeBB process. This setting is not required if you have multiple NodeBB processes running either on a single or multiple machines.
 * `jobsDisabled` This can be added to disable jobs that are run on a certain interval.
     - For example "jobsDisabled":true will disable daily digest emails and notification pruning. This option is useful for installations that run multiple NodeBB backends in order to scale. In such a setup, only one backend should handle jobs, and the other backends would set `jobsDisabled` to `true`.
@@ -48,7 +52,7 @@ NodeBB:
     bind to. You can specify an array of ports and NodeBB will spawn
     port.length processes. If you use multiple ports you need to
     configure a load balancer to proxy requests to the different ports.
-* `max-memory` Specifies the maximum memory a nodebb process can use in megabytes. 
+* `max-memory` Specifies the maximum memory a nodebb process can use in megabytes.
 * `package_manager` Specifies the package manager that NodeBB will invoke. If not set, will fall back to lockfile detection (and if no lockfiles are present, will use npm.)
 * `sessionKey` (Default: `express.sid`) Specifies the session key to use.
 * `session_store` This is an object similar to the `redis`, `mongo` or `postgres` block. It defines a database to use for sessions. For example by setting this to a different redis instance you can separate your data and sessions into two different redis instances.
