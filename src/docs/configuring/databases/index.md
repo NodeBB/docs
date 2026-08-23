@@ -6,6 +6,7 @@ drivers for their database of choice. Currently we have the following
 options:
 
 -   [Mongo](./mongo.md) (default, [see installation guides](../../installing/os/index.md))
+-   [PostgreSQL](./postgres.md)
 -   [Redis](./redis.md)
 
 !!! note
