@@ -9,6 +9,7 @@ NodeBB does not endorse nor provide maintenance and support for these services. 
 * [Cloudron.io](./cloudron.md)
 * [DigitalOcean](https://community.nodebb.org/topic/16343/tutorial-install-nodebb-on-digitalocean-ubuntu-20-04) (external)
 * [Heroku](./heroku.md)
+* [Hostim.dev](https://hostim.dev/docs/templates/nodebb/) (external)
 * [Jelastic](http://docs.jelastic.com/nodebb) (external)
 * [Nitrous.IO](./nitrous.md)
 * [Openshift](./openshift.md)
