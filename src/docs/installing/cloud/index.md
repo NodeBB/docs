@@ -8,6 +8,7 @@ NodeBB does not endorse nor provide maintenance and support for these services. 
 * [Cloud9](https://community.nodebb.org/topic/7983/setting-up-nodebb-on-cloud-9) (external)
 * [Cloudron.io](./cloudron.md)
 * [DigitalOcean](https://community.nodebb.org/topic/16343/tutorial-install-nodebb-on-digitalocean-ubuntu-20-04) (external)
+* [Easypanel](./easypanel.md)
 * [Heroku](./heroku.md)
 * [Jelastic](http://docs.jelastic.com/nodebb) (external)
 * [Nitrous.IO](./nitrous.md)
