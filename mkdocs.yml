@@ -50,6 +50,7 @@ nav:
     - Configuration:
         - Running NodeBB: 'configuring/running.md'
         - config.json: 'configuring/config.md'
+        - Environment Variables: 'configuring/envvars.md'
         - Databases:
             - 'configuring/databases/index.md'
             - MongoDB: 'configuring/databases/mongo.md'
