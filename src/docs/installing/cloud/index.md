@@ -13,6 +13,7 @@ NodeBB does not endorse nor provide maintenance and support for these services. 
 * [Nitrous.IO](./nitrous.md)
 * [Openshift](./openshift.md)
 * [Elestio](./elestio.md)
+* [Pethost](https://pethost.dev/templates/nodebb/) (external)
 * RoseHosting.com
     * [CentOS](https://www.rosehosting.com/blog/how-to-install-nodebb-on-a-centos-7-vps/) (external)
     * [Ubuntu](https://www.rosehosting.com/blog/install-and-setup-nodebb-with-redis-and-nginx-on-ubuntu-12-04/) (external)
